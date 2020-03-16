@@ -21,6 +21,9 @@ All data before March 14, 2020 are recovered using _Way Back Machine_.
 Tools for getting, cleaning and curating global COVID-19 open source data (time series, line list and etc.)
 https://github.com/wzmli/curate_coronadata
 
+## Trackers
+
+https://www.ctvnews.ca/health/coronavirus/tracking-every-case-of-covid-19-in-canada-1.4852102
 
 ## Terms of Use:
 
