@@ -20,3 +20,8 @@ All data before March 14, 2020 are recovered using _Way Back Machine_.
 
 Tools for getting, cleaning and curating global COVID-19 open source data (time series, line list and etc.)
 https://github.com/wzmli/curate_coronadata
+
+
+## Terms of Use:
+
+This GitHub repo and its contents herein, including all data, copyright 2020 McMaster University, all rights reserved, is provided to the public strictly for educational and academic research purposes.  The Website relies upon publicly available data from multiple sources, that do not always agree. The McMaster University hereby disclaims any and all representations and warranties with respect to the Website, including accuracy, fitness for use, and merchantability.  Reliance on the Website for medical guidance or use of the Website in commerce is strictly prohibited.
