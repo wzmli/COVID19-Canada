@@ -14,7 +14,7 @@ ON,2020-03-10,2347,NA,22,NA,31,4,2404,WBM
 ON,2020-03-11,2888,NA,465,NA,36,5,3394,WBM
 ON,2020-03-12,2888,NA,465,NA,37,5,3395,WBM
 ON,2020-03-13,5606,NA,939,NA,96,5,6646,WBM
-ON,2020-03-14,5606,NA,939,NA,98,5,6648,https://www.ON.ca/page/2019-novel-coronavirus
+ON,2020-03-14,5606,NA,939,NA,98,5,6648,https://www.ontario.ca/page/2019-novel-coronavirus
 ON,2020-03-15,7004,NA,1316,NA,140,5,8465,Input
 AB,2020-02-14,76,NA,NA,0,0,NA,76,WBM
 AB,2020-02-21,117,NA,NA,0,0,NA,117,WBM
@@ -35,9 +35,12 @@ QC,2020-03-11,570,NA,136,0,9,NA,NA,WBM
 QC,2020-03-14,1399,NA,850,0,24,NA,NA,https://www.msss.gouv.qc.ca/professionnels/maladies-infectieuses/coronavirus-2019-ncov
 QC,2020-03-15,2270,NA,1480,0,39,NA,NA,Input
 BC,2020-03-13,NA,NA,NA,NA,73,NA,6326,http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements
+BC,2020-03-13,NA,NA,NA,NA,73,NA,6326,http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements
+BC,2020-03-13,NA,NA,NA,NA,103,NA,6326,Input
 SK,2020-03-02,45,NA,7,0,0,NA,52,WBM
 SK,2020-03-10,263,NA,22,1,0,NA,285,WBM
 SK,2020-03-14,452,NA,44,5,1,NA,499,https://www.saskatchewan.ca/coronavirus
+SK,2020-03-15,NA,NA,16,5,2,NA,796,Input
 MB,2020-03-11,NA,NA,NA,NA,4,NA,403,WBM
 MB,2020-03-16,NA,NA,NA,NA,7,NA,NA,https://www.gov.mb.ca/covid19/index.html
 NL,2020-03-16,NA,NA,NA,1,NA,NA,NA,https://www.gov.nl.ca/covid-19/
