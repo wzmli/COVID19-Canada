@@ -1,4 +1,4 @@
-Province,Date,negative,presumptive_negative,under_investiation,presumptive_positive,confirmed_positive,resolved,total_testing,source
+Province,Date,negative,presumptive_negative,under_investigation,presumptive_positive,confirmed_positive,resolved,total_testing,source
 ON,2020-02-15,418,0,0,0,2,1,421,WBM
 ON,2020-02-18,418,0,0,0,2,1,421,WBM
 ON,2020-02-20,436,0,17,0,2,1,456,WBM

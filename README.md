@@ -1,29 +1,32 @@
-# COVID19-Canada
+# COVID19-Canada Testing
 
-This is the data repository for the COVID19 testing data for Canada rather from open sources and public health websites. The data will be updated daily at 23:00 Toronto time. 
-All data before March 14, 2020 are recovered using _Way Back Machine_. 
+This is a public open-resource page for the COVID19 testing data for Canada. 
 
-## Resources
+## COVID19 Testing Data
 
-- ON: https://www.ontario.ca/page/2019-novel-coronavirus
-- AB: https://www.alberta.ca/coronavirus-info-for-albertans.aspx
-- QC: https://www.msss.gouv.qc.ca/professionnels/maladies-infectieuses/coronavirus-2019-ncov
-- BC: http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements
-- SK: https://www.saskatchewan.ca/coronavirus
-- MB: https://www.gov.mb.ca/covid19/index.html
-- NL: https://www.gov.nl.ca/covid-19/
-- NB: https://www2.gnb.ca/content/gnb/en/departments/ocmoh/cdc/content/respiratory_diseases/coronavirus.html
-- NS: https://novascotia.ca/coronavirus/#cases
-- PEI: https://www.princeedwardisland.ca/en/topic/covid-19
+This dataset is compiled from open sources and provincial level public health websites. 
+The data will be updated daily at 22:00 Toronto time.
+
+This dataset contains daily reported number of positive/negative confirmed cases, presumptive cases, under investigation, and sources. 
+
+All data before March 14, 2020 are recovered using _Way Back Machine_, and inputed manually after March 14th. 
+
+[Testing Data](https://github.com/wzmli/COVID19-Canada/raw/master/COVID-19_test.csv)
 
 ## Other Resources
 
-Tools for getting, cleaning and curating global COVID-19 open source data (time series, line list and etc.)
-https://github.com/wzmli/curate_coronadata
+- Public_COVID-19_Canada linelist from XXX: https://docs.google.com/spreadsheets/d/1D6okqtBS3S2NRC7GFVHzaZ67DuTw7LX49-fqSLwJyeo/edit
 
-## Trackers
+- Tools for getting, cleaning and curating (in development) global COVID-19 open source  data (time series, line list and etc.): https://github.com/wzmli/curate_coronadata
 
-https://www.ctvnews.ca/health/coronavirus/tracking-every-case-of-covid-19-in-canada-1.4852102
+## Contacts 
+
+Maintainer: Michael Li 
+Email: wzmichael.li@gmail.com
+Twitter: @MLiwz1
+Github backend: https://github.com/wzmli/COVID19-Canada
+
+If there are questions about the data, please contact via email or github issues at https://github.com/wzmli/COVID19-Canada/issues. 
 
 ## Terms of Use:
 
