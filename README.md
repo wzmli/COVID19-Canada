@@ -1,5 +1,3 @@
-# COVID19-Canada Testing
-
 This is a public open-resource page for the COVID19 testing data for Canada. 
 
 ## COVID19 Testing Data
@@ -15,16 +13,17 @@ All data before March 14, 2020 are recovered using _Way Back Machine_, and input
 
 ## Other Resources
 
-- Public_COVID-19_Canada linelist from XXX: https://docs.google.com/spreadsheets/d/1D6okqtBS3S2NRC7GFVHzaZ67DuTw7LX49-fqSLwJyeo/edit
+- Public COVID-19 Canada linelist from XXX: [google sheets](https://docs.google.com/spreadsheets/d/1D6okqtBS3S2NRC7GFVHzaZ67DuTw7LX49-fqSLwJyeo/edit)
 
-- Tools for getting, cleaning and curating (in development) global COVID-19 open source  data (time series, line list and etc.): https://github.com/wzmli/curate_coronadata
+
+- Coming soon: Tools for getting, cleaning and curating (in development) global COVID-19 open source  data (time series, line list and etc.): [curate_coronadata repo](https://github.com/wzmli/curate_coronadata)
 
 ## Contacts 
 
-Maintainer: Michael Li 
-Email: wzmichael.li@gmail.com
-Twitter: @MLiwz1
-Github backend: https://github.com/wzmli/COVID19-Canada
+- Maintainer: Michael Li 
+- Email: wzmichael.li@gmail.com
+- Twitter: @MLiwz1
+- [Github repo](https://github.com/wzmli/COVID19-Canada)
 
 If there are questions about the data, please contact via email or github issues at https://github.com/wzmli/COVID19-Canada/issues. 
 
