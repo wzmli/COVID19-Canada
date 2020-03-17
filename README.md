@@ -13,10 +13,15 @@ All data before March 14, 2020 are recovered using _Way Back Machine_, and input
 
 ## Other Resources
 
-- Public COVID-19 Canada linelist from XXX: [google sheets](https://docs.google.com/spreadsheets/d/1D6okqtBS3S2NRC7GFVHzaZ67DuTw7LX49-fqSLwJyeo/edit)
+### COVID-19 Canada Open Data Working Group
 
+- [link](https://github.com/ishaberry/Covid19Canada)
 
-- Coming soon: Tools for getting, cleaning and curating (in development) global COVID-19 open source  data (time series, line list and etc.): [curate_coronadata repo](https://github.com/wzmli/curate_coronadata)
+- Public COVID-19 Canada linelist: [google sheets](https://docs.google.com/spreadsheets/d/1D6okqtBS3S2NRC7GFVHzaZ67DuTw7LX49-fqSLwJyeo/edit)
+
+### Coming soon: Tools for getting, cleaning and curating (in development) global COVID-19 open source  data (time series, line list and etc.)
+
+- [Repo in development](https://github.com/wzmli/curate_coronadata)
 
 ## Contacts 
 
