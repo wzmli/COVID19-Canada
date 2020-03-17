@@ -30,7 +30,7 @@ All data before March 14, 2020 are recovered using _Way Back Machine_, and input
 - Twitter: @MLiwz1
 - [Github repo](https://github.com/wzmli/COVID19-Canada)
 
-If there are questions about the data, please contact via email or github issues at https://github.com/wzmli/COVID19-Canada/issues. 
+If there are questions about the data, please contact via email or [github issues](https://github.com/wzmli/COVID19-Canada/issues). 
 
 ## Terms of Use:
 
