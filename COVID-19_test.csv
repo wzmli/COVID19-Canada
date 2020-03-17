@@ -16,6 +16,7 @@ ON,2020-03-12,2888,NA,465,NA,37,5,3395,WBM
 ON,2020-03-13,5606,NA,939,NA,96,5,6646,WBM
 ON,2020-03-14,5606,NA,939,NA,98,5,6648,https://www.ontario.ca/page/2019-novel-coronavirus
 ON,2020-03-15,7004,NA,1316,NA,140,5,8465,Input
+ON,2020-03-16,8464,NA,1537,NA,172,5,10178,Input
 AB,2020-02-14,76,NA,NA,0,0,NA,76,WBM
 AB,2020-02-21,117,NA,NA,0,0,NA,117,WBM
 AB,2020-02-28,173,NA,NA,0,0,NA,173,WBM
@@ -24,8 +25,9 @@ AB,2020-03-09,1452,NA,NA,0,7,NA,NA,WBM
 AB,2020-03-10,2004,NA,NA,0,14,NA,NA,WBM
 AB,2020-03-11,2600,NA,NA,0,19,NA,NA,WBM
 AB,2020-03-13,5429,NA,NA,0,29,NA,NA,WBM
-AB,2020-03-14,7069,NA,NA,0,39,NA,NA,https://www.AB.ca/coronavirus-info-for-ABns.aspx
+AB,2020-03-14,7069,NA,NA,0,39,NA,NA,https://www.alberta.ca/coronavirus-info-for-albertans.aspx
 AB,2020-03-15,7069,NA,NA,0,56,NA,NA,Input
+AB,2020-03-16,10524,NA,NA,0,74,NA,NA,Input
 QC,2020-03-04,203,NA,33,0,1,NA,NA,WBM
 QC,2020-03-05,242,NA,20,1,2,NA,NA,WBM
 QC,2020-03-08,340,NA,10,2,2,NA,NA,WBM
@@ -34,19 +36,20 @@ QC,2020-03-10,465,NA,91,0,7,NA,NA,WBM
 QC,2020-03-11,570,NA,136,0,9,NA,NA,WBM
 QC,2020-03-14,1399,NA,850,0,24,NA,NA,https://www.msss.gouv.qc.ca/professionnels/maladies-infectieuses/coronavirus-2019-ncov
 QC,2020-03-15,2270,NA,1480,0,39,NA,NA,Input
+QC,2020-03-16,3079,NA,3073,0,50,NA,NA,Input
 BC,2020-03-13,NA,NA,NA,NA,73,NA,6326,http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements
 BC,2020-03-13,NA,NA,NA,NA,73,NA,6326,http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements
-BC,2020-03-13,NA,NA,NA,NA,103,NA,6326,Input
+BC,2020-03-16,NA,NA,NA,NA,103,NA,6326,Input
 SK,2020-03-02,45,NA,7,0,0,NA,52,WBM
 SK,2020-03-10,263,NA,22,1,0,NA,285,WBM
 SK,2020-03-14,452,NA,44,5,1,NA,499,https://www.saskatchewan.ca/coronavirus
 SK,2020-03-15,NA,NA,16,5,2,NA,796,Input
 MB,2020-03-11,NA,NA,NA,NA,4,NA,403,WBM
-MB,2020-03-16,NA,NA,NA,NA,7,NA,NA,https://www.gov.mb.ca/covid19/index.html
+MB,2020-03-16,NA,NA,NA,NA,7,NA,1871,https://www.gov.mb.ca/covid19/index.html
 NL,2020-03-16,NA,NA,NA,1,NA,NA,NA,https://www.gov.nl.ca/covid-19/
 NB,2020-02-24,4,NA,NA,NA,0,NA,4,WBM
 NB,2020-03-14,18,NA,NA,1,1,NA,NA,WBM
-NB,2020-03-16,196,NA,NA,4,2,NA,NA,https://www2.gnb.ca/content/gnb/en/departments/ocmoh/cdc/content/respiratory_diseases/coronavirus.html
+NB,2020-03-16,196,NA,NA,5,2,NA,NA,https://www2.gnb.ca/content/gnb/en/departments/ocmoh/cdc/content/respiratory_diseases/coronavirus.html
 NS,2020-03-12,57,NA,NA,0,0,NA,NA,WBM
 NS,2020-03-16,671,NA,NA,5,0,NA,NA,https://novascotia.ca/coronavirus/#cases
 
