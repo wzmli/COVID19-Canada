@@ -9,7 +9,7 @@ This dataset contains daily reported number of positive/negative confirmed cases
 
 All data before March 14, 2020 are recovered using _Way Back Machine_, and inputted manually after March 14th. 
 
-[Testing Data](https://github.com/wzmli/COVID19-Canada/raw/master/COVID-19_test.csv)
+[Testing Data](https://github.com/wzmli/COVID19-Canada/raw/master/COVID-19_test.csv) (Last update: March 17th 22:00 Toronto time)
 
 ## Other Resources
 
