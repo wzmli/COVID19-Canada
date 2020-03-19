@@ -14,7 +14,8 @@ Sources += $(wildcard *.R)
 
 Sources += clean.Rout.csv
 clean.Rout.csv: clean.R
-clean.Rout: clean.R
+## Warning: redundant specification
+clean.Rout: COVID-19_test.csv clean.R
 	$(run-R)
 
 plot.png: plot.Rout ;
