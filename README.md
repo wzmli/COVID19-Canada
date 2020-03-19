@@ -14,8 +14,7 @@ All data before March 14, 2020 are recovered using _Way Back Machine_, and input
 
 ## Cumulative Cases
 
-![alt text](https://github.com/wzmli/COVID19-Canada/blob/master/git_push/plot.Rout.pdf)
-
+<img src="git_push/plot.Rout.pdf">
 
 ## Contacts 
 
