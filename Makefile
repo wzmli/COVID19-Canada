@@ -7,6 +7,10 @@ Drop = ~/Dropbox
 
 ######################################################################
 
+## Boom!!
+
+## https://wzmli.github.io/COVID19-Canada/ 
+## pages are on master branch
 
 Sources += $(wildcard *.R)
 Ignore += $(wildcard *.csv)
@@ -15,10 +19,13 @@ clean.Rout.csv: clean.R
 clean.Rout: clean.R
 	$(run-R)
 
+plot.png: plot.Rout ;
 plot.Rout: clean.Rout plot.R
 	$(run-R)
 
 Sources += README.md plot.png
+
+README.gh.html: README.md
 
 ######################################################################
 

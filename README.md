@@ -4,25 +4,23 @@ _last updated: March 18th 21:33 Toronto time_
 
 ## COVID19 Testing Data
 
-This dataset is compiled from open sources and provincial level public health websites. 
-The data will be updated daily around 22:00 Toronto time.
+Our [_raw_ dataset](https://github.com/wzmli/COVID19-Canada/raw/master/COVID-19_test.csv) is compiled from available, open sources on the web – primarily provincial-level public health websites, see file for URLs 
+
+We update once per day around 22:00 Toronto time.
 
 This dataset contains daily reported number of positive/negative confirmed cases, presumptive cases, under investigation, and sources. 
 
-All data before March 14, 2020 are recovered using _Way Back Machine_, and inputted manually after March 14th. 
-
-[Raw Data](https://github.com/wzmli/COVID19-Canada/raw/master/COVID-19_test.csv)
+Data before March 14, 2020 were recovered using the [Way Back Machine](https://archive.org/web/); later data are gathered daily directly from the sites. 
 
 ## Curating Data
 
-In addition to the raw data, we are providing a *curated* version where it curates minor inconsistency in the reported data.
-For example:
+Our [*curated* data set](https://github.com/wzmli/COVID19-Canada/raw/master/clean.Rout.csv):
 
-- different reporting format across provincial websites
-- missing information
-- calculate incidence data from cumulative cases
+* puts all of the information into a consistent format
+* calculates daily incidence from cumulative cases
+* corrects minor errors (using [this script](clean.R))
 
-[Curated Data](https://github.com/wzmli/COVID19-Canada/raw/master/clean.Rout.csv)
+When possible we use summary reports from [the federal outbreak website](https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html) to check our error correction
 
 ## Testing status
 
@@ -37,7 +35,7 @@ _These plots are generated using the curated data_
 - Twitter: @MLiwz1
 - [Github repo](https://github.com/wzmli/COVID19-Canada)
 
-If there are questions about the data, please contact via email or add to the [github issues](https://github.com/wzmli/COVID19-Canada/issues). 
+If there are questions about the data, please contact via email or add a [github issue](https://github.com/wzmli/COVID19-Canada/issues). 
 
 ### Terms of Use
 

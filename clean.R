@@ -1,5 +1,6 @@
 library(tidyverse)
 
+## Try using pmax instead of max, and see if that allows you to lose rowwise
 dd <- read_csv("COVID-19_test.csv")
 
 ddtotal <- (dd
