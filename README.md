@@ -1,5 +1,7 @@
 This is a public open-resource page for the COVID19 testing data for Canada. 
 
+_last updated: March 18th 21:33 Toronto time_
+
 ## COVID19 Testing Data
 
 This dataset is compiled from open sources and provincial level public health websites. 
@@ -9,12 +11,15 @@ This dataset contains daily reported number of positive/negative confirmed cases
 
 All data before March 14, 2020 are recovered using _Way Back Machine_, and inputted manually after March 14th. 
 
-[Testing Data](https://github.com/wzmli/COVID19-Canada/raw/master/COVID-19_test.csv) (Last updated: March 18th 21:33 Toronto time)
+[Raw Data](https://github.com/wzmli/COVID19-Canada/raw/master/COVID-19_test.csv)
 
+[Curated Data](https://github.com/wzmli/COVID19-Canada/raw/master/clean.Rout.csv)
 
-## Cumulative Cases
+## Testing status
 
-<img src="plot.png" width="600" height="300">
+_These plots are generated using the curated data_
+
+<img src="plot.png" width="1000" height="500">
 
 ## Contacts 
 

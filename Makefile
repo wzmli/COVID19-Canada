@@ -11,6 +11,7 @@ Drop = ~/Dropbox
 Sources += $(wildcard *.R)
 Ignore += $(wildcard *.csv)
 
+clean.Rout.csv: clean.R
 clean.Rout: clean.R
 	$(run-R)
 
