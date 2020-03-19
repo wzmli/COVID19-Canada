@@ -14,7 +14,7 @@ All data before March 14, 2020 are recovered using _Way Back Machine_, and input
 
 ## Cumulative Cases
 
-<img src="git_push/plot.Rout.pdf">
+<img src="cumulative_cases.png">
 
 ## Contacts 
 
