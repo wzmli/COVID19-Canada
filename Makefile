@@ -18,6 +18,8 @@ clean.Rout: clean.R
 plot.Rout: clean.Rout plot.R
 	$(run-R)
 
+Sources += README.md plot.png
+
 ######################################################################
 
 ### Makestuff
