@@ -14,7 +14,7 @@ All data before March 14, 2020 are recovered using _Way Back Machine_, and input
 
 ## Cumulative Cases
 
-<img src="cumulative_cases.png">
+<img src="cumulative_cases.png" width="300", height="150">
 
 ## Contacts 
 
