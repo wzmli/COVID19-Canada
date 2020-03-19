@@ -13,8 +13,8 @@ Drop = ~/Dropbox
 ## pages are on master branch
 
 Sources += $(wildcard *.R)
-Ignore += $(wildcard *.csv)
 
+Sources += clean.Rout.csv
 clean.Rout.csv: clean.R
 clean.Rout: clean.R
 	$(run-R)
