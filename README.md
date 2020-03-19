@@ -13,6 +13,15 @@ All data before March 14, 2020 are recovered using _Way Back Machine_, and input
 
 [Raw Data](https://github.com/wzmli/COVID19-Canada/raw/master/COVID-19_test.csv)
 
+## Curating Data
+
+In addition to the raw data, we are providing a *curated* version where it curates minor inconsistency in the reported data.
+For example:
+
+- different reporting format across provincial websites
+- missing information
+- calculate incidence data from cumulative cases
+
 [Curated Data](https://github.com/wzmli/COVID19-Canada/raw/master/clean.Rout.csv)
 
 ## Testing status
