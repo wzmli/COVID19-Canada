@@ -23,7 +23,7 @@ gg <- (ggplot(ddtotal, aes(x=Date, y=calcCumCases,color=Province))
 	  , show.legend = FALSE
 	  )
 	+ geom_line()
-	+ ggtitle("Cumulative Reported Positive Tests")
+	+ ggtitle("Cumulative Reported POSITIVE Tests")
 	+ theme(legend.position = "none", axis.title.y=element_blank()
 	        , plot.title = element_text(vjust=-10,hjust=0.1,size=10))
 )
@@ -43,11 +43,10 @@ gg2 <- (ggplot(ddtotal, aes(x=Date, y=bestTotal,color=Province))
                          , show.legend = FALSE
        )
        + geom_line()
-       + ggtitle("Cumulative Reported Total Tests")
+       + ggtitle("Cumulative Reported TOTAL Tests")
        + theme(legend.position = "none", axis.title.y=element_blank()
                , plot.title = element_text(vjust=-10,hjust=0.1,size=10))
 )
-
 
 print(gg2)
 
