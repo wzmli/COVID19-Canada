@@ -7,8 +7,6 @@ Drop = ~/Dropbox
 
 ######################################################################
 
-## Boom!!
-
 ## https://wzmli.github.io/COVID19-Canada/ 
 ## pages are on master branch
 
