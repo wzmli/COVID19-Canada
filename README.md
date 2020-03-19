@@ -11,11 +11,11 @@ All data before March 14, 2020 are recovered using _Way Back Machine_, and input
 
 [Testing Data](https://github.com/wzmli/COVID19-Canada/raw/master/COVID-19_test.csv) (Last updated: March 18th 21:33 Toronto time)
 
-## Other Resources
 
-### Coming soon: Tools for getting, cleaning and curating global COVID-19 open-source  data.
+## Cumulative Cases
 
-- [Repo in development](https://github.com/wzmli/curate_coronadata)
+![alt text](https://github.com/wzmli/COVID19-Canada/git_push/plot.Rout.pdf)
+
 
 ## Contacts 
 
