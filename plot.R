@@ -3,6 +3,7 @@ library(directlabels)
 library(tidyverse)
 library(ggrepel)
 library(gridExtra)
+library(colorspace)
 
 label_dat <- (ddtotal
     %>% filter(Date == as.Date("2020-03-18"))
@@ -24,6 +25,7 @@ label_dat <- (ddtotal
 
 
 gg <- (ggplot(ddtotal, aes(x=Date, y=calcCumCases,color=Province))
+        + scale_colour_discrete_qualitative()
 	+ scale_y_continuous(trans="log2")
 	+ scale_x_date()
 	+ geom_text_repel(data=label_dat,aes(label = lab_positives)
@@ -34,7 +36,7 @@ gg <- (ggplot(ddtotal, aes(x=Date, y=calcCumCases,color=Province))
 	  , segment.color = NA
 	  , show.legend = FALSE
 	  )
-	+ geom_line()
+        + geom_line()
         + ggtitle(parse(text="'Cumulative Reported'~bold('Positive')~'Tests'"))
 	+ theme(legend.position = "none", axis.title.y=element_blank()
 	        , plot.title = element_text(vjust=-10,hjust=0.1,size=10))
@@ -44,6 +46,7 @@ gg <- (ggplot(ddtotal, aes(x=Date, y=calcCumCases,color=Province))
 print(gg)
 
 gg2 <- (ggplot(ddtotal, aes(x=Date, y=bestTotal,color=Province))
+       + scale_colour_discrete_qualitative()
        + scale_y_continuous(trans="log2")
        + scale_x_date()
        + geom_text_repel(data=label_dat,aes(label = lab_total)
