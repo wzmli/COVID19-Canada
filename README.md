@@ -1,6 +1,6 @@
 This is a public open-resource page for the COVID19 testing data for Canada. 
 
-_last updated: March 18th 21:33 Toronto time_
+_last updated: March 19th 22:06 Toronto time_
 
 ## COVID19 Testing Data
 
