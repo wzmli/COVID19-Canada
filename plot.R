@@ -6,7 +6,7 @@ library(gridExtra)
 library(colorspace)
 
 label_dat <- (ddtotal
-    %>% filter(Date == as.Date("2020-03-18"))
+    %>% filter(Date == as.Date("2020-03-19"))
     %>% mutate(lab_positives = paste0(Province,":",calcCumCases)
                , lab_total = paste0(Province,":",bestTotal)
                , Date = Date+3)
