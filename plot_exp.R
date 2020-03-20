@@ -7,18 +7,15 @@ library(colorspace)
 
 load(".clean.RData")
 
-label_dat <- (ddtotal
-    %>% filter(Date == max(Date))
-    %>% mutate(lab_positives = paste0(Province,":",calcCumCases)
-               , lab_total = paste0(Province,":",bestTotal)
-               , Date = Date+3)
-)
 
-dd_long <- (ddtotal
-    %>% select(Date, calcCumCases, bestTotal, Province)
-    %>% tidyr::pivot_longer(-c(Date,Province))
+dd_long <- (ddtotal_p
+    ## FIXME: fragile, depends on order
+    %>% select(Province, Date, bestTotal:incidence,
+               bestTotal_i:frac_pos)
+    %>% tidyr::pivot_longer(-c(Date,Province,frac_pos))
     %>% group_by(Province,name)
-    %>% mutate(lab=paste0(Province,":",tail(value,1)))
+    ## FIXME: do we still want all the numbers?
+    %>% mutate(lab=paste0(Province,": ",round(tail(value,1))))
     %>% ungroup()
 )
 
@@ -28,13 +25,15 @@ lab_data <- (dd_long
                   lab=tail(lab,1))
 )
 
-## why is last.points putting things in the wrong place?
+dm <- list(dl.trans(x=x+0.2),cex=0.5,last.bumpup)
+## http://directlabels.r-forge.r-project.org/examples.html
+## n.b. can't mess with x aesthetic in geom_dl
 (ggplot(dd_long, aes(x=Date, y=value, color=Province))
     + scale_colour_discrete_qualitative()
-    + scale_y_continuous(trans="log2")
+    + scale_y_continuous(trans="log2",expand=expansion(mult=0.1,add=1))
     + scale_x_date()
-    ## + geom_dl(aes(label=lab,x=max(Date)+1),method="last.bumpup")
-    + expand_limits(x=max(dd_long$Date)+8)
+    + geom_dl(aes(label=lab),method=dm)
+    + expand_limits(x=max(dd_long$Date)+12)
     + geom_line()
     + theme(legend.position = "none", axis.title.y=element_blank()
             ## , plot.title = element_text(vjust=-10,hjust=0.1,size=10)
@@ -42,34 +41,4 @@ lab_data <- (dd_long
     + facet_wrap(~name,scale="free_y")
 )
 
-gg <- (ggplot(ddtotal, aes(x=Date, y=calcCumCases,color=Province))
-)
-
-
-print(gg)
-
-gg2 <- (ggplot(ddtotal, aes(x=Date, y=bestTotal,color=Province))
-       + scale_colour_discrete_qualitative()
-       + scale_y_continuous(trans="log2")
-       + scale_x_date()
-       + geom_text_repel(data=label_dat,aes(label = lab_total)
-                         , hjust = -10
-                         , direction = "y"
-                         , size = 3
-                         # , nudge_y = 5
-                         , segment.color = NA
-                         , show.legend = FALSE
-       )
-       + geom_line()
-       + ggtitle(parse(text="'Cumulative Reported'~bold('Total')~'Tests'"))
-       + theme(legend.position = "none", axis.title.y=element_blank()
-               , plot.title = element_text(vjust=-10,hjust=0.1,size=10))
-)
-
-print(gg2)
-
-gg3 <- grid.arrange(gg,gg2,nrow=1)
-gg3
-
-ggsave(plot=gg3,filename = "plot.png",width = 10, height = 5)
-
+ggsave("plot_exp.png",width=8,height=4)
