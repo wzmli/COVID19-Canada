@@ -11,6 +11,18 @@ label_dat <- (ddtotal
                , Date = Date+3)
 )
 
+## FIXME:: DRY: how different are these two plots??
+##  could this be done with faceting?
+
+## for boldfacing parts of titles below,
+##  could use expression('... bold(...) ...'); parse(text=...) is
+##  more flexible, could be used to incorporate variables etc.
+
+## plot(0:1,0:1,type="n")
+## text(0.5,0.5,expression('zzz'~bold('abc')~'aaa'))
+## text(0.1,0.1,parse(text="'zzz'~bold('abc')~'aaa'"))
+
+
 gg <- (ggplot(ddtotal, aes(x=Date, y=calcCumCases,color=Province))
 	+ scale_y_continuous(trans="log2")
 	+ scale_x_date()
@@ -23,7 +35,7 @@ gg <- (ggplot(ddtotal, aes(x=Date, y=calcCumCases,color=Province))
 	  , show.legend = FALSE
 	  )
 	+ geom_line()
-	+ ggtitle("Cumulative Reported POSITIVE Tests")
+        + ggtitle(parse(text="'Cumulative Reported'~bold('Positive')~'Tests'"))
 	+ theme(legend.position = "none", axis.title.y=element_blank()
 	        , plot.title = element_text(vjust=-10,hjust=0.1,size=10))
 )
@@ -43,7 +55,7 @@ gg2 <- (ggplot(ddtotal, aes(x=Date, y=bestTotal,color=Province))
                          , show.legend = FALSE
        )
        + geom_line()
-       + ggtitle("Cumulative Reported TOTAL Tests")
+       + ggtitle(parse(text="'Cumulative Reported'~bold('Total')~'Tests'"))
        + theme(legend.position = "none", axis.title.y=element_blank()
                , plot.title = element_text(vjust=-10,hjust=0.1,size=10))
 )
