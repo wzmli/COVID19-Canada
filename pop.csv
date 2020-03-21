@@ -1,0 +1,16 @@
+## hand-scraped from https://en.wikipedia.org/wiki/List_of_Canadian_provinces_and_territories_by_population
+## could auto-scrape
+Province,Province_full,pop
+ON,Ontario,13448494
+QC,Quebec,8164361
+BC,British Columbia,4648055
+AB,Alberta,4067175
+MB,Manitoba,1278365
+SK,Saskatchewan,1098352
+NS,Nova Scotia,971395
+NB,New Brunswick,747101
+NL,Newfoundland and Labrador,519716
+PEI,Prince Edward Island,142907
+NT,Northwest Territories,41786
+NN,Nunavut,35944
+YT,Yukon,35874
