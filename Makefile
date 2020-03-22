@@ -23,6 +23,9 @@ plot.png: plot.Rout
 plot.Rout: clean.Rout plot.R
 	$(run-R)
 
+plot_exp.Rout: clean.Rout plot_exp.R
+	$(run-R)
+
 update: clean.Rout.csv plot.png
 
 Sources += README.md plot.png
