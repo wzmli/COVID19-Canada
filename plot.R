@@ -10,7 +10,7 @@ label_dat <- (ddtotal
     %>% mutate(lab_positives = paste0(Province,":",calcCumCases)
                , lab_total = paste0(Province,":",bestTotal)
                , lab_incidence = paste0(Province, ":",incidence)
-               , Date = Date+3)
+               , Date = Date+5)
 )
 
 ## FIXME:: DRY: how different are these two plots??
@@ -91,4 +91,4 @@ print(gg3)
 
 print(ggcombo)
 
-ggsave(plot=ggcombo,filename = "plot.png",width = 10, height = 5)
+ggsave(plot=ggcombo,filename = "plot.png",width = 10, height = 6)
