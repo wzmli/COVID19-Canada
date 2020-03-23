@@ -11,6 +11,7 @@ Drop = ~/Dropbox
 ## pages are on master branch
 
 Sources += $(wildcard *.R)
+Sources += COVID-19_test.csv
 
 Sources += clean.Rout.csv
 clean.Rout.csv: clean.R
@@ -18,9 +19,14 @@ clean.Rout.csv: clean.R
 clean.Rout: COVID-19_test.csv clean.R
 	$(run-R)
 
-plot.png: plot.Rout ;
+plot.png: plot.Rout
 plot.Rout: clean.Rout plot.R
 	$(run-R)
+
+plot_exp.Rout: clean.Rout plot_exp.R
+	$(run-R)
+
+update: clean.Rout.csv plot.png
 
 Sources += README.md plot.png
 
