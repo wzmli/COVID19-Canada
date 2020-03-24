@@ -1,6 +1,6 @@
 This is a public open-resource page for the COVID19 testing data for Canada. 
 
-_last updated: March 23th 00:48 Toronto time_
+_last updated: March 23rd 10:36 Toronto time_
 
 ## COVID19 Testing Data
 
@@ -26,9 +26,19 @@ When possible we use summary reports from [the federal outbreak website](https:/
 
 _These plots are generated using the curated data_
 
-<img src="plot.png" width="1000" height="500">
+<img src="plot.png" width="1000" height="600">
 
-## Contacts 
+## Other Canadian COVID19 Resources
+
+### COVID-19 Canada Open Data Working Group
+
+Epidemiological Data from the COVID-19 Outbreak in Canada
+
+- [Github repo](https://github.com/ishaberry/Covid19Canada)
+- [Public COVID-19 Canada Line list](https://docs.google.com/spreadsheets/d/1D6okqtBS3S2NRC7GFVHzaZ67DuTw7LX49-fqSLwJyeo/edit?usp=sharing)
+- [shiny app](https://art-bd.shinyapps.io/covid19canada/)
+
+## Contacts
 
 - Maintainer: Michael Li 
 - Email: wzmichael.li@gmail.com

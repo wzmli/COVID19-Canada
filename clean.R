@@ -9,7 +9,7 @@ ddtotal <- (dd
 	%>% rowwise()
 	%>% mutate(calcTotal = sum(c(negative,presumptive_negative,under_investigation,presumptive_positive,confirmed_positive,resolved,deceased), na.rm=TRUE)
 		, bestTotal = max(c(calcTotal,total_testing),na.rm=TRUE)
-	, calcCumCases = sum(c(confirmed_positive, resolved,deceased),na.rm=TRUE)
+	, calcCumCases = sum(c(presumptive_positive,confirmed_positive, resolved,deceased),na.rm=TRUE)
 	)
 	%>% ungroup()
 	%>% group_by(Province)
