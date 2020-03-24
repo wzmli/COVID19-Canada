@@ -26,7 +26,7 @@ When possible we use summary reports from [the federal outbreak website](https:/
 
 _These plots are generated using the curated data_
 
-<img src="plot.png" width="1000" height="600">
+<img src="plot.png" width="1000" height="500">
 
 ## Other Canadian COVID19 Resources
 
