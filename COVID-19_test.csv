@@ -30,7 +30,7 @@ ON,2020-03-26,26727,NA,10965,NA,835,8,15,38550,NA,NA,Input,NA
 ON,2020-03-27,29967,NA,10074,NA,967,8,18,41032,NA,NA,Input,NA
 ON,2020-03-28,33240,NA,8690,NA,1117,8,19,43072,NA,NA,Input,NA
 ON,2020-03-29,40630,NA,7203,NA,1324,8,23,49186,NA,NA,Input,"2 deaths not lab confirmed"
-ON,2020-03-30,NA,NA,5651,NA,1324,431,23,48461,NA,NA,https://covid-19.ontario.ca/ ,"Last update on 10:30, stop reporting negative test and total test decrease; Resolved case close after 14 days past symptom onset"
+ON,2020-03-30,NA,NA,5651,NA,1706,431,23,48461,NA,NA,https://covid-19.ontario.ca/ ,"Last update on 10:30, stop reporting negative test and total test decrease; Resolved case close after 14 days past symptom onset"
 AB,2020-02-14,76,NA,NA,0,0,NA,0,76,NA,NA,WBM,NA
 AB,2020-02-21,117,NA,NA,0,0,NA,0,117,NA,NA,WBM,NA
 AB,2020-02-28,173,NA,NA,0,0,NA,0,173,NA,NA,WBM,NA
