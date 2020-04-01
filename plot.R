@@ -13,6 +13,19 @@ label_dat <- (ddtotal
                , Date = Date+5)
 )
 
+ddcountry <- (ddtotal
+   %>% group_by(Date)
+   %>% summarise(incidence = sum(incidence,na.rm=TRUE))
+)
+
+ggincidence <- (ggplot(ddcountry, aes(x=Date,y=incidence))
+  + geom_point()
+  + geom_line()
+  + ggtitle("New reported COVID-19 cases")
+)
+
+print(ggincidence)
+
 ## FIXME:: DRY: how different are these two plots??
 ##  could this be done with faceting?
 
@@ -90,5 +103,7 @@ gg3 <- (ggplot(ddtotal, aes(x=Date, y=incidence,color=Province))
 print(gg3)
 
 print(ggcombo)
+
+ggsave(plot=ggincidence,filename="CAincidence.png")
 
 ggsave(plot=ggcombo,filename = "plot.png",width = 10, height = 6)

@@ -13,7 +13,7 @@ ddtotal <- (dd
 	)
 	%>% ungroup()
 	%>% group_by(Province)
-	%>% mutate(incidence = diff(c(NA,calcCumCases)))
+	%>% mutate(incidence = diff(c(calcCumCases,NA)))
 )
 
 ## MB only reported +ve cases, but separated on March 20th
