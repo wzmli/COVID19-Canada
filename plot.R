@@ -18,6 +18,8 @@ ddcountry <- (ddtotal
    %>% summarise(incidence = sum(incidence,na.rm=TRUE))
 )
 
+print(ddcountry,n=50)
+
 ggincidence <- (ggplot(ddcountry, aes(x=Date,y=incidence))
   + geom_point()
   + geom_line()

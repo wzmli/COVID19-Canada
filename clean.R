@@ -25,6 +25,8 @@ ddtotal <- (ddtotal
   )
 )
 
+print(tail(ddtotal %>% filter(Province == "ON") %>% select(Date, calcCumCases, incidence)))
+
 write.csv(ddtotal,csvname)
 
 # ## from https://en.wikipedia.org/wiki/List_of_Canadian_provinces_and_territories_by_population
