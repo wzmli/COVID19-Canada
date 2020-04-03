@@ -34,6 +34,10 @@ README.gh.html: README.md
 
 ######################################################################
 
+
+ON.Rout: ON.R
+	$(run-R)
+
 ### Makestuff
 
 Sources += Makefile

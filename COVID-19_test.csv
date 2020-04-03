@@ -34,6 +34,7 @@ ON,2020-03-30,NA,NA,5651,NA,1706,431,23,48461,NA,NA,https://covid-19.ontario.ca/
 ON,2020-03-31,NA,NA,4280,NA,1966,534,33,51629,NA,NA,Input, "new location with more detail data https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario"
 ON,2020-04-01,NA,NA,3135,NA,2392,689,37,57874,NA,NA,Input, NA
 ON,2020-04-02,NA,NA,2052,NA,2793,831,53,62733,NA,NA,Input, "updated 10:30 am"
+ON,2020-04-03,NA,NA,1245,NA,3255,1023,67,66753,462,194,Input, "140 in ICU on a ventilator"
 AB,2020-02-14,76,NA,NA,0,0,NA,0,76,NA,NA,WBM,NA
 AB,2020-02-21,117,NA,NA,0,0,NA,0,117,NA,NA,WBM,NA
 AB,2020-02-28,173,NA,NA,0,0,NA,0,173,NA,NA,WBM,NA
@@ -236,7 +237,7 @@ YU,2020-03-29,556,NA,43,NA,4,NA,0,603,NA,NA,Input,"Did not update"
 YU,2020-03-30,593,NA,90,NA,5,NA,0,688,NA,NA,Input, NA
 YU,2020-03-31,593,NA,90,NA,5,NA,0,688,NA,NA,Input, "Did not update"
 YU,2020-04-01,690,NA,26,NA,6,3,0,722,NA,NA,Input, "Is positives here cumulative and not prevalence? the numbers add up with I don't include recovery"
-YU,2020-04-02,690,NA,26,NA,6,3,0,722,NA,NA,Input, "did not update""
+YU,2020-04-02,690,NA,26,NA,6,3,0,722,NA,NA,Input, "did not update"
 NWT,2020-03-21,NA,NA,NA,NA,1,NA,NA,299,NA,NA,https://www.hss.gov.nt.ca/en/services/coronavirus-disease-covid-19 ,NA 
 NWT,2020-03-22,NA,NA,NA,NA,1,NA,NA,370,NA,NA,Input,NA
 NWT,2020-03-23,NA,NA,NA,NA,1,NA,NA,370,NA,NA,Input,"TODO: Server down"
