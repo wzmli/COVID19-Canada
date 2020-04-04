@@ -1,6 +1,6 @@
 This is a public open-resource page for the COVID19 testing data for Canada. 
 
-_last updated: April 2nd 21:02 Toronto time_
+_last updated: April 3rd 20:46 Toronto time_
 
 ## COVID19 Testing Data
 
@@ -29,6 +29,15 @@ _These plots are generated using the curated data_
 <img src="plot.png" width="1000" height="500">
 
 ## Other Canadian COVID19 Resources
+
+### National-level Public data
+
+- [StatsCan detail line list](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310076701)
+
+### Provincial-level
+
+- [Ontario line list](https://data.ontario.ca/dataset/confirmed-positive-cases-of-covid-19-in-ontario/resource/455fd63b-603d-4608-8216-7d8647f43350)
+- [Ontario Population level Covid Data](https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario)
 
 ### COVID-19 Canada Open Data Working Group
 
