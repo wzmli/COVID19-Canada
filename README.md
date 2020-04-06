@@ -1,6 +1,6 @@
 This is a public open-resource page for the COVID19 testing data for Canada. 
 
-_last updated: April 4th 21:24 Toronto time_
+_last updated: April 5th 20:41 Toronto time_
 
 ## COVID19 Testing Data
 
@@ -9,6 +9,8 @@ Our [_raw_ dataset](https://github.com/wzmli/COVID19-Canada/raw/master/COVID-19_
 We update once per day around 22:00 Toronto time.
 
 This dataset contains daily reported number of positive/negative confirmed cases, presumptive cases, under investigation, and sources. 
+
+Note: We are adding in Hospitalization and ICU data when avaliable.
 
 Data before March 14, 2020 were recovered using the [Way Back Machine](https://archive.org/web/); later data are gathered daily directly from the sites. 
 

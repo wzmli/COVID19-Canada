@@ -36,6 +36,7 @@ ON,2020-04-01,NA,NA,3135,NA,2392,689,37,57874,NA,NA,NA,Input, NA
 ON,2020-04-02,NA,NA,2052,NA,2793,831,53,62733,NA,NA,NA,Input, "updated 10:30 am"
 ON,2020-04-03,NA,NA,1245,NA,3255,1023,67,66753,462,194,140,Input, "140 in ICU on a ventilator"
 ON,2020-04-04,NA,NA,1336,NA,3630,1219,94,71338,506,196,152,Input, NA
+ON,2020-04-05,NA,NA,1449,NA,4038,1449,119,75046,523,200,154,Input, NA
 AB,2020-02-14,76,NA,NA,0,0,NA,0,76,NA,NA,NA,WBM,NA
 AB,2020-02-21,117,NA,NA,0,0,NA,0,117,NA,NA,NA,WBM,NA
 AB,2020-02-28,173,NA,NA,0,0,NA,0,173,NA,NA,NA,WBM,NA
@@ -50,22 +51,23 @@ AB,2020-03-16,10524,NA,NA,0,74,NA,0,NA,NA,NA,NA,Input,NA
 AB,2020-03-17,12258,NA,NA,0,97,NA,0,NA,NA,NA,NA,Input,NA
 AB,2020-03-18,14447,NA,NA,0,119,NA,0,NA,NA,NA,NA,Input,NA
 AB,2020-03-19,16867,NA,NA,0,146,NA,1,NA,NA,NA,NA,Input,NA
-AB,2020-03-20,20165,NA,NA,0,195,NA,1,NA,NA,NA,NA,Input,NA
-AB,2020-03-21,23516,NA,NA,0,226,NA,1,NA,NA,NA,NA,https://www.alberta.ca/covid-19-alberta-data.aspx ,NA
-AB,2020-03-22,26740,NA,NA,0,259,NA,1,NA,NA,NA,NA,Input,NA
+AB,2020-03-20,20165,NA,NA,0,195,NA,1,NA,10,5,NA,Input,NA
+AB,2020-03-21,23516,NA,NA,0,226,NA,1,NA,11,6,NA,https://www.alberta.ca/covid-19-alberta-data.aspx ,NA
+AB,2020-03-22,26740,NA,NA,0,259,NA,1,NA,18,7,NA,Input,NA
 AB,2020-03-23,29757,NA,NA,0,301,NA,1,NA,NA,NA,NA,Input,NA
-AB,2020-03-24,32418,NA,NA,0,358,NA,2,NA,NA,NA,NA,Input,NA
-AB,2020-03-25,35089,NA,NA,0,419,NA,2,NA,NA,NA,NA,Input,NA
+AB,2020-03-24,32418,NA,NA,0,358,NA,2,NA,19,7,NA,Input,NA
+AB,2020-03-25,35089,NA,NA,0,419,NA,2,NA,24,8,NA,Input,NA
 AB,2020-03-26,36174,NA,NA,0,486,NA,2,NA,NA,NA,NA,Input,NA
-AB,2020-03-27,37673,NA,NA,0,542,NA,2,NA,NA,NA,NA,Input,NA
-AB,2020-03-28,NA,NA,NA,0,621,NA,2,42527,NA,NA,NA,Input,"Stop reporting negative test"
-AB,2020-03-29,NA,NA,NA,0,661,NA,3,44999,NA,NA,NA,Input,NA
-AB,2020-03-30,NA,NA,NA,0,690,NA,3,46057,NA,NA,NA,Input,NA
-AB,2020-03-31,NA,NA,NA,0,754,NA,9,48692,NA,NA,NA,Input, "Note: total means individuals tested. New location https://covid19stats.alberta.ca/"
+AB,2020-03-27,37673,NA,NA,0,542,NA,2,NA,31,11,NA,Input,NA
+AB,2020-03-28,NA,NA,NA,0,621,NA,2,42527,38,12,NA,Input,"Stop reporting negative test"
+AB,2020-03-29,NA,NA,NA,0,661,NA,3,44999,41,14,NA,Input,NA
+AB,2020-03-30,NA,NA,NA,0,690,NA,3,46057,47,17,NA,Input,NA
+AB,2020-03-31,NA,NA,NA,0,754,NA,9,48692,49,17,NA,Input, "Note: total means individuals tested. New location https://covid19stats.alberta.ca/"
 AB,2020-04-01,NA,NA,NA,0,871,NA,11,53141,62,20,NA,Input, "hosp and ICU numbers filled in using the second link"
 AB,2020-04-02,NA,NA,NA,0,968,NA,13,57096,67,21,NA,Input, NA
 AB,2020-04-03,NA,NA,NA,0,1075,NA,18,61960,75,24,NA,Input, NA
 AB,2020-04-04,NA,NA,NA,0,1181,240,20,64108,75,25,NA,Input, NA
+AB,2020-04-05,NA,NA,NA,0,1250,279,23,64806,84,26,NA,Input,"Filling in cumulative hosp and ICU using WBM"
 QC,2020-03-04,203,NA,33,0,1,NA,0,NA,NA,NA,NA,WBM,NA
 QC,2020-03-05,242,NA,20,1,2,NA,0,NA,NA,NA,NA,WBM,NA
 QC,2020-03-08,340,NA,10,2,2,NA,0,NA,NA,NA,NA,WBM,NA
@@ -74,26 +76,27 @@ QC,2020-03-10,465,NA,91,0,7,NA,0,NA,NA,NA,NA,WBM,NA
 QC,2020-03-11,570,NA,136,0,9,NA,0,NA,NA,NA,NA,WBM,NA
 QC,2020-03-14,1399,NA,850,0,24,NA,0,NA,NA,NA,NA,https://www.msss.gouv.qc.ca/professionnels/maladies-infectieuses/coronavirus-2019-ncov ,NA
 QC,2020-03-15,2270,NA,1480,0,39,NA,0,NA,NA,NA,NA,Input,NA
-QC,2020-03-16,3079,NA,3073,0,50,NA,0,NA,NA,NA,NA,Input,NA
-QC,2020-03-17,4778,NA,2949,0,74,NA,0,NA,NA,NA,NA,Input,NA
-QC,2020-03-18,5213,NA,3627,0,94,NA,1,NA,NA,NA,NA,Input,NA
-QC,2020-03-19,6331,NA,3997,0,121,1,1,NA,NA,NA,NA,Input,NA
-QC,2020-03-20,7666,NA,2403,14,139,1,1,NA,NA,NA,NA,Input,NA
-QC,2020-03-21,9242,NA,1512,57,181,1,4,NA,NA,NA,NA,Input,NA
-QC,2020-03-22,9786,NA,2063,233,219,1,4,NA,NA,NA,NA,Input,NA
-QC,2020-03-23,11211,NA,1888,NA,628,1,4,NA,NA,NA,NA,Input,"The significant increase in confirmed cases is explained by the fact that, on March 22, 2020, cases tested positive by hospital center laboratories are now considered confirmed. They no longer need validation by the Quebec Public Health Laboratory (LSPQ)."
-QC,2020-03-24,12202,NA,2548,NA,1013,1,4,NA,NA,NA,NA,Input,NA
-QC,2020-03-25,26634,NA,2998,NA,1339,1,6,NA,NA,NA,NA,Input,NA
-QC,2020-03-26,31854,NA,2622,NA,1629,1,8,NA,NA,NA,NA,Input,NA
-QC,2020-03-27,32335,NA,7236,NA,2021,29,18,NA,NA,NA,NA,Input,NA
-QC,2020-03-28,43589,NA,6757,NA,2498,NA,22,NA,NA,NA,NA,Input,"Did not report recovered today, coding NA"
-QC,2020-03-29,49364,NA,6313,NA,2840,NA,22,NA,NA,NA,NA,Input,NA
-QC,2020-03-30,56285,NA,6200,NA,3430,NA,25,NA,NA,NA,NA,Input,NA
-QC,2020-03-31,63378,NA,5601,NA,4162,NA,31,NA,NA,NA,NA,Input,NA
-QC,2020-04-01,65082,NA,5770,NA,4611,NA,33,NA,NA,NA,NA,Input,"no data on recovery"
-QC,2020-04-02,69024,NA,4871,NA,5518,NA,36,NA,NA,NA,NA,Input,"update 1pm"
-QC,2020-04-03,77469,NA,4233,NA,6101,NA,61,NA,NA,NA,NA,Input,NA
-QC,2020-04-04,83230,NA,3879,NA,6997,NA,75,NA,NA,NA,NA,Input,NA
+QC,2020-03-16,3079,NA,3073,0,50,NA,0,NA,2,0,NA,Input,NA
+QC,2020-03-17,4778,NA,2949,0,74,NA,0,NA,5,0,NA,Input,NA
+QC,2020-03-18,5213,NA,3627,0,94,NA,1,NA,6,4,NA,Input,NA
+QC,2020-03-19,6331,NA,3997,0,121,1,1,NA,7,4,NA,Input,NA
+QC,2020-03-20,7666,NA,2403,14,139,1,1,NA,10,6,NA,Input,NA
+QC,2020-03-21,9242,NA,1512,57,181,1,4,NA,19,10,NA,Input,NA
+QC,2020-03-22,9786,NA,2063,233,219,1,4,NA,24,13,NA,Input,NA
+QC,2020-03-23,11211,NA,1888,NA,628,1,4,NA,45,20,NA,Input,"The significant increase in confirmed cases is explained by the fact that, on March 22, 2020, cases tested positive by hospital center laboratories are now considered confirmed. They no longer need validation by the Quebec Public Health Laboratory (LSPQ)."
+QC,2020-03-24,12202,NA,2548,NA,1013,1,4,NA,67,31,NA,Input,NA
+QC,2020-03-25,26634,NA,2998,NA,1339,1,6,NA,78,35,NA,Input,NA
+QC,2020-03-26,31854,NA,2622,NA,1629,1,8,NA,106,43,NA,Input,NA
+QC,2020-03-27,32335,NA,7236,NA,2021,29,18,NA,141,50,NA,Input,NA
+QC,2020-03-28,43589,NA,6757,NA,2498,NA,22,NA,164,57,NA,Input,"Did not report recovered today, coding NA"
+QC,2020-03-29,49364,NA,6313,NA,2840,NA,22,NA,192,72,NA,Input,NA
+QC,2020-03-30,56285,NA,6200,NA,3430,NA,25,NA,235,78,NA,Input,NA
+QC,2020-03-31,63378,NA,5601,NA,4162,NA,31,NA,286,82,NA,Input,NA
+QC,2020-04-01,65082,NA,5770,NA,4611,NA,33,NA,307,82,NA,Input,"no data on recovery"
+QC,2020-04-02,69024,NA,4871,NA,5518,NA,36,NA,365,96,NA,Input,"update 1pm"
+QC,2020-04-03,77469,NA,4233,NA,6101,NA,61,NA,441,107,NA,Input,NA
+QC,2020-04-04,83230,NA,3879,NA,6997,NA,75,NA,478,130,NA,Input,NA
+QC,2020-04-05,87992,NA,2847,NA,7944,464,94,NA,525,154,NA,Input,"filling in detail past info from second link, note, they update late at night, check time stamp, the 1pm updates are actually 1 day. We are keeping this uploading format to match our told 1pm updates. https://www.inspq.qc.ca/covid-19/donnees"
 BC,2020-03-13,NA,NA,NA,NA,73,NA,0,6326,NA,NA,NA,http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements ,NA
 BC,2020-03-15,NA,NA,NA,NA,73,4,1,6326,NA,NA,NA,Input,NA
 BC,2020-03-16,NA,NA,NA,NA,103,5,7,6326,NA,NA,NA,Input,NA
@@ -116,6 +119,7 @@ BC,2020-04-01,NA,NA,NA,NA,1066,606,25,44639,NA,NA,NA,Input,NA
 BC,2020-04-02,NA,NA,NA,NA,1121,641,31,45966,NA,NA,NA,Input,NA
 BC,2020-04-03,NA,NA,NA,NA,1174,673,35,47352,NA,NA,NA,Input,NA
 BC,2020-04-04,NA,NA,NA,NA,1203,704,38,48508,NA,NA,NA,Input,NA
+BC,2020-04-05,NA,NA,NA,NA,1203,704,38,48508,NA,NA,NA,Input,"did not update"
 SK,2020-03-02,45,NA,7,0,0,NA,0,52,NA,NA,NA,WBM,NA
 SK,2020-03-10,263,NA,22,1,0,NA,0,285,NA,NA,NA,WBM,NA
 SK,2020-03-14,452,NA,44,5,1,NA,0,499,NA,NA,NA,https://www.saskatchewan.ca/coronavirus ,NA
@@ -139,6 +143,7 @@ SK,2020-04-01,10009,NA,NA,NA,193,30,3,10528,3,1,NA,Input,NA
 SK,2020-04-02,10828,NA,NA,NA,206,36,3,11395,3,1,NA,Input,NA
 SK,2020-04-03,11504,NA,NA,NA,220,48,3,12112,2,1,NA,Input,NA
 SK,2020-04-04,12017,NA,NA,NA,231,55,3,12670,3,1,NA,Input,"neg and positive people, not cases"
+SK,2020-04-05,12812,NA,NA,NA,249,67,3,13528,2,2,NA,Input,"hospital and ICU are probably prevalence"
 MB,2020-03-11,NA,NA,NA,NA,4,NA,0,403,NA,NA,NA,WBM,NA
 MB,2020-03-16,NA,NA,NA,NA,7,NA,0,1871,NA,NA,NA,https://www.gov.mb.ca/covid19/index.html ,NA
 MB,2020-03-17,NA,NA,NA,NA,7,8,0,2280,NA,NA,NA,Input,NA
@@ -160,6 +165,7 @@ MB,2020-04-01,NA,NA,NA,18,109,4,1,10044,4,3,NA,Input,NA
 MB,2020-04-02,NA,NA,NA,15,152,4,1,11327,4,3,NA,Input,"update 1:00pm"
 MB,2020-04-03,NA,NA,NA,18,164,11,2,11952,5,4,NA,Input,NA
 MB,2020-04-04,NA,NA,NA,22,172,17,2,12514,10,6,NA,https://www.gov.mb.ca/covid19/updates/index.html ,NA
+MB,2020-04-05,NA,NA,NA,16,187,17,2,12998,17,7,NA,Input ,"These are 9:30 am updates"
 NL,2020-03-16,NA,NA,NA,1,NA,NA,0,NA,NA,NA,NA,https://www.gov.nl.ca/covid-19/ ,NA
 NL,2020-03-18,NA,NA,NA,3,NA,NA,0,NA,NA,NA,NA,Input,NA
 NL,2020-03-19,NA,NA,NA,2,1,NA,0,NA,NA,NA,NA,Input,NA
@@ -180,6 +186,7 @@ NL,2020-04-01,2641,NA,NA,NA,175,NA,0,2816,15,NA,NA,Input,NA
 NL,2020-04-02,2746,NA,NA,NA,183,10,0,2929,11,4,NA,Input,"update 2:30pm; 4 of the 11 are in ICU"
 NL,2020-04-03,2746,NA,NA,NA,183,10,0,2929,11,4,NA,Input,"did not update"
 NL,2020-04-04,2746,NA,NA,NA,203,18,1,3386,11,NA,NA,https://covid-19-newfoundland-and-labrador-gnl.hub.arcgis.com/ , "No more ICU data"
+NL,2020-04-05,NA,NA,NA,NA,217,28,1,3565,10,NA,NA,Input,"Can't find negative;prevalence for hospital"
 NB,2020-02-24,4,NA,NA,NA,0,NA,0,4,NA,NA,NA,WBM,NA
 NB,2020-03-14,18,NA,NA,1,1,NA,0,NA,NA,NA,NA,WBM,NA
 NB,2020-03-16,196,NA,NA,5,2,NA,0,NA,NA,NA,NA,https://www2.gnb.ca/content/gnb/en/departments/ocmoh/cdc/content/respiratory_diseases/coronavirus.html ,NA
@@ -203,6 +210,7 @@ NB,2020-04-02,4224,NA,NA,NA,91,22,0,NA,NA,NA,NA,Input, NA
 NB,2020-04-03,4661,NA,NA,NA,95,25,0,NA,NA,NA,NA,Input, NA
 NB,2020-04-03,4661,NA,NA,NA,95,25,0,NA,NA,NA,NA,Input, NA
 NB,2020-04-04,5005,NA,NA,NA,98,28,0,NA,NA,NA,NA,Input, NA
+NB,2020-04-05,5217,NA,NA,NA,101,28,0,NA,NA,NA,NA,Input, NA
 NS,2020-03-12,57,NA,NA,0,0,NA,0,NA,NA,NA,NA,WBM,NA
 NS,2020-03-16,671,NA,NA,5,0,NA,0,NA,NA,NA,NA,https://novascotia.ca/coronavirus/#cases ,NA
 NS,2020-03-17,934,NA,NA,6,1,NA,0,NA,NA,NA,NA,Input,NA
@@ -224,6 +232,7 @@ NS,2020-04-01,6591,NA,NA,NA,173,NA,0,NA,NA,NA,NA,Input,NA
 NS,2020-04-02,7446,NA,NA,NA,193,NA,0,NA,NA,NA,NA,Input,NA
 NS,2020-04-03,8234,NA,NA,NA,207,21,0,NA,5,NA,NA,Input, "second link for recovered and hosp data https://novascotia.ca/coronavirus/data/"
 NS,2020-04-04,8964,NA,NA,NA,236,50,0,NA,4,NA,NA,Input, NA
+NS,2020-04-05,9510,NA,NA,NA,262,53,0,NA,6,NA,NA,Input, NA
 PEI,2020-03-15,NA,NA,NA,NA,1,NA,0,NA,NA,NA,NA,WBM,NA
 PEI,2020-03-17,40,NA,142,NA,1,NA,0,NA,NA,NA,NA,WBM,NA
 PEI,2020-03-19,122,NA,89,NA,2,NA,0,NA,NA,NA,NA,https://www.princeedwardisland.ca/en/topic/covid-19 ,NA
@@ -243,6 +252,7 @@ PEI,2020-04-01,665,NA,184,NA,21,1,0,NA,NA,NA,NA,Input,"Stop reporting total"
 PEI,2020-04-02,809,NA,127,NA,22,3,0,NA,NA,NA,NA,Input,"The numbers don't seem to add up compare to yesterday; it says total cases include recovered cases"
 PEI,2020-04-03,813,NA,264,NA,22,4,0,NA,NA,NA,NA,Input,NA
 PEI,2020-04-04,982,NA,264,NA,22,6,0,NA,NA,NA,NA,Input,NA
+PEI,2020-04-05,982,NA,264,NA,22,6,0,NA,NA,NA,NA,Input,"did not update"
 YU,2020-03-19,NA,NA,NA,NA,NA,NA,0,398,NA,NA,NA,https://yukon.ca/en/information-about-novel-coronavirus-yukoners ,NA
 YU,2020-03-20,NA,NA,NA,NA,NA,NA,0,398,NA,NA,NA,Input,NA
 YU,2020-03-21,NA,NA,NA,NA,NA,NA,0,398,NA,NA,NA,Input,NA
@@ -260,6 +270,7 @@ YU,2020-04-01,690,NA,26,NA,6,3,0,722,NA,NA,NA,Input, "Is positives here cumulati
 YU,2020-04-02,690,NA,26,NA,6,3,0,722,NA,NA,NA,Input, "did not update"
 YU,2020-04-03,694,NA,53,NA,6,4,0,753,NA,NA,NA,Input, NA
 YU,2020-04-04,694,NA,53,NA,6,4,0,753,NA,NA,NA,Input, "did not update"
+YU,2020-04-05,694,NA,53,NA,6,4,0,753,NA,NA,NA,Input, "did not update"
 NWT,2020-03-21,NA,NA,NA,NA,1,NA,NA,299,NA,NA,NA,https://www.hss.gov.nt.ca/en/services/coronavirus-disease-covid-19 ,NA 
 NWT,2020-03-22,NA,NA,NA,NA,1,NA,NA,370,NA,NA,NA,Input,NA
 NWT,2020-03-23,NA,NA,NA,NA,1,NA,NA,370,NA,NA,NA,Input,"TODO: Server down"
@@ -275,10 +286,13 @@ NWT,2020-04-01,977,NA,130,NA,2,NA,NA,979,NA,NA,NA,Input, "pending doesn't count 
 NWT,2020-04-02,994,NA,171,NA,2,NA,NA,996,NA,NA,NA,Input, "updated 9am"
 NWT,2020-04-03,1137,NA,117,NA,4,1,NA,1141,NA,NA,NA,Input, NA
 NWT,2020-04-04,1200,NA,76,NA,4,1,NA,1204,NA,NA,NA,Input, NA
+NWT,2020-04-05,1251,NA,46,NA,4,1,NA,1255,NA,NA,NA,Input, "Update at 9:00am"
 NU,2020-04-01,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,https://www.gov.nu.ca/health/information/covid-19-novel-coronavirus ,"Not sure what person under investiation means. No actual testing other than observations"
 NU,2020-04-02,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Input,"did not update"
 NU,2020-04-03,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Input,"did not update"
 NU,2020-04-04,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Input,"did not update"
+NU,2020-04-05,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Input,"did not update"
+
 
 
 
