@@ -13,9 +13,8 @@ Drop = ~/Dropbox
 Sources += $(wildcard *.R)
 Sources += COVID-19_test.csv
 
-Sources += clean.Rout.csv
+Sources += clean.Rout.csv COVID-19_test.csv
 clean.Rout.csv: clean.R
-## Warning: redundant specification
 clean.Rout: COVID-19_test.csv clean.R
 	$(run-R)
 

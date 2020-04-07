@@ -2,6 +2,7 @@ library(ggplot2);theme_set(theme_bw())
 library(directlabels)
 library(tidyverse)
 library(ggrepel)
+library(ggforce)
 library(gridExtra)
 library(colorspace)
 
@@ -13,6 +14,7 @@ label_dat <- (ddtotal
                , Date = Date+5)
 )
 
+## All done for Mark Loeb; probably should be a separate file
 ddcountry <- (ddtotal
    %>% group_by(Date)
    %>% summarise(incidence = sum(incidence,na.rm=TRUE))
@@ -25,8 +27,8 @@ ggincidence <- (ggplot(ddcountry, aes(x=Date,y=incidence))
   + geom_line()
   + ggtitle("New reported COVID-19 cases")
 )
-
 print(ggincidence)
+ggsave(plot=ggincidence,filename="CAincidence.png")
 
 ## FIXME:: DRY: how different are these two plots??
 ##  could this be done with faceting?
@@ -39,7 +41,7 @@ print(ggincidence)
 ## text(0.5,0.5,expression('zzz'~bold('abc')~'aaa'))
 ## text(0.1,0.1,parse(text="'zzz'~bold('abc')~'aaa'"))
 
-
+## Cumulative reports FIXME: Change variable names?
 gg <- (ggplot(ddtotal, aes(x=Date, y=calcCumCases,color=Province))
         + scale_colour_discrete_qualitative()
 	+ scale_y_continuous(trans="log2")
@@ -58,9 +60,9 @@ gg <- (ggplot(ddtotal, aes(x=Date, y=calcCumCases,color=Province))
 	        , plot.title = element_text(vjust=-10,hjust=0.1,size=10))
 )
 
-
 print(gg)
 
+### Cumulative tests
 gg2 <- (ggplot(ddtotal, aes(x=Date, y=bestTotal,color=Province))
        + scale_colour_discrete_qualitative()
        + scale_y_continuous(trans="log2")
@@ -80,10 +82,11 @@ gg2 <- (ggplot(ddtotal, aes(x=Date, y=bestTotal,color=Province))
 )
 
 print(gg2)
-
 ggcombo <- grid.arrange(gg,gg2,nrow=1)
-ggcombo
+print(ggcombo)
+ggsave(plot=ggcombo,filename = "plot.png",width = 10, height = 6)
 
+## Daily incidence
 gg3 <- (ggplot(ddtotal, aes(x=Date, y=incidence,color=Province))
         + scale_colour_discrete_qualitative()
         + scale_y_continuous(trans="log2")
@@ -104,8 +107,9 @@ gg3 <- (ggplot(ddtotal, aes(x=Date, y=incidence,color=Province))
 
 print(gg3)
 
-print(ggcombo)
+## Daily combo
 
-ggsave(plot=ggincidence,filename="CAincidence.png")
-
-ggsave(plot=ggcombo,filename = "plot.png",width = 10, height = 6)
+print(gg3
+	+ geom_line(aes(y=newTests), color="black")
+	+ facet_wrap_paginate(~Province, nrow=1, ncol=1, page=9)
+)
