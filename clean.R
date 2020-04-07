@@ -17,11 +17,17 @@ ddtotal <- (dd
 )
 
 ## MB only reported +ve cases, but separated on March 20th
+## ON hospitalization feels like a misread number (replacing with guess number, see note)
 ddtotal <- (ddtotal
   %>% mutate(calcCumCases = ifelse(
     (Province == "MB")&(Date %in% c(as.Date("2020-03-17"):as.Date("2020-03-20")))
       , 8
       , calcCumCases)
+    , Hospitalization = ifelse(
+      (Province == "ON")&(Date == as.Date("2020-03-26"))
+      , 50
+      , Hospitalization
+    )
   )
 )
 

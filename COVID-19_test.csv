@@ -28,8 +28,8 @@ ON,2020-03-24,21795,NA,10074,NA,572,8,8,32457,50,17,7,Input, "cum hosp/icu/vent:
 ON,2020-03-25,24458,NA,10489,NA,667,8,13,35635,40,17,15,Input, "hosp/icu/vent filled in, 4:30 in the video https://globalnews.ca/news/6729654/ontario-coronavirus-covid-19-cases-march-25/"
 ON,2020-03-26,26727,NA,10965,NA,835,8,15,38550,80,29,20,Input,"hosp/icu/vent filled in, 2:10, https://www.youtube.com/watch?v=WQPlwQU5EAI ; she said 80, but it really looks like 50"
 ON,2020-03-27,29967,NA,10074,NA,967,8,18,41032,60,43,32,Input,"hosp/icu/vent filled in, 3:15, https://www.youtube.com/watch?v=dAU5BX5MIaE"
-ON,2020-03-28,33240,NA,8690,NA,1117,8,19,43072,NA,63,46,Input,NA
-ON,2020-03-29,40630,NA,7203,NA,1324,8,23,49186,NA,NA,NA,Input,"ICU/vent filled in 3:28, https://www.youtube.com/watch?v=vr35lAdgrZU ;2 deaths not lab confirmed"
+ON,2020-03-28,33240,NA,8690,NA,1117,8,19,43072,NA,63,46,Input,"ICU/vent filled in 3:28, https://www.youtube.com/watch?v=vr35lAdgrZU "
+ON,2020-03-29,40630,NA,7203,NA,1324,8,23,49186,NA,NA,NA,Input,"2 deaths not lab confirmed"
 ON,2020-03-30,NA,NA,5651,NA,1706,431,23,48461,NA,100,61,https://covid-19.ontario.ca/ ,"Last update on 10:30, stop reporting negative test and total test decrease; Resolved case close after 14 days past symptom onset"
 ON,2020-03-31,NA,NA,4280,NA,1966,534,33,51629,291,125,82,Input, "filled in hosp/icu/vent 3:05, https://www.youtube.com/watch?v=DpeAtgXL558; new location with more detail data https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario"
 ON,2020-04-01,NA,NA,3135,NA,2392,689,37,57874,332,145,98,Input, "filled in hosp/icu/vent, 4:30, https://www.youtube.com/watch?v=Hs5RdmLq1GM"

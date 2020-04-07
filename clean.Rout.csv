@@ -26,10 +26,10 @@
 "25","ON",2020-03-23,19586,NA,8417,NA,489,8,6,28506,39,12,NA,"Input","hosp/icu filled in with march 24th link",20075,28506,489,77
 "26","ON",2020-03-24,21795,NA,10074,NA,572,8,8,32457,50,17,7,"Input","cum hosp/icu/vent: https://globalnews.ca/news/6723905/ontario-coronavirus-covid-19-cases-march-24/",22367,32457,572,83
 "27","ON",2020-03-25,24458,NA,10489,NA,667,8,13,35635,40,17,15,"Input","hosp/icu/vent filled in, 4:30 in the video https://globalnews.ca/news/6729654/ontario-coronavirus-covid-19-cases-march-25/",25125,35635,667,95
-"28","ON",2020-03-26,26727,NA,10965,NA,835,8,15,38550,80,29,20,"Input","hosp/icu/vent filled in, 2:10, https://www.youtube.com/watch?v=WQPlwQU5EAI ; she said 80, but it really looks like 50",27562,38550,835,168
+"28","ON",2020-03-26,26727,NA,10965,NA,835,8,15,38550,50,29,20,"Input","hosp/icu/vent filled in, 2:10, https://www.youtube.com/watch?v=WQPlwQU5EAI ; she said 80, but it really looks like 50",27562,38550,835,168
 "29","ON",2020-03-27,29967,NA,10074,NA,967,8,18,41032,60,43,32,"Input","hosp/icu/vent filled in, 3:15, https://www.youtube.com/watch?v=dAU5BX5MIaE",30934,41032,967,132
-"30","ON",2020-03-28,33240,NA,8690,NA,1117,8,19,43072,NA,63,46,"Input",NA,34357,43072,1117,150
-"31","ON",2020-03-29,40630,NA,7203,NA,1324,8,23,49186,NA,NA,NA,"Input","ICU/vent filled in 3:28, https://www.youtube.com/watch?v=vr35lAdgrZU ;2 deaths not lab confirmed",41954,49186,1324,207
+"30","ON",2020-03-28,33240,NA,8690,NA,1117,8,19,43072,NA,63,46,"Input","ICU/vent filled in 3:28, https://www.youtube.com/watch?v=vr35lAdgrZU",34357,43072,1117,150
+"31","ON",2020-03-29,40630,NA,7203,NA,1324,8,23,49186,NA,NA,NA,"Input","2 deaths not lab confirmed",41954,49186,1324,207
 "32","ON",2020-03-30,NA,NA,5651,NA,1706,431,23,48461,NA,100,61,"https://covid-19.ontario.ca/","Last update on 10:30, stop reporting negative test and total test decrease; Resolved case close after 14 days past symptom onset",1706,48461,1706,382
 "33","ON",2020-03-31,NA,NA,4280,NA,1966,534,33,51629,291,125,82,"Input","filled in hosp/icu/vent 3:05, https://www.youtube.com/watch?v=DpeAtgXL558; new location with more detail data https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario",1966,51629,1966,260
 "34","ON",2020-04-01,NA,NA,3135,NA,2392,689,37,57874,332,145,98,"Input","filled in hosp/icu/vent, 4:30, https://www.youtube.com/watch?v=Hs5RdmLq1GM",2392,57874,2392,426
