@@ -60,7 +60,14 @@ ddhosp <- (ddcombo
   %>% mutate(Source = ifelse(Date < as.Date(ONreleasedate),"LI","ON"))
 )
 
-ddPHO <- read_csv("")
+ddPHO <- read_csv("https://raw.githubusercontent.com/wzmli/COVID19-Canada/master/PHO.csv")
+ddPHOclean <- (ddPHO
+  %>% transmute(Date=Date
+      , Hospitalize = Cumulative_Hospitalized
+      , ICU = Cumulative_Intensive_care
+  )
+  %>% gather(key="Type",value="Cumulative_Count", -Date)
+)
 
 gghosp <- (ggplot(ddhosp, aes(x=Date, y=Cumulative_Count))
   + geom_point(aes(color=Source))
@@ -69,9 +76,17 @@ gghosp <- (ggplot(ddhosp, aes(x=Date, y=Cumulative_Count))
   + facet_wrap(~Type, nrow=3, scale="free_y")
   + scale_color_manual(values=c("red","black"))
   + xlim(c(as.Date("2020-03-15"),as.Date("2020-04-06")))
+  + ggtitle("LI + ON")
 )
 
 print(gghosp)
+
+print(gghosp
+  + geom_point(data=ddPHOclean,color="blue")
+  + geom_line(data=ddPHOclean,color="blue")
+  + ggtitle("LI + ON + PHO")
+)
+
 
 quit()
 
