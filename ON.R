@@ -10,16 +10,16 @@ cleanname <- function(x){
 	return(nobackquote)
 }
 
-dd <- read_csv("https://data.ontario.ca/dataset/f4f86e54-872d-43f8-8a86-3892fd3cb5e6/resource/ed270bb8-340b-41f9-a7c6-e8ef587e6d11/download/covidtesting.csv")
+ddON <- read_csv("https://data.ontario.ca/dataset/f4f86e54-872d-43f8-8a86-3892fd3cb5e6/resource/ed270bb8-340b-41f9-a7c6-e8ef587e6d11/download/covidtesting.csv")
 
-colnames(dd) <- cleanname(colnames(dd))
+colnames(ddON) <- cleanname(colnames(ddON))
 
 ## Create a new dataframe with ALL days
 
 
-ddall <- data.frame(Reported_Date = as.Date(min(dd[["Reported_Date"]]):max(dd[["Reported_Date"]])))
+ddall <- data.frame(Reported_Date = as.Date(min(ddON[["Reported_Date"]]):max(ddON[["Reported_Date"]])))
 
-ddnew <- (left_join(ddall, dd)
+ddONclean <- (left_join(ddall, ddON)
 	%>% select(Hospitalize = "Number_of_patients_hospitalized_with_COVID-19"
 		, ICU = "Number_of_patients_in_ICU_with_COVID-19"
 		, Ventilator = "Number_of_patients_in_ICU_on_a_ventilator_with_COVID-19"
@@ -30,7 +30,48 @@ ddnew <- (left_join(ddall, dd)
 		, New_ICU = diff(c(NA,ICU))
 		, New_Ventilator = diff(c(NA,Ventilator))
 		)
+	%>% select(Date = Reported_Date, everything())
 )
+
+ddLI <- (read_csv("https://raw.githubusercontent.com/wzmli/COVID19-Canada/master/clean.Rout.csv")
+	%>% filter(Province == "ON")
+	%>% transmute(Date = Date
+		, cum_positives = confirmed_positive
+		, Hosp_li = Hospitalization
+		, ICU_li = ICU
+		, Vent_li = ventilator
+	)
+)
+
+ONreleasedate <- "2020-04-02"
+
+ddcombo <-(left_join(ddONclean, ddLI)
+	%>% mutate(positive_diff = Confirmed_Positive + Resolved + Deaths - cum_positives
+		, hosp_diff = Hospitalize - Hosp_li
+		, icu_diff = ICU - ICU_li
+		, vent_diff = Ventilator - Vent_li
+		, Source = ifelse(Date < as.Date(ONreleasedate),"LI","ON")
+  )
+)
+
+ddhosp <- (ddcombo
+  %>% select(Date, Hospitalize=Hosp_li, ICU=ICU_li, Ventilator=Vent_li)
+  %>% gather(key="Type", value="Cumulative_Count", -Date)
+  %>% mutate(Source = ifelse(Date < as.Date(ONreleasedate),"LI","ON"))
+)
+
+gghosp <- (ggplot(ddhosp, aes(x=Date, y=Cumulative_Count))
+  + geom_point(aes(color=Source))
+  + geom_line()
+  + geom_vline(xintercept = as.Date(ONreleasedate))
+  + facet_wrap(~Type, nrow=3, scale="free_y")
+  + scale_color_manual(values=c("red","black"))
+  + xlim(c(as.Date("2020-03-15"),as.Date("2020-04-06")))
+)
+
+print(gghosp)
+
+quit()
 
 ddmelt <- (ddnew
 	%>% gather(key="Type", value="Counts",-Reported_Date)
