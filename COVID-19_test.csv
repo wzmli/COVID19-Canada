@@ -19,21 +19,21 @@ ON,2020-03-15,7004,NA,1316,NA,140,5,0,8465,NA,NA,NA,Input,NA
 ON,2020-03-16,8464,NA,1537,NA,172,5,0,10178,NA,NA,NA,Input,NA
 ON,2020-03-17,9415,NA,1567,NA,183,5,1,11171,NA,NA,NA,Input,NA
 ON,2020-03-18,10305,NA,3378,NA,208,5,1,13897,NA,NA,NA,Input,NA
-ON,2020-03-19,12421,NA,3971,NA,251,5,2,16650,NA,NA,NA,Input,NA
-ON,2020-03-20,13718,NA,5475,NA,311,5,2,19511,NA,NA,NA,Input,NA
+ON,2020-03-19,12421,NA,3971,NA,251,5,2,16650,22,NA,NA,Input,"hosp filled in https://globalnews.ca/news/6701449/ontario-coronavirus-covid19-cases-march-19/"
+ON,2020-03-20,13718,NA,5475,NA,311,5,2,19511,23,NA,NA,Input,"hosp filled in from update on the 23rd, see 4:30 https://www.youtube.com/watch?v=T2o_hAeWnQM"
 ON,2020-03-21,15768,NA,7239,NA,368,6,3,23384,NA,NA,NA,Input,NA
 ON,2020-03-22,17634,NA,8361,NA,412,8,5,26420,NA,NA,NA,Input,NA
-ON,2020-03-23,19586,NA,8417,NA,489,8,6,28506,NA,NA,NA,Input,NA
-ON,2020-03-24,21795,NA,10074,NA,572,8,8,32457,NA,NA,NA,Input,NA
-ON,2020-03-25,24458,NA,10489,NA,667,8,13,35635,NA,NA,NA,Input,NA
-ON,2020-03-26,26727,NA,10965,NA,835,8,15,38550,NA,NA,NA,Input,NA
-ON,2020-03-27,29967,NA,10074,NA,967,8,18,41032,NA,NA,NA,Input,NA
-ON,2020-03-28,33240,NA,8690,NA,1117,8,19,43072,NA,NA,NA,Input,NA
-ON,2020-03-29,40630,NA,7203,NA,1324,8,23,49186,NA,NA,NA,Input,"2 deaths not lab confirmed"
-ON,2020-03-30,NA,NA,5651,NA,1706,431,23,48461,NA,NA,NA,https://covid-19.ontario.ca/ ,"Last update on 10:30, stop reporting negative test and total test decrease; Resolved case close after 14 days past symptom onset"
-ON,2020-03-31,NA,NA,4280,NA,1966,534,33,51629,NA,NA,NA,Input, "new location with more detail data https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario"
-ON,2020-04-01,NA,NA,3135,NA,2392,689,37,57874,NA,NA,NA,Input, NA
-ON,2020-04-02,NA,NA,2052,NA,2793,831,53,62733,NA,NA,NA,Input, "updated 10:30 am"
+ON,2020-03-23,19586,NA,8417,NA,489,8,6,28506,39,12,NA,Input,"hosp/icu filled in with march 24th link"
+ON,2020-03-24,21795,NA,10074,NA,572,8,8,32457,50,17,7,Input, "cum hosp/icu/vent: https://globalnews.ca/news/6723905/ontario-coronavirus-covid-19-cases-march-24/"
+ON,2020-03-25,24458,NA,10489,NA,667,8,13,35635,40,17,15,Input, "hosp/icu/vent filled in, 4:30 in the video https://globalnews.ca/news/6729654/ontario-coronavirus-covid-19-cases-march-25/"
+ON,2020-03-26,26727,NA,10965,NA,835,8,15,38550,80,29,20,Input,"hosp/icu/vent filled in, 2:10, https://www.youtube.com/watch?v=WQPlwQU5EAI ; she said 80, but it really looks like 50"
+ON,2020-03-27,29967,NA,10074,NA,967,8,18,41032,60,43,32,Input,"hosp/icu/vent filled in, 3:15, https://www.youtube.com/watch?v=dAU5BX5MIaE"
+ON,2020-03-28,33240,NA,8690,NA,1117,8,19,43072,NA,63,46,Input,NA
+ON,2020-03-29,40630,NA,7203,NA,1324,8,23,49186,NA,NA,NA,Input,"ICU/vent filled in 3:28, https://www.youtube.com/watch?v=vr35lAdgrZU ;2 deaths not lab confirmed"
+ON,2020-03-30,NA,NA,5651,NA,1706,431,23,48461,NA,100,61,https://covid-19.ontario.ca/ ,"Last update on 10:30, stop reporting negative test and total test decrease; Resolved case close after 14 days past symptom onset"
+ON,2020-03-31,NA,NA,4280,NA,1966,534,33,51629,291,125,82,Input, "filled in hosp/icu/vent 3:05, https://www.youtube.com/watch?v=DpeAtgXL558; new location with more detail data https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario"
+ON,2020-04-01,NA,NA,3135,NA,2392,689,37,57874,332,145,98,Input, "filled in hosp/icu/vent, 4:30, https://www.youtube.com/watch?v=Hs5RdmLq1GM"
+ON,2020-04-02,NA,NA,2052,NA,2793,831,53,62733,405,167,112,Input, "filled in hosp/icu/vent, 3:25 in video, https://www.youtube.com/watch?v=gGf1X3YMBZg"
 ON,2020-04-03,NA,NA,1245,NA,3255,1023,67,66753,462,194,140,Input, "140 in ICU on a ventilator"
 ON,2020-04-04,NA,NA,1336,NA,3630,1219,94,71338,506,196,152,Input, NA
 ON,2020-04-05,NA,NA,1449,NA,4038,1449,119,75046,523,200,154,Input, NA
