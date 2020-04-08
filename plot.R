@@ -28,7 +28,7 @@ ggincidence <- (ggplot(ddcountry, aes(x=Date,y=newConfirmations))
   + ggtitle("New reported COVID-19 cases")
 )
 print(ggincidence)
-ggsave(plot=ggincidence,filename="CAincidence.png")
+## ggsave(plot=ggincidence,filename="CAincidence.png")
 
 ## FIXME:: DRY: how different are these two plots??
 ##  could this be done with faceting?

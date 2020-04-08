@@ -28,6 +28,7 @@ clean.Rout: COVID19_Canada.csv clean.R
 	$(run-R)
 
 ## plot.png: plot.R
+Ignore += plot.png
 plot.png: plot.Rout ;
 plot.Rout: clean.Rout plot.R
 	$(run-R)
