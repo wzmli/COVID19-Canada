@@ -23,9 +23,11 @@ ddONclean <- (left_join(ddall, ddON)
 	%>% select(Hospitalize = "Number_of_patients_hospitalized_with_COVID-19"
 		, ICU = "Number_of_patients_in_ICU_with_COVID-19"
 		, Ventilator = "Number_of_patients_in_ICU_on_a_ventilator_with_COVID-19"
+		, Testing = "Total_patients_approved_for_testing_as_of_Reporting_Date"
 		, everything()
 		)
-	%>% mutate(New_Positive = diff(c(NA,Confirmed_Positive))
+	%>% mutate(New_Testing = diff(c(NA,Testing))
+	  , New_Cases = diff(c(NA,Total_Cases))
 		, New_Hospitalize = diff(c(NA,Hospitalize))
 		, New_ICU = diff(c(NA,ICU))
 		, New_Ventilator = diff(c(NA,Ventilator))
@@ -33,6 +35,21 @@ ddONclean <- (left_join(ddall, ddON)
 	%>% select(Date = Reported_Date, everything())
 )
 
+ddtesting <- (ddONclean
+  %>% select(Date, New_Testing, New_Cases, Under_Investigation)
+  %>% mutate(New_Case_ratio = New_Cases/New_Testing)
+  %>% gather(key = "Type", value = "Counts", -Date)
+)
+
+ggtesting <- (ggplot(ddtesting, aes(x=Date,y=Counts))
+  + geom_point()
+  + geom_line()
+  + facet_wrap(~Type,ncol=1,scale="free_y")
+)
+
+print(ggtesting)
+
+quit()
 ddLI <- (read_csv("https://raw.githubusercontent.com/wzmli/COVID19-Canada/master/clean.Rout.csv")
 	%>% filter(Province == "ON")
 	%>% transmute(Date = Date
