@@ -20,7 +20,7 @@ Data before March 14, 2020 were recovered using the [Way Back Machine](https://a
 Our [*curated* data set](https://github.com/wzmli/COVID19-Canada/blob/master/git_push/clean.Rout.csv); [direct download](git_push/clean.Rout.csv)
 
 * puts all of the information into a consistent format
-* calculates daily incidence from cumulative cases
+* calculates daily new reported cases from cumulative cases
 * corrects minor errors (using [this script](clean.R))
 
 When possible we use summary reports from [the federal outbreak website](https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html) to check our error correction
