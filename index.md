@@ -1,4 +1,4 @@
-This is a public open-resource page for COVID19 testing data for Canada. 
+This is a public open-resource page for the COVID19 testing data for Canada. 
 
 # Under construction
 
@@ -16,6 +16,8 @@ Data before March 14, 2020 were recovered using the [Way Back Machine](https://a
 
 ## Curating Data
 
+Our [*curated* data set](https://github.com/wzmli/COVID19-Canada/raw/master/clean.Rout.csv):
+
 Our [*curated* data set](git_push/clean.Rout.csv):
 * [raw](https://github.com/wzmli/COVID19-Canada/raw/master/clean.Rout.csv):
 * [Repo](https://github.com/wzmli/COVID19-Canada/blob/master/git_push/clean.Rout.csv)
@@ -30,7 +32,7 @@ When possible we use summary reports from [the federal outbreak website](https:/
 
 _These plots are generated using the curated data_
 
-<img src="git_push/plot.png" width="1000" height="500">
+<img src="plot.png" width="1000" height="500">
 
 ## Other Canadian COVID19 Resources
 
@@ -63,6 +65,7 @@ If there are questions about the data, please contact via email or add a [github
 ### Terms of Use
 
 <font size="1"> This GitHub page and its contents herein, including all data, copyright 2020 McMaster University TheoBio Lab, all rights reserved, is provided to the public strictly for educational and academic research purposes.  The Website relies upon publicly available data from multiple sources, that do not always agree. The McMaster University TheoBio Lab hereby disclaims any and all representations and warranties with respect to the Website, including accuracy, fitness for use, and merchantability.  Reliance on the Website for medical guidance or use of the Website in commerce is strictly prohibited.</font>
+
 
 
 
