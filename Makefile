@@ -14,9 +14,16 @@ Sources += index.md
 
 ######################################################################
 
+vim_session: 
+	bash -cl "vmt index.md README.md"
 Sources += $(wildcard *.R)
+
+######################################################################
+
+Sources += raw_notes.txt
 Sources += COVID19_Canada.csv
-clean.Rout.csv: clean.R
+
+## clean.Rout.csv: clean.R ;
 clean.Rout: COVID19_Canada.csv clean.R
 	$(run-R)
 

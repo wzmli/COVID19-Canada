@@ -5,7 +5,7 @@ This is a public open-resource page for COVID19 data for Canada.
 
 All code is available on [the associated repo](https://github.com/wzmli/COVID19-Canada)
 
-Our [*raw* data set](COVID19_Canada.csv); [direct download](https://github.com/wzmli/COVID19-Canada/blob/master/COVID19_Canada.csv) is compiled from available, open sources on the web – primarily provincial-level public health websites, see file for URLs.
+Our [*raw* data set](https://github.com/wzmli/COVID19-Canada/blob/master/COVID19_Canada.csv); [direct download](COVID19_Canada.csv) is compiled from available, open sources on the web – primarily provincial-level public health websites, see file for URLs; also see [notes](raw_notes.txt)
 
 We update once per day around 21:00 Toronto time. 
 
@@ -17,7 +17,7 @@ Data before March 14, 2020 were recovered using the [Way Back Machine](https://a
 
 ## Curating Data
 
-Our [*curated* data set](https://github.com/wzmli/COVID19-Canada/blob/master/git_push/clean.Rout.csv); [direct download](clean.Rout.csv)
+Our [*curated* data set](https://github.com/wzmli/COVID19-Canada/blob/master/git_push/clean.Rout.csv); [direct download](git_push/clean.Rout.csv)
 
 * puts all of the information into a consistent format
 * calculates daily incidence from cumulative cases
