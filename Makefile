@@ -9,11 +9,12 @@ Drop = ~/Dropbox
 
 ## https://wzmli.github.io/COVID19-Canada/ 
 ## pages are on master branch
+Sources += README.md
+
+######################################################################
 
 Sources += $(wildcard *.R)
 Sources += COVID-19_test.csv
-
-Sources += clean.Rout.csv COVID-19_test.csv
 clean.Rout.csv: clean.R
 clean.Rout: COVID-19_test.csv clean.R
 	$(run-R)
@@ -27,10 +28,9 @@ plot_exp.Rout: clean.Rout plot_exp.R
 
 update: clean.Rout.csv plot.png
 
-## git mv CAincidence.png ON.Rout.pdf git_push
+## git mv CAincidence.png plot.png clean.Rout.csv ON.Rout.pdf git_push ##
 ## git add plot.png CAincidence.png ON.Rout.pdf  ##
 
-Sources += README.md plot.png
 
 README.gh.html: README.md
 
