@@ -1,4 +1,4 @@
-"","Province","Date","negative","presumptive_negative","under_investigation","presumptive_positive","confirmed_positive","resolved","deceased","total_testing","Hospitalization","ICU","ventilator","source","Note","calcTotal","bestTotal","calcCumCases","incidence","newTests"
+"","Province","Date","negative","presumptive_negative","under_investigation","presumptive_positive","confirmed_positive","resolved","deceased","total_testing","Hospitalization","ICU","ventilator","source","Note","calcTotal","bestTotal","cumConfirmations","newConfirmations","newTests"
 "1","ON",2020-02-15,418,0,0,0,2,1,0,421,NA,NA,NA,"WBM",NA,420,421,2,NA,NA
 "2","ON",2020-02-18,418,0,0,0,2,1,0,421,NA,NA,NA,"WBM",NA,420,421,2,0,0
 "3","ON",2020-02-20,436,0,17,0,2,1,0,456,NA,NA,NA,"WBM",NA,438,456,2,0,35

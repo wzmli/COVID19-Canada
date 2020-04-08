@@ -8,21 +8,21 @@ library(colorspace)
 
 label_dat <- (ddtotal
     %>% filter(Date == max(Date))
-    %>% mutate(lab_positives = paste0(Province,":",calcCumCases)
+    %>% mutate(lab_positives = paste0(Province,":",cumConfirmations)
                , lab_total = paste0(Province,":",bestTotal)
-               , lab_incidence = paste0(Province, ":",incidence)
+               , lab_incidence = paste0(Province, ":",newConfirmations)
                , Date = Date+5)
 )
 
 ## All done for Mark Loeb; probably should be a separate file
 ddcountry <- (ddtotal
    %>% group_by(Date)
-   %>% summarise(incidence = sum(incidence,na.rm=TRUE))
+   %>% summarise(newConfirmations = sum(newConfirmations,na.rm=TRUE))
 )
 
 print(ddcountry,n=50)
 
-ggincidence <- (ggplot(ddcountry, aes(x=Date,y=incidence))
+ggincidence <- (ggplot(ddcountry, aes(x=Date,y=newConfirmations))
   + geom_point()
   + geom_line()
   + ggtitle("New reported COVID-19 cases")
@@ -42,7 +42,7 @@ ggsave(plot=ggincidence,filename="CAincidence.png")
 ## text(0.1,0.1,parse(text="'zzz'~bold('abc')~'aaa'"))
 
 ## Cumulative reports FIXME: Change variable names?
-gg <- (ggplot(ddtotal, aes(x=Date, y=calcCumCases,color=Province))
+gg <- (ggplot(ddtotal, aes(x=Date, y=cumConfirmations,color=Province))
         + scale_colour_discrete_qualitative()
 	+ scale_y_continuous(trans="log2")
 	+ scale_x_date()
@@ -86,8 +86,8 @@ ggcombo <- grid.arrange(gg,gg2,nrow=1)
 print(ggcombo)
 ggsave(plot=ggcombo,filename = "plot.png",width = 10, height = 6)
 
-## Daily incidence
-gg3 <- (ggplot(ddtotal, aes(x=Date, y=incidence,color=Province))
+## Daily confirmations
+gg3 <- (ggplot(ddtotal, aes(x=Date, y=newConfirmations,color=Province))
         + scale_colour_discrete_qualitative()
         + scale_y_continuous(trans="log2")
         + scale_x_date()
