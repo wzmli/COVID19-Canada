@@ -16,7 +16,9 @@ Data before March 14, 2020 were recovered using the [Way Back Machine](https://a
 
 ## Curating Data
 
-Our [*curated* data set](https://github.com/wzmli/COVID19-Canada/raw/master/clean.Rout.csv):
+Our [*curated* data set](git_push/clean.Rout.csv):
+* [raw](https://github.com/wzmli/COVID19-Canada/raw/master/clean.Rout.csv):
+* [Repo](https://github.com/wzmli/COVID19-Canada/blob/master/git_push/clean.Rout.csv)
 
 * puts all of the information into a consistent format
 * calculates daily incidence from cumulative cases
@@ -28,7 +30,7 @@ When possible we use summary reports from [the federal outbreak website](https:/
 
 _These plots are generated using the curated data_
 
-<img src="plot.png" width="1000" height="500">
+<img src="git_push/plot.png" width="1000" height="500">
 
 ## Other Canadian COVID19 Resources
 
