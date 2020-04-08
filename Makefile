@@ -15,9 +15,9 @@ Sources += index.md
 ######################################################################
 
 Sources += $(wildcard *.R)
-Sources += COVID-19_test.csv
+Sources += COVID19_Canada.csv
 clean.Rout.csv: clean.R
-clean.Rout: COVID-19_test.csv clean.R
+clean.Rout: COVID19_Canada.csv clean.R
 	$(run-R)
 
 plot.png: plot.Rout
