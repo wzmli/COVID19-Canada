@@ -28,6 +28,8 @@ ddONclean <- (left_join(ddall, ddON)
 		)
 	%>% mutate(New_Testing = diff(c(NA,Testing))
 	  , New_Cases = diff(c(NA,Total_Cases))
+	  , New_Confirmed = diff(c(NA,Confirmed_Positive))
+	  , New_Presumptive = diff(c(NA,Presumptive_Positive))
 		, New_Hospitalize = diff(c(NA,Hospitalize))
 		, New_ICU = diff(c(NA,ICU))
 		, New_Ventilator = diff(c(NA,Ventilator))
@@ -36,9 +38,11 @@ ddONclean <- (left_join(ddall, ddON)
 )
 
 ddtesting <- (ddONclean
-  %>% select(Date, New_Testing, New_Cases, Under_Investigation)
-  %>% mutate(New_Case_ratio = New_Cases/New_Testing)
+  %>% select(Date, New_Testing, New_Cases, New_Confirmed,New_Presumptive, Under_Investigation)
+  # %>% mutate(New_Case_ratio = New_Cases/New_Testing
+  #     , New_Confirmed_ratio = New_Confirmed/New_Testing)
   %>% gather(key = "Type", value = "Counts", -Date)
+  %>% filter(Counts>0)
 )
 
 ggtesting <- (ggplot(ddtesting, aes(x=Date,y=Counts))
