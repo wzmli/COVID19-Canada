@@ -6,29 +6,13 @@ library(ggforce)
 library(gridExtra)
 library(colorspace)
 
-label_dat <- (ddtotal
+label_dat <- (ddclean
     %>% filter(Date == max(Date))
     %>% mutate(lab_positives = paste0(Province,":",cumConfirmations)
                , lab_total = paste0(Province,":",bestTotal)
-               , lab_incidence = paste0(Province, ":",newConfirmations)
+               , lab_newConfirmations = paste0(Province, ":",newConfirmations)
                , Date = Date+5)
 )
-
-## All done for Mark Loeb; probably should be a separate file
-ddcountry <- (ddtotal
-   %>% group_by(Date)
-   %>% summarise(newConfirmations = sum(newConfirmations,na.rm=TRUE))
-)
-
-print(ddcountry,n=50)
-
-ggincidence <- (ggplot(ddcountry, aes(x=Date,y=newConfirmations))
-  + geom_point()
-  + geom_line()
-  + ggtitle("New reported COVID-19 cases")
-)
-print(ggincidence)
-## ggsave(plot=ggincidence,filename="CAincidence.png")
 
 ## FIXME:: DRY: how different are these two plots??
 ##  could this be done with faceting?
@@ -41,8 +25,10 @@ print(ggincidence)
 ## text(0.5,0.5,expression('zzz'~bold('abc')~'aaa'))
 ## text(0.1,0.1,parse(text="'zzz'~bold('abc')~'aaa'"))
 
-## Cumulative reports FIXME: Change variable names?
-gg <- (ggplot(ddtotal, aes(x=Date, y=cumConfirmations,color=Province))
+## Cumulative reports 
+ddcumreport <- ddclean %>% filter(cumConfirmations>0)
+
+gg <- (ggplot(ddcumreport, aes(x=Date, y=cumConfirmations,color=Province))
         + scale_colour_discrete_qualitative()
 	+ scale_y_continuous(trans="log2")
 	+ scale_x_date()
@@ -63,7 +49,10 @@ gg <- (ggplot(ddtotal, aes(x=Date, y=cumConfirmations,color=Province))
 print(gg)
 
 ### Cumulative tests
-gg2 <- (ggplot(ddtotal, aes(x=Date, y=bestTotal,color=Province))
+
+ddcumtest <- ddclean %>% filter(bestTotal>0)
+
+gg2 <- (ggplot(ddcumtest, aes(x=Date, y=bestTotal,color=Province))
        + scale_colour_discrete_qualitative()
        + scale_y_continuous(trans="log2")
        + scale_x_date()
@@ -86,12 +75,12 @@ ggcombo <- grid.arrange(gg,gg2,nrow=1)
 print(ggcombo)
 ggsave(plot=ggcombo,filename = "plot.png",width = 10, height = 6)
 
-## Daily confirmations
-gg3 <- (ggplot(ddtotal, aes(x=Date, y=newConfirmations,color=Province))
+## Daily new report
+gg3 <- (ggplot(ddclean, aes(x=Date, y=newConfirmations,color=Province))
         + scale_colour_discrete_qualitative()
         + scale_y_continuous(trans="log2")
         + scale_x_date()
-        + geom_text_repel(data=label_dat,aes(label = lab_incidence)
+        + geom_text_repel(data=label_dat,aes(label = lab_newConfirmations)
                           , hjust = -10
                           , direction = "y"
                           , size = 3
@@ -107,9 +96,39 @@ gg3 <- (ggplot(ddtotal, aes(x=Date, y=newConfirmations,color=Province))
 
 print(gg3)
 
-## Daily combo
-
 print(gg3
 	+ geom_line(aes(y=newTests), color="black")
 	+ facet_wrap_paginate(~Province, nrow=1, ncol=1, page=9)
 )
+
+
+## Hospitalization
+ddhosp <- (ddclean
+  %>% select(Date, Province, Hospitalization, ICU, Ventilator)
+  %>% gather(key="HospType",value="Count",-Date,-Province)
+  %>% filter(!is.na(Count)&(Count>0))
+  %>% mutate(Province = factor(Province,levels = c("BC","AB","ON","QC","SK","MB","NB","NS","PEI","NL","YU","NWT","NU")))
+)
+
+gghosp <- (ggplot(ddhosp, aes(x=Date, y=Count,color=HospType))
+       + scale_x_date()
+       # + geom_text_repel(data=label_dat,aes(label = lab_positives)
+       #                   , hjust = -10
+       #                   , direction = "y"
+       #                   , size = 3
+       #                   # , nudge_y = 5
+       #                   , segment.color = NA
+       #                   , show.legend = FALSE
+       # )
+       + geom_line()
+       + geom_point()
+       # + ggtitle(parse(text="'Cumulative Reported'~bold('Positive')~'Tests'"))
+       + theme(legend.position = "bottom", axis.title.y=element_blank()
+               , plot.title = element_text(vjust=-10,hjust=0.1,size=10))
+       + facet_wrap(~Province,nrow=2, scale="free")
+       + scale_colour_manual(values=c("black","red","blue"))
+
+)
+
+print(gghosp)
+ggsave(plot=gghosp,filename = "plothosp.png",width = 10, height = 6)

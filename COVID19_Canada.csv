@@ -1,4 +1,4 @@
-Province,Date,negative,presumptive_negative,under_investigation,presumptive_positive,confirmed_positive,resolved,deceased,total_testing,Hospitalization,ICU,ventilator,source,Note
+Province,Date,negative,presumptive_negative,under_investigation,presumptive_positive,confirmed_positive,resolved,deceased,total_testing,Hospitalization,ICU,Ventilator,source,Note
 ON,2020-02-15,418,0,0,0,2,1,0,421,NA,NA,NA,WBM,NA
 ON,2020-02-18,418,0,0,0,2,1,0,421,NA,NA,NA,WBM,NA
 ON,2020-02-20,436,0,17,0,2,1,0,456,NA,NA,NA,WBM,NA
@@ -102,6 +102,7 @@ QC,2020-04-03,77469,NA,4233,NA,6101,NA,61,NA,441,107,NA,Input,NA
 QC,2020-04-04,83230,NA,3879,NA,6997,NA,75,NA,478,130,NA,Input,NA
 QC,2020-04-05,87992,NA,2847,NA,7944,464,94,NA,525,154,NA,Input,"filling in detail past info from second link, note, they update late at night, check time stamp, the 1pm updates are actually 1 day. We are keeping this uploading format to match our told 1pm updates. https://www.inspq.qc.ca/covid-19/donnees"
 QC,2020-04-06,91533,NA,2942,NA,8580,611,121,NA,533,164,NA,Input, NA
+QC,2020-04-07,95186,NA,2472,NA,9340,720,150,NA,583,164,NA,Input, NA
 BC,2020-03-13,NA,NA,NA,NA,73,NA,0,6326,NA,NA,NA,http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements ,NA
 BC,2020-03-15,NA,NA,NA,NA,73,4,1,6326,NA,NA,NA,Input,NA
 BC,2020-03-16,NA,NA,NA,NA,103,5,7,6326,NA,NA,NA,Input,NA
@@ -111,22 +112,22 @@ BC,2020-03-19,NA,NA,NA,NA,271,5,7,6326,NA,NA,NA,Input,NA
 BC,2020-03-20,NA,NA,NA,NA,348,6,9,17912,NA,NA,NA,Input,NA
 BC,2020-03-21,NA,NA,NA,NA,424,6,10,17912,NA,NA,NA,Input,NA
 BC,2020-03-22,NA,NA,NA,NA,424,6,10,21296,NA,NA,NA,Input,"Did not update"
-BC,2020-03-23,NA,NA,NA,NA,472,100,13,26681,NA,NA,NA,Input,NA
-BC,2020-03-24,NA,NA,NA,NA,617,173,13,26681,NA,NA,NA,Input,NA
-BC,2020-03-25,NA,NA,NA,NA,659,183,14,31739,NA,NA,NA,Input,NA
-BC,2020-03-26,NA,NA,NA,NA,725,186,14,34561,NA,NA,NA,Input,NA
-BC,2020-03-27,NA,NA,NA,NA,792,275,16,36643,NA,NA,NA,Input,NA
+BC,2020-03-23,NA,NA,NA,NA,539,146,13,26681,83,23,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_23_2020.pdf ,NA
+BC,2020-03-24,NA,NA,NA,NA,617,173,13,26681,96,29,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_24_2020%20Final.pdf ,NA
+BC,2020-03-25,NA,NA,NA,NA,659,183,14,31739,107,41,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_25_final.pdf ,NA
+BC,2020-03-26,NA,NA,NA,NA,725,186,14,34561,110,42,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_26%20Final.pdf ,NA
+BC,2020-03-27,NA,NA,NA,NA,792,275,16,36643,123,46,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_27_final.pdf ,NA
 BC,2020-03-28,NA,NA,NA,NA,884,396,17,38697,NA,NA,NA,Input,NA
 BC,2020-03-29,NA,NA,NA,NA,884,396,17,38697,NA,NA,NA,Input,"Did not update"
-BC,2020-03-30,NA,NA,NA,NA,970,469,19,42028,NA,NA,NA,Input,NA
-BC,2020-03-31,NA,NA,NA,NA,1013,507,24,43229,NA,NA,NA,Input,NA
-BC,2020-04-01,NA,NA,NA,NA,1066,606,25,44639,NA,NA,NA,Input,NA
-BC,2020-04-02,NA,NA,NA,NA,1121,641,31,45966,NA,NA,NA,Input,NA
-BC,2020-04-03,NA,NA,NA,NA,1174,673,35,47352,NA,NA,NA,Input,NA
+BC,2020-03-30,NA,NA,NA,NA,970,469,19,42028,175,NA,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_30_final.pdf ,NA
+BC,2020-03-31,NA,NA,NA,NA,1013,507,24,43229,204,NA,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_31.pdf ,NA
+BC,2020-04-01,NA,NA,NA,NA,1066,606,25,44639,225,NA,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_1%20Final.pdf ,NA
+BC,2020-04-02,NA,NA,NA,NA,1121,641,31,45966,244,68,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_2%20Final.pdf  ,NA
+BC,2020-04-03,NA,NA,NA,NA,1174,673,35,47352,263,64,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_3%20Final.pdf  ,NA
 BC,2020-04-04,NA,NA,NA,NA,1203,704,38,48508,NA,NA,NA,Input,NA
 BC,2020-04-05,NA,NA,NA,NA,1203,704,38,48508,NA,NA,NA,Input,"did not update"
-BC,2020-04-06,NA,NA,NA,NA,1266,783,39,50350,NA,NA,NA,Input,NA
-BC,2020-04-07,NA,NA,NA,NA,1266,783,39,50350,NA,NA,NA,Input,"did not update"
+BC,2020-04-06,NA,NA,NA,NA,1266,783,39,50350,290,72,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_6_final.pdf ,NA
+BC,2020-04-07,NA,NA,NA,NA,1291,805,43,51423,298,66,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_7.pdf ,"Hosp and ICU data filled in from situation reports; cumulative ICU are avaliable on the last page on the situation report"
 SK,2020-03-02,45,NA,7,0,0,NA,0,52,NA,NA,NA,WBM,NA
 SK,2020-03-10,263,NA,22,1,0,NA,0,285,NA,NA,NA,WBM,NA
 SK,2020-03-14,452,NA,44,5,1,NA,0,499,NA,NA,NA,https://www.saskatchewan.ca/coronavirus ,NA
@@ -271,7 +272,7 @@ PEI,2020-04-03,813,NA,264,NA,22,4,0,NA,NA,NA,NA,Input,NA
 PEI,2020-04-04,982,NA,264,NA,22,6,0,NA,NA,NA,NA,Input,NA
 PEI,2020-04-05,982,NA,264,NA,22,6,0,NA,NA,NA,NA,Input,"did not update"
 PEI,2020-04-06,984,NA,368,NA,22,8,0,NA,NA,NA,NA,Input,"Changed format"
-PEI,2020-04-07,996,NA,464,NA,22,8,0,NA,NA,NA,NA,Input,"Changed format"
+PEI,2020-04-07,996,NA,464,NA,22,8,0,NA,NA,NA,NA,Input,NA
 YU,2020-03-19,NA,NA,NA,NA,NA,NA,0,398,NA,NA,NA,https://yukon.ca/en/information-about-novel-coronavirus-yukoners ,NA
 YU,2020-03-20,NA,NA,NA,NA,NA,NA,0,398,NA,NA,NA,Input,NA
 YU,2020-03-21,NA,NA,NA,NA,NA,NA,0,398,NA,NA,NA,Input,NA

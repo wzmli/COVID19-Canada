@@ -30,13 +30,14 @@ clean.Rout: COVID19_Canada.csv clean.R
 ## plot.png: plot.R
 Ignore += plot.png
 plot.png: plot.Rout ;
+plothosp.png: plot.Rout ; 
 plot.Rout: clean.Rout plot.R
 	$(run-R)
 
 plot_exp.Rout: clean.Rout plot_exp.R
 	$(run-R)
 
-update: clean.Rout.csv.gp plot.png.gp
+update: clean.Rout.csv.gp plot.png.gp plothosp.png.gp
 
 ## git mv CAincidence.png plot.png clean.Rout.csv ON.Rout.pdf git_push ##
 ## git add plot.png CAincidence.png ON.Rout.pdf  ##

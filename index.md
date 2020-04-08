@@ -31,6 +31,9 @@ _These plots are generated using the curated data_
 
 <img src="git_push/plot.png" width="1000" height="500">
 
+<img src="git_push/plothosp.png" width="1000" height="500">
+
+
 ## Other Canadian COVID19 Resources
 
 ### National-level Public data

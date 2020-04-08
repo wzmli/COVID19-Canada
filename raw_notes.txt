@@ -1,1 +1,8 @@
 The hospitalization columns (including ICU and ventilators) have different meanings from province to province. We are working on documenting this.
+
+Most of provinces report prevalence (current numbers) of hospitalization and ICU.
+AB and BC are the only two provinces reporting cumulative (ever) hospitalization and ICU cases (BC changed to ICU prevalence after April 2nd)
+
+ON hospitalization, ICU and ventilators counts before April 2nd are recovered from daily live covid19 updates by Ontario's Chef Medical Officers of Health (See Notes column in the data for link).
+
+
