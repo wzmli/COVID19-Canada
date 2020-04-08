@@ -11,7 +11,7 @@ We update once per day around 21:00 Toronto time.
 
 This dataset contains daily reported number of positive/negative confirmed cases, presumptive cases, under investigation, and sources. 
 
-Note: We are adding in Hospitalization and ICU data when avaliable.
+New addition: We are adding in Hospitalization, ICU, and Ventilator counts when they are avaliable.
 
 Data before March 14, 2020 were recovered using the [Way Back Machine](https://archive.org/web/); later data are gathered daily directly from the sites. 
 
@@ -25,11 +25,13 @@ Our [*curated* data set](https://github.com/wzmli/COVID19-Canada/blob/master/git
 
 When possible we use summary reports from [the federal outbreak website](https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html) to check our error correction
 
-## Testing status
+### Testing Status
 
 _These plots are generated using the curated data_
 
 <img src="git_push/plot.png" width="1000" height="500">
+
+### Hospitalization/ICU counts
 
 <img src="git_push/plothosp.png" width="1000" height="500">
 
@@ -52,6 +54,8 @@ Epidemiological Data from the COVID-19 Outbreak in Canada
 - [Github repo](https://github.com/ishaberry/Covid19Canada)
 - [Public COVID-19 Canada Line list](https://docs.google.com/spreadsheets/d/1D6okqtBS3S2NRC7GFVHzaZ67DuTw7LX49-fqSLwJyeo/edit?usp=sharing)
 - [shiny app](https://art-bd.shinyapps.io/covid19canada/)
+
+
 
 ## Contacts
 

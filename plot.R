@@ -7,6 +7,7 @@ library(gridExtra)
 library(colorspace)
 
 label_dat <- (ddclean
+    %>% group_by(Province)
     %>% filter(Date == max(Date))
     %>% mutate(lab_positives = paste0(Province,":",cumConfirmations)
                , lab_total = paste0(Province,":",bestTotal)
@@ -124,7 +125,8 @@ gghosp <- (ggplot(ddhosp, aes(x=Date, y=Count,color=HospType))
        + geom_point()
        # + ggtitle(parse(text="'Cumulative Reported'~bold('Positive')~'Tests'"))
        + theme(legend.position = "bottom", axis.title.y=element_blank()
-               , plot.title = element_text(vjust=-10,hjust=0.1,size=10))
+               , axis.text.x = element_text(angle = 45,vjust=0.5)
+               , plot.title = element_text(vjust=0,hjust=0.1,size=10))
        + facet_wrap(~Province,nrow=2, scale="free")
        + scale_colour_manual(values=c("black","red","blue"))
 

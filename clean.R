@@ -3,7 +3,6 @@ library(zoo)
 
 dd <- read_csv("COVID19_Canada.csv")
 
-today <- Sys.Date()
 ## FIXME; patch the NAs, get rid of sum and then use pmax to get rid of rowwise
 ## This could be part of more principled approach to patching dates
 ## NOTATE: We are treating presumptive_positive as confirmations
@@ -13,7 +12,7 @@ today <- Sys.Date()
 
 ## Creating a full date frame, this will automatically fill in missing gaps with NA
 ## FIXME: Do we really need this extra step? This will help flag people that there are missing days
-datevec = as.Date(min(dd[["Date"]]):today)
+datevec = as.Date(min(dd[["Date"]]):max(dd[["Date"]]))
 provinces <- unique(dd[["Province"]])
 datedf <- data.frame(Date = rep(datevec,length(provinces))
   , Province = rep(provinces,each=length(datevec))
