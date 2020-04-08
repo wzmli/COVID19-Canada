@@ -27,7 +27,7 @@ plot.Rout: clean.Rout plot.R
 plot_exp.Rout: clean.Rout plot_exp.R
 	$(run-R)
 
-update: clean.Rout.csv plot.png
+update: clean.Rout.csv.gp plot.png.gp
 
 ## git mv CAincidence.png plot.png clean.Rout.csv ON.Rout.pdf git_push ##
 ## git add plot.png CAincidence.png ON.Rout.pdf  ##
