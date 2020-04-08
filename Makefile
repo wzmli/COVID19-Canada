@@ -28,7 +28,7 @@ plot_exp.Rout: clean.Rout plot_exp.R
 update: clean.Rout.csv plot.png
 
 ## git mv CAincidence.png ON.Rout.pdf git_push
-## git add CAincidence.png ON.Rout.pdf  ##
+## git add plot.png CAincidence.png ON.Rout.pdf  ##
 
 Sources += README.md plot.png
 
