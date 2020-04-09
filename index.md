@@ -1,5 +1,18 @@
+This is a public open-resource page for COVID19 data for Canada, 
+maintained by Michael Li at McMaster University.
 
-This is a public open-resource page for COVID19 data for Canada. 
+_last updated: April 8th 20:38 Toronto time_
+
+## Testing Status
+
+_These plots are generated using the curated data_ provided below.
+
+<img src="git_push/plot.png" width="1000" height="500">
+
+## Hospitalization/ICU counts
+
+<img src="git_push/plothosp.png" width="1000" height="500">
+
 
 ## COVID19 Data
 
@@ -24,17 +37,6 @@ Our [*curated* data set](https://github.com/wzmli/COVID19-Canada/blob/master/git
 * corrects minor errors (using [this script](clean.R))
 
 When possible we use summary reports from [the federal outbreak website](https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html) to check our error correction
-
-### Testing Status
-
-_These plots are generated using the curated data_
-
-<img src="git_push/plot.png" width="1000" height="500">
-
-### Hospitalization/ICU counts
-
-<img src="git_push/plothosp.png" width="1000" height="500">
-
 
 ## Other Canadian COVID19 Resources
 
