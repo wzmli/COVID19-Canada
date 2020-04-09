@@ -38,9 +38,7 @@ ddONclean <- (left_join(ddall, ddON)
 )
 
 ddtesting <- (ddONclean
-  %>% select(Date, New_Testing, New_Cases, New_Confirmed,New_Presumptive, Under_Investigation)
-  # %>% mutate(New_Case_ratio = New_Cases/New_Testing
-  #     , New_Confirmed_ratio = New_Confirmed/New_Testing)
+  %>% select(Date, New_Testing, New_Cases, New_Confirmed,Under_Investigation)
   %>% gather(key = "Type", value = "Counts", -Date)
   %>% filter(Counts>0)
 )
@@ -89,6 +87,9 @@ ggicu <- (ggplot(ddicu, aes(x=Date, y=ICU))
 )
 
 print(ggicu)
+
+## This is bad, FIXME or put it in another file. We already share this link with two parties already, cannot ignore them.
+print(ggtesting)
 
 quit()
 
