@@ -47,33 +47,33 @@ AB,2020-03-06,375,NA,NA,0,4,NA,0,NA,NA,NA,NA,WBM,NA
 AB,2020-03-09,1452,NA,NA,0,7,NA,0,NA,NA,NA,NA,WBM,NA
 AB,2020-03-10,2004,NA,NA,0,14,NA,0,NA,NA,NA,NA,WBM,NA
 AB,2020-03-11,2600,NA,NA,0,19,NA,0,NA,NA,NA,NA,WBM,NA
-AB,2020-03-13,5429,NA,NA,0,29,NA,0,NA,NA,NA,NA,WBM,NA
-AB,2020-03-14,7069,NA,NA,0,39,NA,0,NA,NA,NA,NA,https://www.alberta.ca/coronavirus-info-for-albertans.aspx ,NA
-AB,2020-03-15,7069,NA,NA,0,56,NA,0,NA,NA,NA,NA,Input,NA
-AB,2020-03-16,10524,NA,NA,0,74,NA,0,NA,NA,NA,NA,Input,NA
-AB,2020-03-17,12258,NA,NA,0,97,NA,0,NA,NA,NA,NA,Input,NA
-AB,2020-03-18,14447,NA,NA,0,119,NA,0,NA,NA,NA,NA,Input,NA
-AB,2020-03-19,16867,NA,NA,0,146,NA,1,NA,NA,NA,NA,Input,NA
+AB,2020-03-13,5429,NA,NA,0,29,NA,0,NA,1,1,NA,WBM,NA
+AB,2020-03-14,7069,NA,NA,0,39,NA,0,NA,3,2,NA,https://www.alberta.ca/coronavirus-info-for-albertans.aspx ,NA
+AB,2020-03-15,7069,NA,NA,0,56,NA,0,NA,3,2,NA,Input,NA
+AB,2020-03-16,10524,NA,NA,0,74,NA,0,NA,5,2,NA,Input,NA
+AB,2020-03-17,12258,NA,NA,0,97,NA,0,NA,5,2,NA,Input,NA
+AB,2020-03-18,14447,NA,NA,0,119,NA,0,NA,6,3,NA,Input,NA
+AB,2020-03-19,16867,NA,NA,0,146,NA,1,NA,5,2,NA,Input,NA
 AB,2020-03-20,20165,NA,NA,0,195,NA,1,NA,10,5,NA,Input,NA
 AB,2020-03-21,23516,NA,NA,0,226,NA,1,NA,11,6,NA,https://www.alberta.ca/covid-19-alberta-data.aspx ,NA
 AB,2020-03-22,26740,NA,NA,0,259,NA,1,NA,18,7,NA,Input,NA
-AB,2020-03-23,29757,NA,NA,0,301,NA,1,NA,NA,NA,NA,Input,NA
+AB,2020-03-23,29757,NA,NA,0,301,NA,1,NA,18,7,NA,Input,NA
 AB,2020-03-24,32418,NA,NA,0,358,NA,2,NA,19,7,NA,Input,NA
-AB,2020-03-25,35089,NA,NA,0,419,NA,2,NA,24,8,NA,Input,NA
-AB,2020-03-26,36174,NA,NA,0,486,NA,2,NA,NA,NA,NA,Input,NA
-AB,2020-03-27,37673,NA,NA,0,542,NA,2,NA,31,11,NA,Input,NA
-AB,2020-03-28,NA,NA,NA,0,621,NA,2,42527,38,12,NA,Input,"Stop reporting negative test"
-AB,2020-03-29,NA,NA,NA,0,661,NA,3,44999,41,14,NA,Input,NA
-AB,2020-03-30,NA,NA,NA,0,690,NA,3,46057,47,17,NA,Input,NA
-AB,2020-03-31,NA,NA,NA,0,754,NA,9,48692,49,17,NA,Input, "Note: total means individuals tested. New location https://covid19stats.alberta.ca/"
-AB,2020-04-01,NA,NA,NA,0,871,NA,11,53141,62,20,NA,Input, "hosp and ICU numbers filled in using the second link"
-AB,2020-04-02,NA,NA,NA,0,968,NA,13,57096,67,21,NA,Input, NA
-AB,2020-04-03,NA,NA,NA,0,1075,NA,18,61960,75,24,NA,Input, NA
-AB,2020-04-04,NA,NA,NA,0,1181,240,20,64108,75,25,NA,Input, NA
-AB,2020-04-05,NA,NA,NA,0,1250,279,23,64806,84,26,NA,Input,"Filling in cumulative hosp and ICU using WBM"
-AB,2020-04-06,NA,NA,NA,0,1348,361,24,65914,90,31,NA,Input,NA
-AB,2020-04-07,NA,NA,NA,0,1373,447,26,67117,90,31,NA,Input,NA
-AB,2020-04-08,NA,NA,NA,0,1423,519,29,68762,95,32,NA,Input,NA
+AB,2020-03-25,35089,NA,NA,0,419,NA,2,NA,20,8,NA,Input,NA
+AB,2020-03-26,36174,NA,NA,0,486,NA,2,NA,21,10,NA,Input,NA
+AB,2020-03-27,37673,NA,NA,0,542,NA,2,NA,23,10,NA,Input,NA
+AB,2020-03-28,NA,NA,NA,0,621,NA,2,42527,26,11,NA,Input,"Stop reporting negative test"
+AB,2020-03-29,NA,NA,NA,0,661,NA,3,44999,28,12,NA,Input,NA
+AB,2020-03-30,NA,NA,NA,0,690,NA,3,46057,28,11,NA,Input,NA
+AB,2020-03-31,NA,NA,NA,0,754,NA,9,48692,26,11,NA,Input, "Note: total means individuals tested. New location https://covid19stats.alberta.ca/"
+AB,2020-04-01,NA,NA,NA,0,871,NA,11,53141,29,13,NA,Input, "hosp and ICU numbers filled in using the second link"
+AB,2020-04-02,NA,NA,NA,0,968,NA,13,57096,32,14,NA,Input, NA
+AB,2020-04-03,NA,NA,NA,0,1075,NA,18,61960,39,15,NA,Input, NA
+AB,2020-04-04,NA,NA,NA,0,1181,240,20,64108,42,14,NA,Input, NA
+AB,2020-04-05,NA,NA,NA,0,1250,279,23,64806,48,13,NA,Input,"Filling in cumulative hosp and ICU using WBM"
+AB,2020-04-06,NA,NA,NA,0,1348,361,24,65914,40,16,NA,Input,NA
+AB,2020-04-07,NA,NA,NA,0,1373,447,26,67117,42,15,NA,Input,NA
+AB,2020-04-08,NA,NA,NA,0,1423,519,29,68762,44,16,NA,Input,"Hosp/ICU prevalence fill in with : https://www.cbc.ca/news/canada/calgary/alberta-covid-19-data-statistics-numbers-cases-hospitalizations-1.5514947"
 QC,2020-03-04,203,NA,33,0,1,NA,0,NA,NA,NA,NA,WBM,NA
 QC,2020-03-05,242,NA,20,1,2,NA,0,NA,NA,NA,NA,WBM,NA
 QC,2020-03-08,340,NA,10,2,2,NA,0,NA,NA,NA,NA,WBM,NA
@@ -110,28 +110,28 @@ BC,2020-03-13,NA,NA,NA,NA,73,NA,0,6326,NA,NA,NA,http://www.bccdc.ca/health-info/
 BC,2020-03-15,NA,NA,NA,NA,73,4,1,6326,NA,NA,NA,Input,NA
 BC,2020-03-16,NA,NA,NA,NA,103,5,7,6326,NA,NA,NA,Input,NA
 BC,2020-03-17,NA,NA,NA,NA,186,5,7,6326,NA,NA,NA,Input,NA
-BC,2020-03-18,NA,NA,NA,NA,231,5,7,6326,NA,NA,NA,Input,NA
-BC,2020-03-19,NA,NA,NA,NA,271,5,7,6326,NA,NA,NA,Input,NA
-BC,2020-03-20,NA,NA,NA,NA,348,6,9,17912,NA,NA,NA,Input,NA
-BC,2020-03-21,NA,NA,NA,NA,424,6,10,17912,NA,NA,NA,Input,NA
-BC,2020-03-22,NA,NA,NA,NA,424,6,10,21296,NA,NA,NA,Input,"Did not update"
-BC,2020-03-23,NA,NA,NA,NA,539,146,13,26681,83,23,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_23_2020.pdf ,NA
-BC,2020-03-24,NA,NA,NA,NA,617,173,13,26681,96,29,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_24_2020%20Final.pdf ,NA
-BC,2020-03-25,NA,NA,NA,NA,659,183,14,31739,107,41,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_25_final.pdf ,NA
-BC,2020-03-26,NA,NA,NA,NA,725,186,14,34561,110,42,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_26%20Final.pdf ,NA
-BC,2020-03-27,NA,NA,NA,NA,792,275,16,36643,123,46,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_27_final.pdf ,NA
-BC,2020-03-28,NA,NA,NA,NA,884,396,17,38697,NA,NA,NA,Input,NA
-BC,2020-03-29,NA,NA,NA,NA,884,396,17,38697,NA,NA,NA,Input,"Did not update"
-BC,2020-03-30,NA,NA,NA,NA,970,469,19,42028,175,NA,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_30_final.pdf ,NA
-BC,2020-03-31,NA,NA,NA,NA,1013,507,24,43229,204,NA,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_31.pdf ,NA
-BC,2020-04-01,NA,NA,NA,NA,1066,606,25,44639,225,NA,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_1%20Final.pdf ,NA
-BC,2020-04-02,NA,NA,NA,NA,1121,641,31,45966,244,68,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_2%20Final.pdf  ,NA
-BC,2020-04-03,NA,NA,NA,NA,1174,673,35,47352,263,64,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_3%20Final.pdf  ,NA
-BC,2020-04-04,NA,NA,NA,NA,1203,704,38,48508,NA,NA,NA,Input,NA
-BC,2020-04-05,NA,NA,NA,NA,1203,704,38,48508,NA,NA,NA,Input,"did not update"
-BC,2020-04-06,NA,NA,NA,NA,1266,783,39,50350,290,72,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_6_final.pdf ,NA
-BC,2020-04-07,NA,NA,NA,NA,1291,805,43,51423,298,66,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_7.pdf ,"Hosp and ICU data filled in from situation reports; cumulative ICU are avaliable on the last page on the situation report"
-BC,2020-04-08,NA,NA,NA,NA,1336,838,48,52412,309,61,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_8%20final.pdf ,NA
+BC,2020-03-18,NA,NA,NA,NA,231,5,7,6326,13,7,NA,Input,NA
+BC,2020-03-19,NA,NA,NA,NA,271,5,7,6326,17,9,NA,Input,NA
+BC,2020-03-20,NA,NA,NA,NA,348,6,9,17912,22,10,NA,Input,NA
+BC,2020-03-21,NA,NA,NA,NA,424,6,10,17912,15,12,NA,Input,NA
+BC,2020-03-22,NA,NA,NA,NA,424,6,10,21296,17,13,NA,Input,"Did not update"
+BC,2020-03-23,NA,NA,NA,NA,539,146,13,26681,33,14,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_23_2020.pdf ,NA
+BC,2020-03-24,NA,NA,NA,NA,617,173,13,26681,59,23,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_24_2020%20Final.pdf ,NA
+BC,2020-03-25,NA,NA,NA,NA,659,183,14,31739,64,26,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_25_final.pdf ,NA
+BC,2020-03-26,NA,NA,NA,NA,725,186,14,34561,66,26,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_26%20Final.pdf ,NA
+BC,2020-03-27,NA,NA,NA,NA,792,275,16,36643,73,39,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_27_final.pdf ,NA
+BC,2020-03-28,NA,NA,NA,NA,884,396,17,38697,81,52,NA,Input,NA
+BC,2020-03-29,NA,NA,NA,NA,884,396,17,38697,94,56,NA,Input,"Did not update"
+BC,2020-03-30,NA,NA,NA,NA,970,469,19,42028,106,60,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_30_final.pdf ,NA
+BC,2020-03-31,NA,NA,NA,NA,1013,507,24,43229,128,61,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_March_31.pdf ,NA
+BC,2020-04-01,NA,NA,NA,NA,1066,606,25,44639,142,67,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_1%20Final.pdf ,NA
+BC,2020-04-02,NA,NA,NA,NA,1121,641,31,45966,149,68,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_2%20Final.pdf  ,NA
+BC,2020-04-03,NA,NA,NA,NA,1174,673,35,47352,164,64,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_3%20Final.pdf  ,NA
+BC,2020-04-04,NA,NA,NA,NA,1203,704,38,48508,149,68,NA,Input,NA
+BC,2020-04-05,NA,NA,NA,NA,1203,704,38,48508,137,70,NA,Input,"did not update"
+BC,2020-04-06,NA,NA,NA,NA,1266,783,39,50350,140,72,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_6_final.pdf ,NA
+BC,2020-04-07,NA,NA,NA,NA,1291,805,43,51423,138,66,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_7.pdf ,"Hosp and ICU data filled in from situation reports; cumulative ICU are avaliable on the last page on the situation report"
+BC,2020-04-08,NA,NA,NA,NA,1336,838,48,52412,135,61,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_8%20final.pdf , "hosp/icu prevalence filled in: https://www.cbc.ca/news/canada/british-columbia/bc-ontario-quebec-covid-19-1.5524056"
 SK,2020-03-02,45,NA,7,0,0,NA,0,52,NA,NA,NA,WBM,NA
 SK,2020-03-10,263,NA,22,1,0,NA,0,285,NA,NA,NA,WBM,NA
 SK,2020-03-14,452,NA,44,5,1,NA,0,499,NA,NA,NA,https://www.saskatchewan.ca/coronavirus ,NA

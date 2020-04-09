@@ -6,6 +6,9 @@ library(ggforce)
 library(gridExtra)
 library(colorspace)
 
+## use url link?
+ddcapacity <- read_csv("capacity.csv")
+
 label_dat <- (ddclean
     %>% group_by(Province)
     %>% filter(Date == max(Date))
@@ -14,6 +17,7 @@ label_dat <- (ddclean
                , lab_newConfirmations = paste0(Province, ":",newConfirmations)
                , Date = Date+5)
 )
+
 
 ## FIXME:: DRY: how different are these two plots??
 ##  could this be done with faceting?
@@ -108,8 +112,11 @@ ddhosp <- (ddclean
   %>% select(Date, Province, Hospitalization, ICU, Ventilator)
   %>% gather(key="HospType",value="Count",-Date,-Province)
   %>% filter(!is.na(Count)&(Count>0))
+  %>% left_join(.,ddcapacity)
   %>% mutate(Province = factor(Province,levels = c("BC","AB","ON","QC","SK","MB","NB","NS","PEI","NL","YU","NWT","NU")))
 )
+
+
 
 gghosp <- (ggplot(ddhosp, aes(x=Date, y=Count,color=HospType))
        + scale_x_date()
@@ -124,11 +131,13 @@ gghosp <- (ggplot(ddhosp, aes(x=Date, y=Count,color=HospType))
        + geom_line()
        + geom_point()
        # + ggtitle(parse(text="'Cumulative Reported'~bold('Positive')~'Tests'"))
+		 + geom_hline(aes(yintercept=Current), color="red",linetype=2)
        + theme(legend.position = "bottom", axis.title.y=element_blank()
                , axis.text.x = element_text(angle = 45,vjust=0.5)
                , plot.title = element_text(vjust=0,hjust=0.1,size=10))
        + facet_wrap(~Province,nrow=2, scale="free")
        + scale_colour_manual(values=c("black","red","blue"))
+		 + scale_y_log10(breaks=c(1,5,10,30,50,100,200,300,500,600,800))
 
 )
 
