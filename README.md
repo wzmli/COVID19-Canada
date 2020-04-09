@@ -12,6 +12,7 @@ Alberta
 
 - https://www.alberta.ca/covid-19-alberta-data.aspx
 - https://covid19stats.alberta.ca/
+- https://www.cbc.ca/news/canada/calgary/alberta-covid-19-data-statistics-numbers-cases-hospitalizations-1.5514947
 
 Quebec
 
@@ -21,6 +22,7 @@ Quebec
 British Columbia
 
 - http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements 
+- https://www.cbc.ca/news/canada/british-columbia/bc-ontario-quebec-covid-19-1.5524056
 
 Saskatchewan
 

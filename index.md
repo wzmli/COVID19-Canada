@@ -12,13 +12,13 @@ _These plots are generated using the curated data_ provided below.
 ## Hospitalization/ICU counts
 
 <img src="git_push/plothosp.png" width="800" height="400">
-
+Dashed red line represents current ICU capacity.
 
 ## COVID19 Data
 
 All code is available on [the associated repo](https://github.com/wzmli/COVID19-Canada)
 
-Our [*raw* data set](https://github.com/wzmli/COVID19-Canada/blob/master/COVID19_Canada.csv); [direct download](COVID19_Canada.csv) is compiled from available, open sources on the web – primarily provincial-level public health websites, see file for URLs; also see [notes](raw_notes.txt)
+Our [*raw* data set](https://github.com/wzmli/COVID19-Canada/blob/master/COVID19_Canada.csv); [direct download](COVID19_Canada.csv) is compiled from available, open sources on the web – primarily provincial-level public health websites, and news reports. See [README](https://github.com/wzmli/COVID19-Canada/blob/master/README.md) for URLs.
 
 We update once per day around 21:00 Toronto time. 
 
