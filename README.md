@@ -6,7 +6,7 @@ Ontario
 
 - https://www.ontario.ca/page/2019-novel-coronavirus
 - https://covid-19.ontario.ca/
-
+- https://files.ontario.ca/po-covid-19-technical-briefing-en-2020-04-03.pdf
 
 Alberta
 

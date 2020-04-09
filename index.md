@@ -1,17 +1,17 @@
 This is a public open-resource page for COVID19 data for Canada, 
 maintained by [Michael Li](https://wzmli.github.io/) at McMaster University.
 
-_last updated: April 8th 20:38 Toronto time_
+_last updated: April 9th 2:17 Toronto time_
 
 ## Testing Status
 
 _These plots are generated using the curated data_ provided below.
 
-<img src="git_push/plot.png" width="800" height="400">
+<img src="git_push/plot.png" width="900" height="500">
 
 ## Hospitalization/ICU counts
 
-<img src="git_push/plothosp.png" width="800" height="400">
+<img src="git_push/plothosp.png" width="900" height="500">
 
 Dashed red line represents current ICU capacity.
 
