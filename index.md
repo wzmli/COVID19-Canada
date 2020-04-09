@@ -12,6 +12,7 @@ _These plots are generated using the curated data_ provided below.
 ## Hospitalization/ICU counts
 
 <img src="git_push/plothosp.png" width="800" height="400">
+
 Dashed red line represents current ICU capacity.
 
 ## COVID19 Data
