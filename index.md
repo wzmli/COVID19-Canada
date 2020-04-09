@@ -1,11 +1,25 @@
+This is a public open-resource page for COVID19 data for Canada, 
+maintained by [Michael Li](https://wzmli.github.io/) at McMaster University.
 
-This is a public open-resource page for COVID19 data for Canada. 
+_last updated: April 9th 2:17 Toronto time_
+
+## Hospitalization/ICU counts
+
+_These plots are generated using the curated data_ provided below.
+
+<img src="git_push/plothosp.png" width="900" height="500">
+
+Dashed red line represents current ICU capacity allocated to COVID, this line will adjust when we have more details on expansions. This line does not represent the general ICU capacity (which includes all non-COVID cases).
+
+## Testing Status
+
+<img src="git_push/plot.png" width="900" height="500">
 
 ## COVID19 Data
 
 All code is available on [the associated repo](https://github.com/wzmli/COVID19-Canada)
 
-Our [*raw* data set](https://github.com/wzmli/COVID19-Canada/blob/master/COVID19_Canada.csv); [direct download](COVID19_Canada.csv) is compiled from available, open sources on the web – primarily provincial-level public health websites, see file for URLs; also see [notes](raw_notes.txt)
+Our [*raw* data set](https://github.com/wzmli/COVID19-Canada/blob/master/COVID19_Canada.csv); [direct download](COVID19_Canada.csv) is compiled from available, open sources on the web – primarily provincial-level public health websites, and news reports. See [README](https://github.com/wzmli/COVID19-Canada/blob/master/README.md) for URLs.
 
 We update once per day around 21:00 Toronto time. 
 
@@ -24,17 +38,6 @@ Our [*curated* data set](https://github.com/wzmli/COVID19-Canada/blob/master/git
 * corrects minor errors (using [this script](clean.R))
 
 When possible we use summary reports from [the federal outbreak website](https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html) to check our error correction
-
-### Testing Status
-
-_These plots are generated using the curated data_
-
-<img src="git_push/plot.png" width="1000" height="500">
-
-### Hospitalization/ICU counts
-
-<img src="git_push/plothosp.png" width="1000" height="500">
-
 
 ## Other Canadian COVID19 Resources
 

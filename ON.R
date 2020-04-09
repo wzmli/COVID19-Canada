@@ -23,9 +23,13 @@ ddONclean <- (left_join(ddall, ddON)
 	%>% select(Hospitalize = "Number_of_patients_hospitalized_with_COVID-19"
 		, ICU = "Number_of_patients_in_ICU_with_COVID-19"
 		, Ventilator = "Number_of_patients_in_ICU_on_a_ventilator_with_COVID-19"
+		, Testing = "Total_patients_approved_for_testing_as_of_Reporting_Date"
 		, everything()
 		)
-	%>% mutate(New_Positive = diff(c(NA,Confirmed_Positive))
+	%>% mutate(New_Testing = diff(c(NA,Testing))
+	  , New_Cases = diff(c(NA,Total_Cases))
+	  , New_Confirmed = diff(c(NA,Confirmed_Positive))
+	  , New_Presumptive = diff(c(NA,Presumptive_Positive))
 		, New_Hospitalize = diff(c(NA,Hospitalize))
 		, New_ICU = diff(c(NA,ICU))
 		, New_Ventilator = diff(c(NA,Ventilator))
@@ -33,17 +37,61 @@ ddONclean <- (left_join(ddall, ddON)
 	%>% select(Date = Reported_Date, everything())
 )
 
-ddLI <- (read_csv("https://raw.githubusercontent.com/wzmli/COVID19-Canada/master/clean.Rout.csv")
+ddtesting <- (ddONclean
+  %>% select(Date, New_Testing, New_Cases, New_Confirmed,Under_Investigation)
+  %>% gather(key = "Type", value = "Counts", -Date)
+  %>% filter(Counts>0)
+)
+
+ggtesting <- (ggplot(ddtesting, aes(x=Date,y=Counts))
+  + geom_point()
+  + geom_line()
+  + facet_wrap(~Type,ncol=1,scale="free_y")
+)
+
+# print(ggtesting)
+
+ddLI <- (read_csv("https://wzmli.github.io/COVID19-Canada/git_push/clean.Rout.csv")
 	%>% filter(Province == "ON")
 	%>% transmute(Date = Date
 		, cum_positives = confirmed_positive
 		, Hosp_li = Hospitalization
 		, ICU_li = ICU
-		, Vent_li = ventilator
+		, Vent_li = Ventilator
 	)
 )
 
 ONreleasedate <- "2020-04-02"
+
+ddicu <- (ddLI
+	%>% select(Date, ICU=ICU_li)
+	%>% filter(!is.na(ICU))
+)
+
+current <- 600
+current_date <- "2020-03-30"
+
+expansion <- 1300
+expansion_date <- "2020-03-30"
+
+ggicu <- (ggplot(ddicu, aes(x=Date, y=ICU))
+	+ geom_point()
+	+ geom_smooth(method="lm",formula=y~poly(x,2),color="black")
+	+ scale_y_log10(breaks = c(100, 200, 300, 400, 500, 600, 1000,  + 1300))
+	+ geom_hline(yintercept = current,color="red")
+	+ annotate("text", label = "Current Capacity"
+		, x = as.Date(current_date), y = 700, size = 8, color = "red")
+	+ geom_hline(yintercept = expansion, color="blue")
+	+ annotate("text", label = "Expansion Capacity"
+		, x = as.Date(expansion_date), y = 1500, size = 8, color = "blue")
+)
+
+print(ggicu)
+
+## This is bad, FIXME or put it in another file. We already share this link with two parties already, cannot ignore them.
+print(ggtesting)
+
+quit()
 
 ddcombo <-(left_join(ddONclean, ddLI)
 	%>% mutate(positive_diff = Confirmed_Positive + Resolved + Deaths - cum_positives
@@ -87,8 +135,6 @@ print(gghosp
   + ggtitle("LI + ON + PHO")
 )
 
-
-quit()
 
 ddmelt <- (ddnew
 	%>% gather(key="Type", value="Counts",-Reported_Date)
