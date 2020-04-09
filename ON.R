@@ -51,20 +51,46 @@ ggtesting <- (ggplot(ddtesting, aes(x=Date,y=Counts))
   + facet_wrap(~Type,ncol=1,scale="free_y")
 )
 
-print(ggtesting)
+# print(ggtesting)
 
-quit()
-ddLI <- (read_csv("https://raw.githubusercontent.com/wzmli/COVID19-Canada/master/clean.Rout.csv")
+ddLI <- (read_csv("https://wzmli.github.io/COVID19-Canada/git_push/clean.Rout.csv")
 	%>% filter(Province == "ON")
 	%>% transmute(Date = Date
 		, cum_positives = confirmed_positive
 		, Hosp_li = Hospitalization
 		, ICU_li = ICU
-		, Vent_li = ventilator
+		, Vent_li = Ventilator
 	)
 )
 
 ONreleasedate <- "2020-04-02"
+
+ddicu <- (ddLI
+	%>% select(Date, ICU=ICU_li)
+	%>% filter(!is.na(ICU))
+)
+
+current <- 600
+current_date <- "2020-03-30"
+
+expansion <- 1300
+expansion_date <- "2020-03-30"
+
+ggicu <- (ggplot(ddicu, aes(x=Date, y=ICU))
+	+ geom_point()
+	+ geom_smooth(method="lm",formula=y~poly(x,2),color="black")
+	+ scale_y_log10(breaks = c(100, 200, 300, 400, 500, 600, 1000,  + 1300))
+	+ geom_hline(yintercept = current,color="red")
+	+ annotate("text", label = "Current Capacity"
+		, x = as.Date(current_date), y = 700, size = 8, color = "red")
+	+ geom_hline(yintercept = expansion, color="blue")
+	+ annotate("text", label = "Expansion Capacity"
+		, x = as.Date(expansion_date), y = 1500, size = 8, color = "blue")
+)
+
+print(ggicu)
+
+quit()
 
 ddcombo <-(left_join(ddONclean, ddLI)
 	%>% mutate(positive_diff = Confirmed_Positive + Resolved + Deaths - cum_positives
@@ -108,8 +134,6 @@ print(gghosp
   + ggtitle("LI + ON + PHO")
 )
 
-
-quit()
 
 ddmelt <- (ddnew
 	%>% gather(key="Type", value="Counts",-Reported_Date)
