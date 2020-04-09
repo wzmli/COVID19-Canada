@@ -5,13 +5,13 @@ _last updated: April 9th 2:17 Toronto time_
 
 ## Hospitalization/ICU counts
 
+_These plots are generated using the curated data_ provided below.
+
 <img src="git_push/plothosp.png" width="900" height="500">
 
-Dashed red line represents current ICU capacity.
+Dashed red line represents current ICU capacity allocated to COVID, this line will adjust when we have more details on expansions. This line does not represent the general ICU capacity (which includes all non-COVID cases).
 
 ## Testing Status
-
-_These plots are generated using the curated data_ provided below.
 
 <img src="git_push/plot.png" width="900" height="500">
 
