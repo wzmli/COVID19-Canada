@@ -126,7 +126,7 @@ ddhosp <- (ddclean
   %>% filter(!is.na(Count)&(Count>0))
   %>% left_join(.,ddcapacity)
   # %>% left_join(.,hosp_lab_dat)
-  %>% mutate(Province = factor(Province,levels = c("BC","AB","ON","QC","SK","MB","NB","NS","PEI","NL","YU","NWT","NU")))
+  %>% mutate(Province = factor(Province,levels = c("BC","AB","ON","QC","SK","MB","NB","NS","PEI","NL","YT","NT","NU")))
 )
 
 ddhosplab <- (ddhosp
