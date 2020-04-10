@@ -44,6 +44,7 @@ ddclean <- (ddclean
   )
 )
 
+summary(ddclean)
 write.csv(ddclean,csvname)
 
 # ## from https://en.wikipedia.org/wiki/List_of_Canadian_provinces_and_territories_by_population

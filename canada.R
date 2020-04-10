@@ -20,3 +20,5 @@ ggincidence <- (ggplot(ddcountry, aes(x=Date,y=newConfirmations))
 )
 
 print(ggincidence)
+
+print(ggincidence + scale_y_log10())
