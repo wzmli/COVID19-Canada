@@ -6,6 +6,7 @@ library(ggforce)
 library(gridExtra)
 library(colorspace)
 library(grid)
+library(zoo)
 
 ## use url link?
 ddcapacity <- read_csv("capacity.csv")
@@ -114,7 +115,10 @@ print(gg3
 hosp_lab_dat <- (label_dat
 	%>% select(Date, Province, Hospitalization=lab_hosp, ICU=lab_icu, Ventilator=lab_vent)
 	%>% gather(key="HospType",value="labs",-Date,-Province)
-	# %>% mutate(Date = Date - 5)
+	%>% mutate(Date = ifelse(Province %in% c("SK","MB","NS","NL")
+		, Date - 3, Date)
+		, Date = as.Date(Date)
+	)
 )
 
 print(hosp_lab_dat)
