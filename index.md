@@ -9,7 +9,7 @@ _These plots are generated using the curated data_ provided below.
 
 <img src="git_push/plothosp.png" width="900" height="500">
 
-Dashed red line represents current ICU capacity allocated to COVID, this line will adjust when we have more details on expansions. This line does not represent the general ICU capacity (which includes all non-COVID cases). The current ICU capacities used in the plot can be found in the [capacity data set](https://github.com/wzmli/COVID19-Canada/blob/master/capacity.csv).
+Dashed red line represents current ICU capacity allocated to COVID, this line will adjust when we have more details on expansions. This line does not represent the general ICU capacity (which includes all non-COVID cases). The current ICU capacities used in the plot can be found in the [capacity data set](capacity.csv).
 
 ## Testing Status
 
