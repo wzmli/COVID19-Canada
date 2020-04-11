@@ -41,6 +41,7 @@ ON,2020-04-06,NA,NA,329,NA,4347,1624,132,78796,589,216,160,Input, NA
 ON,2020-04-07,NA,NA,691,NA,4726,1802,153,81364,614,233,187,Input, NA
 ON,2020-04-08,NA,NA,1102,NA,5276,2074,174,84601,605,246,195,Input, NA
 ON,2020-04-09,NA,NA,1208,NA,5759,2305,200,88698,632,264,214,Input, NA
+ON,2020-04-10,NA,NA,1598,NA,6237,2574,222,92673,673,260,217,Input, NA
 AB,2020-02-14,76,NA,NA,0,0,NA,0,76,NA,NA,NA,WBM,NA
 AB,2020-02-21,117,NA,NA,0,0,NA,0,117,NA,NA,NA,WBM,NA
 AB,2020-02-28,173,NA,NA,0,0,NA,0,173,NA,NA,NA,WBM,NA
@@ -76,6 +77,7 @@ AB,2020-04-06,NA,NA,NA,0,1348,361,24,65914,40,16,NA,Input,NA
 AB,2020-04-07,NA,NA,NA,0,1373,447,26,67117,42,15,NA,Input,NA
 AB,2020-04-08,NA,NA,NA,0,1423,519,29,68762,44,16,NA,Input,"Hosp/ICU prevalence fill in with : https://www.cbc.ca/news/canada/calgary/alberta-covid-19-data-statistics-numbers-cases-hospitalizations-1.5514947"
 AB,2020-04-09,NA,NA,NA,0,1451,592,32,70247,47,14,NA,Input,NA
+AB,2020-04-10,NA,NA,NA,0,1500,713,39,72370,48,13,NA,Input,NA
 QC,2020-03-04,203,NA,33,0,1,NA,0,NA,NA,NA,NA,WBM,NA
 QC,2020-03-05,242,NA,20,1,2,NA,0,NA,NA,NA,NA,WBM,NA
 QC,2020-03-08,340,NA,10,2,2,NA,0,NA,NA,NA,NA,WBM,NA
@@ -109,6 +111,7 @@ QC,2020-04-06,91533,NA,2942,NA,8580,611,121,NA,533,164,NA,Input, NA
 QC,2020-04-07,95186,NA,2472,NA,9340,720,150,NA,583,164,NA,Input, NA
 QC,2020-04-08,99239,NA,2837,NA,10031,827,175,NA,632,181,NA,Input, NA
 QC,2020-04-09,102463,NA,3270,NA,10912,1112,216,NA,679,196,NA,Input, NA
+QC,2020-04-10,106540,NA,2721,NA,11677,1341,241,NA,733,186,NA,Input, NA
 BC,2020-03-13,NA,NA,NA,NA,73,NA,0,6326,NA,NA,NA,http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements ,NA
 BC,2020-03-15,NA,NA,NA,NA,73,4,1,6326,NA,NA,NA,Input,NA
 BC,2020-03-16,NA,NA,NA,NA,103,5,7,6326,NA,NA,NA,Input,NA
@@ -136,6 +139,7 @@ BC,2020-04-06,NA,NA,NA,NA,1266,783,39,50350,140,72,NA,http://www.bccdc.ca/Health
 BC,2020-04-07,NA,NA,NA,NA,1291,805,43,51423,138,66,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_7.pdf ,"Hosp and ICU data filled in from situation reports; cumulative ICU are avaliable on the last page on the situation report"
 BC,2020-04-08,NA,NA,NA,NA,1336,838,48,52412,135,61,NA,http://www.bccdc.ca/Health-Info-Site/Documents/BC_Surveillance_Summary_April_8%20final.pdf , "hosp/icu prevalence filled in: https://www.cbc.ca/news/canada/british-columbia/bc-ontario-quebec-covid-19-1.5524056"
 BC,2020-04-09,NA,NA,NA,NA,1370,858,50,53505,132,68,NA,Input, NA
+BC,2020-04-10,NA,NA,NA,NA,1410,879,55,53505,128,63,NA,Input, NA
 SK,2020-03-02,45,NA,7,0,0,NA,0,52,NA,NA,NA,WBM,NA
 SK,2020-03-10,263,NA,22,1,0,NA,0,285,NA,NA,NA,WBM,NA
 SK,2020-03-14,452,NA,44,5,1,NA,0,499,NA,NA,NA,https://www.saskatchewan.ca/coronavirus ,NA
@@ -164,6 +168,7 @@ SK,2020-04-06,13433,NA,NA,NA,253,81,3,14178,4,2,NA,Input,NA
 SK,2020-04-07,13949,NA,NA,NA,260,88,3,14722,7,2,NA,Input,NA
 SK,2020-04-08,14794,NA,NA,NA,271,103,3,15621,8,2,NA,Input,NA
 SK,2020-04-09,15786,NA,NA,NA,278,115,3,16672,8,2,NA,Input, "Becareful in hosp/icu reported. hosp should the the total hosp + icu to be consistent with all the provinces"
+SK,2020-04-10,16672,NA,NA,NA,284,136,3,17634,8,2,NA,Input, NA
 MB,2020-03-11,NA,NA,NA,NA,4,NA,0,403,NA,NA,NA,WBM,NA
 MB,2020-03-16,NA,NA,NA,NA,7,NA,0,1871,NA,NA,NA,https://www.gov.mb.ca/covid19/index.html ,NA
 MB,2020-03-17,NA,NA,NA,NA,7,8,0,2280,NA,NA,NA,Input,NA
