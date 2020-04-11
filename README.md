@@ -4,29 +4,35 @@ This is the back end of our [public open-resource page for COVID19 data for Cana
 
 Ontario
 
-- https://www.ontario.ca/page/2019-novel-coronavirus
-- https://covid-19.ontario.ca/
-- https://files.ontario.ca/po-covid-19-technical-briefing-en-2020-04-03.pdf
+- Daily updates : https://covid-19.ontario.ca/
+- April projections : https://files.ontario.ca/po-covid-19-technical-briefing-en-2020-04-03.pdf
+- Old page : https://www.ontario.ca/page/2019-novel-coronavirus
+
 
 Alberta
 
-- https://www.alberta.ca/covid-19-alberta-data.aspx
-- https://covid19stats.alberta.ca/
-- https://www.cbc.ca/news/canada/calgary/alberta-covid-19-data-statistics-numbers-cases-hospitalizations-1.5514947
+- Daily updates : https://covid19stats.alberta.ca/
+- Current Hosp/ICU : https://www.cbc.ca/news/canada/calgary/alberta-covid-19-data-statistics-numbers-cases-hospitalizations-1.5514947
+- April projections : https://www.alberta.ca/assets/documents/covid-19-case-modelling-projection.pdf
+- Old page : https://www.alberta.ca/covid-19-alberta-data.aspx
+
 
 Quebec
 
-- https://www.msss.gouv.qc.ca/professionnels/maladies-infectieuses/coronavirus-2019-ncov 
-- https://www.inspq.qc.ca/covid-19/donnees
+- Daily updates : https://www.inspq.qc.ca/covid-19/donnees
+- April projections : https://cdn-contenu.quebec.ca/cdn-contenu/sante/documents/Problemes_de_sante/covid-19/COVID_potential_scenarios.pdf?1586293655
+- Old page : https://www.msss.gouv.qc.ca/professionnels/maladies-infectieuses/coronavirus-2019-ncov 
 
 British Columbia
 
-- http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements 
-- https://www.cbc.ca/news/canada/british-columbia/bc-ontario-quebec-covid-19-1.5524056
+- Daily updates : http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements 
+- Current Hosp/ICU : https://www.cbc.ca/news/canada/british-columbia/bc-ontario-quebec-covid-19-1.5524056
+- March 27th projections : https://news.gov.bc.ca/files/COVID19_TechnicalBriefing_Mar27_2020.pdf 
 
 Saskatchewan
 
-- https://www.saskatchewan.ca/government/health-care-administration-and-provider-resources/treatment-procedures-and-guidelines/emerging-public-health-issues/2019-novel-coronavirus/cases-and-risk-of-covid-19-in-saskatchewan
+- Daily updates : https://www.saskatchewan.ca/government/health-care-administration-and-provider-resources/treatment-procedures-and-guidelines/emerging-public-health-issues/2019-novel-coronavirus/cases-and-risk-of-covid-19-in-saskatchewan
+- 
 
 Manitoba
 
