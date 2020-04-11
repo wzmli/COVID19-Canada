@@ -36,15 +36,6 @@ ddclean <- (left_join(datedf,dd)
 
 ## ON hospitalization feels like a misread number (replacing with guess number, see note)
 
-ddclean <- (ddclean
-  %>% mutate(Hospitalization = ifelse(
-      (Province == "ON")&(Date == as.Date("2020-03-26"))
-      , 50
-      , Hospitalization
-    )
-  )
-)
-
 summary(ddclean)
 write.csv(ddclean,csvname)
 
