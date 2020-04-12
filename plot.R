@@ -109,21 +109,13 @@ ggcombo <- grid.arrange(gg,gg2,nrow=1)
 print(ggcombo)
 ggsave(plot=ggcombo,filename = "plot.png",width = 10, height = 6)
 
-## Daily new report
+## Daily new confirmation proportion
 gg3 <- (ggplot(ddclean, aes(x=Date, y=prop,color=Province))
         + scale_colour_discrete_qualitative()
         + scale_y_continuous(trans="log2")
         + scale_x_date()
-        + geom_text_repel(data=label_dat,aes(label = lab_newConfirmations)
-                          , hjust = -10
-                          , direction = "y"
-                          , size = 3
-                          # , nudge_y = 5
-                          , segment.color = NA
-                          , show.legend = FALSE
-        )
         + geom_line()
-        + ggtitle(parse(text="'New Reported'~bold('Positive')~'Tests'"))
+        + ggtitle(parse(text="'New Reported Proportion'~bold('Positive')~'Tests'"))
         + theme(legend.position = "none", axis.title.y=element_blank()
                 , plot.title = element_text(vjust=-10,hjust=0.1,size=10))
 )

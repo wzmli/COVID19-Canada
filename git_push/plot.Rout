@@ -1,0 +1,134 @@
+> 
+> # Generated using wrapR file plot.wrapR.r
+> source('plot.R', echo=TRUE)
+
+> library(ggplot2)
+
+> theme_set(theme_bw())
+
+> library(directlabels)
+
+> library(tidyverse)
+
+> library(ggrepel)
+
+> library(ggforce)
+
+> library(gridExtra)
+
+> library(colorspace)
+
+> library(grid)
+
+> library(zoo)
+
+> ddcapacity <- read_csv("capacity.csv")
+
+> label_dat <- (ddclean %>% group_by(Province) %>% filter(Date == 
++     max(Date)) %>% mutate(lab_positives = paste0(Province, ":", 
++     cumConfirm .... [TRUNCATED] 
+
+> ddtoday <- (ddclean %>% group_by(Province) %>% filter(bestTotal == 
++     max(bestTotal)) %>% filter(Date == min(Date)) %>% select(Date, 
++     Prov .... [TRUNCATED] 
+
+> print(ddtoday)
+# A tibble: 13 x 4
+# Groups:   Province [13]
+   Date       Province newTests newConfirmations
+   <date>     <chr>       <dbl>            <dbl>
+ 1 2020-04-11 ON           3648              411
+ 2 2020-04-11 AB           2908               69
+ 3 2020-04-11 QC           4898              615
+ 4 2020-04-09 BC           1093               34
+ 5 2020-04-11 SK            814                5
+ 6 2020-04-11 MB            163               30
+ 7 2020-04-11 NL            206                2
+ 8 2020-04-11 NB            308                0
+ 9 2020-04-11 NS            639               21
+10 2020-04-11 PEI           135                0
+11 2020-04-08 YT             19                1
+12 2020-04-11 NT             37                0
+13 2020-04-09 NU              7                0
+
+> ggtoday <- (ggplot(ddtoday, aes(x = newTests, y = newConfirmations)) + 
++     geom_point() + geom_text(aes(label = Province), vjust = -0.5, 
++     h .... [TRUNCATED] 
+
+> print(ggtoday)
+
+> ddcumreport <- ddclean %>% filter(cumConfirmations > 
++     0)
+
+> gg <- (ggplot(ddcumreport, aes(x = Date, y = cumConfirmations, 
++     color = Province)) + scale_colour_discrete_qualitative() + 
++     scale_y_cont .... [TRUNCATED] 
+
+> print(gg)
+
+> ddcumtest <- ddclean %>% filter(bestTotal > 0)
+
+> gg2 <- (ggplot(ddcumtest, aes(x = Date, y = bestTotal, 
++     color = Province)) + scale_colour_discrete_qualitative() + 
++     scale_y_continuous(t .... [TRUNCATED] 
+
+> print(gg2)
+
+> ggcombo <- grid.arrange(gg, gg2, nrow = 1)
+
+> print(ggcombo)
+TableGrob (1 x 2) "arrange": 2 grobs
+  z     cells    name           grob
+1 1 (1-1,1-1) arrange gtable[layout]
+2 2 (1-1,2-2) arrange gtable[layout]
+
+> ggsave(plot = ggcombo, filename = "plot.png", width = 10, 
++     height = 6)
+
+> gg3 <- (ggplot(ddclean, aes(x = Date, y = prop, color = Province)) + 
++     scale_colour_discrete_qualitative() + scale_y_continuous(trans = "log2") .... [TRUNCATED] 
+
+> print(gg3)
+
+> print(gg3 + geom_line(aes(y = newTests), color = "black") + 
++     facet_wrap_paginate(~Province, nrow = 1, ncol = 1, page = 9))
+
+> hosp_lab_dat <- (label_dat %>% select(Date, Province, 
++     Hospitalization = lab_hosp, ICU = lab_icu, Ventilator = lab_vent) %>% 
++     gather(key .... [TRUNCATED] 
+
+> print(hosp_lab_dat)
+# A tibble: 39 x 4
+# Groups:   Province [13]
+   Date       Province HospType        labs    
+   <date>     <chr>    <chr>           <chr>   
+ 1 2020-04-16 ON       Hospitalization Hosp:691
+ 2 2020-04-16 AB       Hospitalization Hosp:47 
+ 3 2020-04-16 QC       Hospitalization Hosp:778
+ 4 2020-04-16 BC       Hospitalization Hosp:134
+ 5 2020-04-13 SK       Hospitalization Hosp:8  
+ 6 2020-04-13 MB       Hospitalization Hosp:8  
+ 7 2020-04-13 NL       Hospitalization Hosp:6  
+ 8 2020-04-16 NB       Hospitalization Hosp:NA 
+ 9 2020-04-13 NS       Hospitalization Hosp:8  
+10 2020-04-16 PEI      Hospitalization Hosp:NA 
+# … with 29 more rows
+
+> ddhosp <- (ddclean %>% select(Date, Province, Hospitalization, 
++     ICU, Ventilator) %>% gather(key = "HospType", value = "Count", 
++     -Date, - .... [TRUNCATED] 
+
+> ddhosplab <- (ddhosp %>% filter(Date == as.Date(max(Date))) %>% 
++     select(Province, HospType, Count) %>% left_join(hosp_lab_dat, 
++     .) %>% u .... [TRUNCATED] 
+
+> gghosp <- (ggplot(ddhosp, aes(x = Date, y = Count, 
++     color = HospType)) + geom_text_repel(data = ddhosplab, aes(label = labs), 
++     hjust = - .... [TRUNCATED] 
+
+> print(gghosp)
+
+> ggsave(plot = gghosp, filename = "plothosp.png", width = 12, 
++     height = 6)
+> # Wrapped output file plot.wrapR.rout
+> 
