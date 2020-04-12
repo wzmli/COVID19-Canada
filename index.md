@@ -15,6 +15,8 @@ Dashed red line represents current ICU capacity allocated to COVID, this line wi
 
 <img src="git_push/ggtoday.png" width="700" height="500">
 
+BC, YT, and NU did not update number of new test today.
+
 ## COVID19 Data
 
 All code is available on [the associated repo](https://github.com/wzmli/COVID19-Canada)
