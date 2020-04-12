@@ -11,9 +11,9 @@ _These plots are generated using the curated data_ provided below.
 
 Dashed red line represents current ICU capacity allocated to COVID, this line will adjust when we have more details on expansions. This line does not represent the general ICU capacity (which includes all non-COVID cases). The current ICU capacities used in the plot can be found in the [capacity data set](capacity.csv).
 
-## Testing Status
+## Positive Proportion of test today
 
-<img src="git_push/plot.png" width="900" height="500">
+<img src="git_push/ggtoday.png" width="700" height="500">
 
 ## COVID19 Data
 
