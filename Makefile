@@ -26,7 +26,7 @@ Sources += $(wildcard *.R)
 
 Sources += raw_notes.txt
 Sources += COVID19_Canada.csv
-
+Sources += capacity.csv
 ## clean.Rout.csv: clean.R ;
 clean.Rout: COVID19_Canada.csv clean.R
 	$(run-R)

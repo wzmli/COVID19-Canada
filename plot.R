@@ -20,8 +20,32 @@ label_dat <- (ddclean
 					, lab_hosp = paste0("Hosp",":",Hospitalization)
 					, lab_icu = paste0("ICU",":",ICU)
 					, lab_vent = paste0("Vent",":",Ventilator)
+					, lab_prop = paste0(Province,":",prop,"%")
                , Date = Date+5)
 )
+
+## Working on today code
+
+ddtoday <- (ddclean
+	%>% group_by(Province)
+	%>% filter(bestTotal == max(bestTotal))
+	%>% filter(Date == min(Date))
+	%>% select(Date, Province, newTests, newConfirmations)
+)
+
+print(ddtoday)
+
+
+ggtoday <- (ggplot(ddtoday, aes(x=newTests, y=newConfirmations))
+	+ geom_point()
+	+ geom_text(aes(label=Province),vjust=-0.5,hjust=-0.2)
+	+ xlim(c(1,NA))
+	+ scale_x_log10(breaks=ddtoday$newTests)
+	+ scale_y_log10(breaks=ddtoday$newConfirmations)
+	+ theme(axis.text.x = element_text(angle = 70,vjust=0.3))
+)
+
+print(ggtoday)
 
 
 ## FIXME:: DRY: how different are these two plots??
@@ -86,7 +110,7 @@ print(ggcombo)
 ggsave(plot=ggcombo,filename = "plot.png",width = 10, height = 6)
 
 ## Daily new report
-gg3 <- (ggplot(ddclean, aes(x=Date, y=newConfirmations,color=Province))
+gg3 <- (ggplot(ddclean, aes(x=Date, y=prop,color=Province))
         + scale_colour_discrete_qualitative()
         + scale_y_continuous(trans="log2")
         + scale_x_date()

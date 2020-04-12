@@ -30,6 +30,7 @@ ddclean <- (left_join(datedf,dd)
 		newConfirmations = diff(c(NA,cumConfirmations))
 		, newConfirmations = ifelse(newConfirmations <0, 0, newConfirmations) ## Help fix missing reporting days
 		, newTests = diff(c(NA, bestTotal))
+		, prop = newConfirmations/newTests
 	)
 	%>% ungroup()
 )
