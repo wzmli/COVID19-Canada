@@ -1,7 +1,7 @@
 Province,Current,Expansion,Source,Note
 ON,630,1300,https://files.ontario.ca/po-covid-19-technical-briefing-en-2020-04-03.pdf, NA
 NL, 57, NA, http://ntv.ca/province-releases-projections-for-covid-19/ , "See video for explanations https://youtu.be/Ul9SZNpVD2M?t=3139"
-AB, 100, 1081, https://www.alberta.ca/assets/documents/covid-19-case-modelling-projection.pdf
+AB, 100, 1081, https://www.alberta.ca/assets/documents/covid-19-case-modelling-projection.pdf , NA
 QC, 633, NA, https://cdn-contenu.quebec.ca/cdn-contenu/sante/documents/Problemes_de_sante/covid-19/COVID_potential_scenarios.pdf?1586293655, NA
 BC, 206, NA, https://news.gov.bc.ca/files/COVID19_TechnicalBriefing_Mar27_2020.pdf , "Only using ICU in Primary COVID Sites"
 SK, 98, NA, https://www.saskatchewan.ca/-/media/news-release-backgrounders/2020/apr/health-system-readiness-for-covid-19.pdf , NA 

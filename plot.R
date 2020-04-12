@@ -27,26 +27,40 @@ label_dat <- (ddclean
 ## Working on today code
 
 ddtoday <- (ddclean
-	%>% group_by(Province)
-	%>% filter(bestTotal == max(bestTotal))
-	%>% filter(Date == min(Date))
-	%>% select(Date, Province, newTests, newConfirmations)
+	%>% filter(Date == max(Date))
+	%>% select(Date, Province, newTests, newConfirmations, prop)
 )
 
-print(ddtoday)
+print(didnotupdate <- (ddtoday
+	%>% filter(newTests < 1)
+)
+)
 
+ddtoday <- ddtoday %>% filter(newTests>0)
 
-ggtoday <- (ggplot(ddtoday, aes(x=newTests, y=newConfirmations))
-	+ geom_point()
-	+ geom_text(aes(label=Province),vjust=-0.5,hjust=-0.2)
-	+ xlim(c(1,NA))
-	+ scale_x_log10(breaks=ddtoday$newTests)
-	+ scale_y_log10(breaks=ddtoday$newConfirmations)
-	+ theme(axis.text.x = element_text(angle = 70,vjust=0.3))
+ddslopes <- data.frame(x=c(1,1,1,1)
+	, y = c(0.02,0.05,0.1,0.15)
+	, xend = c(1000/0.02, 1000/0.05, 1000/0.1, 1000/0.15)
+	, yend = c(1000,1000,1000,1000)
+)
+
+print(ddslopes)
+
+ggtoday <- (ggplot(ddtoday, aes(x=newTests))
+	+ geom_point(aes(y=newConfirmations,color=prop))
+	+ geom_segment(data=ddslopes,aes(x=x,y=y,xend=xend,yend=yend,color=y))
+	+ geom_text(data=ddslopes,aes(x=x,y=y,label=y,color=y))
+	+ geom_text(aes(y=newConfirmations,label=Province),vjust=-0.5,hjust=-0.2)
+	+ xlim(c(1,7000))
+	+ ylim(c(0.01,800))
+	+ scale_x_log10(breaks=c(1,ddtoday$newTests, 10000))
+	+ scale_y_log10(breaks=c(0.001,ddtoday$newConfirmations,1000))
+	+ theme(axis.text.x = element_text(angle = 70,vjust=0.3)
+		, panel.grid.minor = element_blank())
+	+  scale_colour_gradient(low = "blue", high = "red", na.value = NA)
 )
 
 print(ggtoday)
-
 
 ## FIXME:: DRY: how different are these two plots??
 ##  could this be done with faceting?
