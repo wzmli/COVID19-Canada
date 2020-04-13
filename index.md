@@ -1,7 +1,7 @@
 This is a public open-resource page for COVID19 data for Canada, 
 maintained by [Michael Li](https://wzmli.github.io/) at McMaster University.
 
-_last updated: April 11th 20:43 Toronto time_
+_last updated: April 12th 21:11 Toronto time_
 
 ## Hospitalization/ICU counts
 
@@ -15,7 +15,7 @@ Dashed red line represents current ICU capacity allocated to COVID, this line wi
 
 <img src="git_push/ggtoday.png" width="700" height="500">
 
-BC, YT, and NU did not update number of new test today.
+BC, PEI, YT, and NU did not update number of new test today.
 
 ## COVID19 Data
 
