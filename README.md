@@ -25,7 +25,8 @@ Quebec
 
 British Columbia
 
-- Daily updates : http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements 
+- Daily updates : http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements
+- Alternative : https://bc.ctvnews.ca/b-c-s-top-health-officials-to-give-an-update-on-novel-coronavirus-1.4893775
 - Current Hosp/ICU : https://www.cbc.ca/news/canada/british-columbia/bc-ontario-quebec-covid-19-1.5524056
 - Projections : https://news.gov.bc.ca/files/COVID19_TechnicalBriefing_Mar27_2020.pdf 
 
