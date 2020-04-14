@@ -9,7 +9,11 @@ library(grid)
 library(zoo)
 
 ## use url link?
-ddcapacity <- read_csv("capacity.csv")
+ddcapacity <- (read_csv("capacity.csv")
+#	%>% mutate(Province = factor(Province)
+#	      , Province = factor(Province,levels = c("BC","AB","ON","QC","SK", "MB","NB","NS","PEI","NL","YT","NT","NU")
+#			, labels = c("British Columbia", "Alberta", "Ontario", "Quebec", "Saskatchewan", "Manitoba", "New Brunswick","Nova Scotia", "Prince Edward Island", "Newfoundland", "Yukon", "Northwest Territories","Nunavut")))
+)
 
 label_dat <- (ddclean
     %>% group_by(Province)
@@ -21,7 +25,9 @@ label_dat <- (ddclean
 					, lab_icu = paste0("ICU",":",ICU)
 					, lab_vent = paste0("Vent",":",Ventilator)
 					, lab_prop = paste0(Province,":",prop,"%")
-               , Date = Date+5)
+               , Date = Date+5
+					)
+	 %>% ungroup()
 )
 
 ## Working on today code
@@ -32,11 +38,14 @@ ddtoday <- (ddclean
 )
 
 print(didnotupdate <- (ddtoday
-	%>% filter(newTests < 1)
+	%>% filter(is.na(newTests))
 )
 )
 
 ddtoday <- ddtoday %>% filter(newTests>0)
+
+print(ddtoday)
+
 
 ddslopes <- data.frame(x=c(1,1,1,1)
 	, y = c(0.02,0.05,0.1,0.15)
@@ -53,7 +62,7 @@ ggtoday <- (ggplot(ddtoday, aes(x=newTests))
 	+ geom_text(aes(y=newConfirmations,label=Province),vjust=-0.5,hjust=-0.2)
 	+ xlim(c(1,7000))
 	+ ylim(c(0.01,800))
-	+ scale_x_log10(breaks=c(1,ddtoday$newTests, 10000))
+	+ scale_x_log10(breaks=c(1,ddtoday$newTests[-length(nrow(ddtoday))], 10000))
 	+ scale_y_log10(breaks=c(0.001,ddtoday$newConfirmations,1000))
 	+ theme(axis.text.x = element_text(angle = 65,vjust=0.65,hjust=1)
 		, panel.grid.minor = element_blank())
@@ -151,7 +160,9 @@ hosp_lab_dat <- (label_dat
 	%>% mutate(Date = ifelse(Province %in% c("SK","MB","NS","NL")
 		, Date - 3, Date)
 		, Date = as.Date(Date)
-	)
+	 	, Province = factor(Province)
+		, Province = factor(Province,levels = c("BC","AB","ON","QC","SK","MB","NB","NS","PEI","NL","YT","NT","NU")
+		, labels = c("British Columbia", "Alberta", "Ontario", "Quebec",  "Saskatchewan", "Manitoba", "New Brunswick","Nova Scotia", "Prince Edward Island", "Newfoundland", "Yukon", "Northwest Territories","Nunavut"))) 
 )
 
 print(hosp_lab_dat)
@@ -163,24 +174,29 @@ ddhosp <- (ddclean
   %>% filter(!is.na(Count)&(Count>0))
   %>% left_join(.,ddcapacity)
   # %>% left_join(.,hosp_lab_dat)
-  %>% mutate(Province = factor(Province,levels = c("BC","AB","ON","QC","SK","MB","NB","NS","PEI","NL","YT","NT","NU")))
+  %>% mutate(Province = factor(Province,levels = c("BC","AB","ON","QC","SK","MB","NB","NS","PEI","NL","YT","NT","NU")
+  	, , labels = c("British Columbia", "Alberta", "Ontario", "Quebec", "Saskatchewan", "Manitoba", "New Brunswick","Nova Scotia", "Prince Edward Island", "Newfoundland", "Yukon", "Northwest Territories", "Nunavut")))
 )
+
+print(ddhosp)
 
 ddhosplab <- (ddhosp
   %>% filter(Date == as.Date(max(Date)))
   %>% select(Province,HospType,Count)
   %>% left_join(hosp_lab_dat,.)
   %>% ungroup()
-  %>% mutate(Province = factor(Province,levels = c("BC","AB","ON","QC","SK","MB","NB","NS","PEI","NL","YU","NWT","NU"))
-             # , Date = Date - 5
-  )
-  %>% filter(Province %in% c("AB","BC","ON","QC","SK","MB","NS","NL"))
+  %>% filter(Province %in% c("Alberta","British Columbia","Ontario","Quebec","Saskatchewan","Manitoba","Nova Scotia","Newfoundland"))
+#  %>% mutate(Province = factor(Province
+#  	,	levels = c("BC","AB","ON","QC","SK","MB","NB","NS","PEI","NL","YU","NWT","NU")
+#  	, labels = c("British Columbia", "Alberta", "Ontario", "Quebec", "Saskatchewan", "Manitoba", "New Brunswick","Nova Scotia", "Prince Edward Island", "Newfoundland", "Yukon", "Northwest Territories", "Nunavut")
+#	)
+#  )
 )
 
-
+print(ddhosplab)
 
 gghosp <- (ggplot(ddhosp, aes(x=Date, y=Count,color=HospType))
-		 + geom_text_repel(data=ddhosplab,aes(label = labs)
+		 + geom_text_repel(data=ddhosplab,aes(x=Date,label = labs)
                           , hjust = -20
 		                      , vjust= 2
                           , direction = "y"
@@ -199,7 +215,7 @@ gghosp <- (ggplot(ddhosp, aes(x=Date, y=Count,color=HospType))
        + facet_wrap(~Province,nrow=2, scale="free")
        + scale_colour_manual(values=c("black","red","blue"))
 		 + scale_y_log10(breaks=c(1,5,10,30,50,100,200,300,600,800))
-
+		 + ylab("Prevalence (Current Occupancy)")
 )
 
 print(gghosp)

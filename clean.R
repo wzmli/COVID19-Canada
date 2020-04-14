@@ -28,8 +28,9 @@ ddclean <- (left_join(datedf,dd)
 	%>% group_by(Province)
 	%>% mutate(
 		newConfirmations = diff(c(NA,cumConfirmations))
-		, newConfirmations = ifelse(newConfirmations <0, 0, newConfirmations) ## Help fix missing reporting days
+		, newConfirmations = ifelse(newConfirmations <0, NA, newConfirmations) ## Help fix missing reporting days
 		, newTests = diff(c(NA, bestTotal))
+		, newTests = ifelse(newTests <= 0, NA, newTests)
 		, prop = newConfirmations/newTests
 	)
 	%>% ungroup()
