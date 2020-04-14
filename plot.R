@@ -208,7 +208,7 @@ gghosp <- (ggplot(ddhosp, aes(x=Date, y=Count,color=HospType))
        + geom_line()
        + geom_point()
 		 + geom_hline(aes(yintercept=Current), color="red",linetype=2)
-       + theme(legend.position = "bottom", axis.title.y=element_blank()
+       + theme(legend.position = "bottom"
                , axis.text.x = element_text(angle = 45,vjust=0.5)
                , plot.title = element_text(vjust=0,hjust=0.1,size=10)
 					, strip.background = element_blank())
