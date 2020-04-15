@@ -15,7 +15,7 @@ Dashed red line represents current ICU capacity allocated to COVID, this line wi
 
 <img src="git_push/ggtoday.png" width="700" height="500">
 
-BC did not update number of new test today.
+BC, YT and NU did not update number of new test today.
 
 ## COVID19 Data
 
