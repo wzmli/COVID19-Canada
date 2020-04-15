@@ -19,6 +19,10 @@ colnames(ddON) <- cleanname(colnames(ddON))
 
 ddall <- data.frame(Reported_Date = as.Date(min(ddON[["Reported_Date"]]):max(ddON[["Reported_Date"]])))
 
+print(tail(ddall))
+
+quit()
+
 ddONclean <- (left_join(ddall, ddON)
 	%>% select(Hospitalize = "Number_of_patients_hospitalized_with_COVID-19"
 		, ICU = "Number_of_patients_in_ICU_with_COVID-19"

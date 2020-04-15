@@ -22,7 +22,7 @@ ddclean <- (left_join(datedf,dd)
 	%>% rowwise()
 	%>% mutate(calcTotal = sum(c(negative,presumptive_negative,presumptive_positive,confirmed_positive), na.rm=TRUE)
 		, bestTotal = max(c(calcTotal,total_testing),na.rm=TRUE)
-	, cumConfirmations = sum(c(presumptive_positive,confirmed_positive),na.rm=TRUE)  ## This is to be consistent with Federal definition of a "Case"
+	, cumConfirmations = sum(c(confirmed_positive),na.rm=TRUE)  ## This is to be consistent with Federal definition of a "Case; however, if sum doesn't change but numbers changed, that is not good. Removing the sum."
 	)
 	%>% ungroup()
 	%>% group_by(Province)
