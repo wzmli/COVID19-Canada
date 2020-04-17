@@ -25,7 +25,8 @@ Quebec
 
 British Columbia
 
-- Daily updates : http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements
+- Daily updates : https://experience.arcgis.com/experience/a6f23959a8b14bfa989e3cda29297ded
+- Old page updates : http://www.bccdc.ca/health-info/diseases-conditions/covid-19/case-counts-press-statements
 - Alternative : https://bc.ctvnews.ca/b-c-s-top-health-officials-to-give-an-update-on-novel-coronavirus-1.4893775
 - Current Hosp/ICU : https://www.cbc.ca/news/canada/british-columbia/bc-ontario-quebec-covid-19-1.5524056
 - Projections : https://news.gov.bc.ca/files/COVID19_TechnicalBriefing_Mar27_2020.pdf 
@@ -46,8 +47,9 @@ Newfoundland & Labrador
 
 New Brunswick
 
-- Daily updates : https://www2.gnb.ca/content/gnb/en/departments/ocmoh/cdc/content/respiratory_diseases/coronavirus.html
-- Daily updates : https://www2.gnb.ca/content/gnb/en/departments/ocmoh/cdc/content/respiratory_diseases/coronavirus/testing-by-the-numbers.html
+- Daily updates : https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/maps_graphs.html
+- Old page : https://www2.gnb.ca/content/gnb/en/departments/ocmoh/cdc/content/respiratory_diseases/coronavirus.html
+- Old page : https://www2.gnb.ca/content/gnb/en/departments/ocmoh/cdc/content/respiratory_diseases/coronavirus/testing-by-the-numbers.html
 - Projections : https://www2.gnb.ca/content/dam/gnb/Departments/h-s/pdf/Modelling.pdf
 
 Nova Scotia 
