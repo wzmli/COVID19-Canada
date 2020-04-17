@@ -63,7 +63,7 @@ ggtoday <- (ggplot(ddtoday, aes(x=newTests))
 	+ xlim(c(1,7000))
 	+ ylim(c(0.01,800))
 	+ scale_x_log10(breaks=c(1,ddtoday$newTests[-length(nrow(ddtoday))], 10000))
-	+ scale_y_log10(breaks=c(0.001,ddtoday$newConfirmations,1000))
+	+ scale_y_log10(breaks=c(0.001,ddtoday$newConfirmations))
 	+ theme(axis.text.x = element_text(angle = 65,vjust=0.65,hjust=1)
 		, panel.grid.minor = element_blank())
 	+  scale_colour_gradient(low = "blue", high = "red", na.value = NA)
@@ -72,7 +72,7 @@ ggtoday <- (ggplot(ddtoday, aes(x=newTests))
 )
 
 print(ggtoday)
-ggsave(ggtoday, filename="ggtoday.png", width = 7, height=5) 
+ggsave(ggtoday, filename="ggtoday.png", width = 9, height=5) 
 
 ## FIXME:: DRY: how different are these two plots??
 ##  could this be done with faceting?
