@@ -25,7 +25,7 @@ label_dat <- (ddclean
 					, lab_icu = paste0("ICU",":",ICU)
 					, lab_vent = paste0("Vent",":",Ventilator)
 					, lab_prop = paste0(Province,":",prop,"%")
-               , Date = Date+5
+               , Date = Date+8
 					)
 	 %>% ungroup()
 )
@@ -42,7 +42,13 @@ print(didnotupdate <- (ddtoday
 )
 )
 
-ddtoday <- ddtoday %>% filter(newTests>0)
+ddtoday <- (ddtoday 
+	%>% filter(newTests>0)
+	## Temp hack to today's labels
+	%>% mutate(Province = ifelse(Province == "MB", "MB NB", Province)
+		, Province = ifelse(Province == "NB", "", Province)
+		)
+)
 
 print(ddtoday)
 
@@ -158,7 +164,7 @@ hosp_lab_dat <- (label_dat
 	%>% select(Date, Province, Hospitalization=lab_hosp, ICU=lab_icu, Ventilator=lab_vent)
 	%>% gather(key="HospType",value="labs",-Date,-Province)
 	%>% mutate(Date = ifelse(Province %in% c("SK","MB","NS","NL")
-		, Date - 3, Date)
+		, Date - 2, Date)
 		, Date = as.Date(Date)
 	 	, Province = factor(Province)
 		, Province = factor(Province,levels = c("BC","AB","ON","QC","SK","MB","NB","NS","PEI","NL","YT","NT","NU")
