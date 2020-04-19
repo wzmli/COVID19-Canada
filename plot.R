@@ -21,6 +21,7 @@ label_dat <- (ddclean
     %>% mutate(lab_positives = paste0(Province,":",cumConfirmations)
                , lab_total = paste0(Province,":",bestTotal)
                , lab_newConfirmations = paste0(Province, ":",newConfirmations)
+					, lab_death = paste0("Death",":",deceased)
 					, lab_hosp = paste0("Hosp",":",Hospitalization)
 					, lab_icu = paste0("ICU",":",ICU)
 					, lab_vent = paste0("Vent",":",Ventilator)
@@ -161,7 +162,7 @@ print(gg3
 
 
 hosp_lab_dat <- (label_dat
-	%>% select(Date, Province, Hospitalization=lab_hosp, ICU=lab_icu, Ventilator=lab_vent)
+	%>% select(Date, Province, Hospitalization=lab_hosp, ICU=lab_icu, Ventilator=lab_vent, Death = lab_death)
 	%>% gather(key="HospType",value="labs",-Date,-Province)
 	%>% mutate(Date = ifelse(Province %in% c("SK","MB","NB","NS","NL")
 		, Date - 2, Date)
@@ -171,13 +172,14 @@ hosp_lab_dat <- (label_dat
 		, labels = c("British Columbia", "Alberta", "Ontario", "Quebec",  "Saskatchewan", "Manitoba", "New Brunswick","Nova Scotia", "Prince Edward Island", "Newfoundland", "Yukon", "Northwest Territories","Nunavut"))) 
 )
 
-print(hosp_lab_dat)
+print(hosp_lab_dat,n=100)
 
 ## Hospitalization
 ddhosp <- (ddclean
-  %>% select(Date, Province, Hospitalization, ICU, Ventilator)
+  %>% select(Date, Province, Hospitalization, ICU, Ventilator, Death=deceased)
   %>% gather(key="HospType",value="Count",-Date,-Province)
   %>% filter(!is.na(Count)&(Count>0))
+  %>% filter(HospType != "Death")
   %>% left_join(.,ddcapacity)
   # %>% left_join(.,hosp_lab_dat)
   %>% mutate(Province = factor(Province,levels = c("BC","AB","ON","QC","SK","MB","NB","NS","PEI","NL","YT","NT","NU")
@@ -186,10 +188,12 @@ ddhosp <- (ddclean
 
 print(ddhosp)
 
+
 ddhosplab <- (ddhosp
   %>% filter(Date == as.Date(max(Date)))
   %>% select(Province,HospType,Count)
   %>% left_join(hosp_lab_dat,.)
+  %>% filter(HospType != "Death")
   %>% ungroup()
   %>% filter(Province %in% c("Alberta","British Columbia","Ontario","Quebec","Saskatchewan","Manitoba","New Brunswick","Nova Scotia","Newfoundland"))
 #  %>% mutate(Province = factor(Province
@@ -201,10 +205,11 @@ ddhosplab <- (ddhosp
 
 print(ddhosplab)
 
+
 gghosp <- (ggplot(ddhosp, aes(x=Date, y=Count,color=HospType))
 		 + geom_text_repel(data=ddhosplab,aes(x=Date,label = labs)
                           , hjust = -20
-		                      , vjust= 4
+		                      , vjust= 3.5
                           , direction = "y"
                           , size = 3
                           # , nudge_y = 5
@@ -213,7 +218,7 @@ gghosp <- (ggplot(ddhosp, aes(x=Date, y=Count,color=HospType))
         )
 #		+ geom_dl(data=ddhosplab,aes(x=Date,label = labs), method=list(cex=1,'last.bumpup'),size=4)
        + geom_line()
-       + geom_point()
+       + geom_point(size=0.5)
 		 + geom_hline(aes(yintercept=Current), color="red",linetype=2)
        + theme(legend.position = "bottom"
                , axis.text.x = element_text(angle = 45,vjust=0.5)
