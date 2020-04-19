@@ -25,7 +25,7 @@ label_dat <- (ddclean
 					, lab_icu = paste0("ICU",":",ICU)
 					, lab_vent = paste0("Vent",":",Ventilator)
 					, lab_prop = paste0(Province,":",prop,"%")
-               , Date = Date+8
+               , Date = Date + 5
 					)
 	 %>% ungroup()
 )
@@ -163,7 +163,7 @@ print(gg3
 hosp_lab_dat <- (label_dat
 	%>% select(Date, Province, Hospitalization=lab_hosp, ICU=lab_icu, Ventilator=lab_vent)
 	%>% gather(key="HospType",value="labs",-Date,-Province)
-	%>% mutate(Date = ifelse(Province %in% c("SK","MB","NS","NL")
+	%>% mutate(Date = ifelse(Province %in% c("SK","MB","NB","NS","NL")
 		, Date - 2, Date)
 		, Date = as.Date(Date)
 	 	, Province = factor(Province)
@@ -191,7 +191,7 @@ ddhosplab <- (ddhosp
   %>% select(Province,HospType,Count)
   %>% left_join(hosp_lab_dat,.)
   %>% ungroup()
-  %>% filter(Province %in% c("Alberta","British Columbia","Ontario","Quebec","Saskatchewan","Manitoba","Nova Scotia","Newfoundland"))
+  %>% filter(Province %in% c("Alberta","British Columbia","Ontario","Quebec","Saskatchewan","Manitoba","New Brunswick","Nova Scotia","Newfoundland"))
 #  %>% mutate(Province = factor(Province
 #  	,	levels = c("BC","AB","ON","QC","SK","MB","NB","NS","PEI","NL","YU","NWT","NU")
 #  	, labels = c("British Columbia", "Alberta", "Ontario", "Quebec", "Saskatchewan", "Manitoba", "New Brunswick","Nova Scotia", "Prince Edward Island", "Newfoundland", "Yukon", "Northwest Territories", "Nunavut")
@@ -204,13 +204,14 @@ print(ddhosplab)
 gghosp <- (ggplot(ddhosp, aes(x=Date, y=Count,color=HospType))
 		 + geom_text_repel(data=ddhosplab,aes(x=Date,label = labs)
                           , hjust = -20
-		                      , vjust= 2
+		                      , vjust= 4
                           , direction = "y"
                           , size = 3
                           # , nudge_y = 5
                           , segment.color = NA
                           , show.legend = FALSE
         )
+#		+ geom_dl(data=ddhosplab,aes(x=Date,label = labs), method=list(cex=1,'last.bumpup'),size=4)
        + geom_line()
        + geom_point()
 		 + geom_hline(aes(yintercept=Current), color="red",linetype=2)
@@ -218,11 +219,12 @@ gghosp <- (ggplot(ddhosp, aes(x=Date, y=Count,color=HospType))
                , axis.text.x = element_text(angle = 45,vjust=0.5)
                , plot.title = element_text(vjust=0,hjust=0.1,size=10)
 					, strip.background = element_blank())
-       + facet_wrap(~Province,nrow=2, scale="free")
+       + facet_wrap(~Province,nrow=3, scale="free")
        + scale_colour_manual(values=c("black","red","blue"))
 		 + scale_y_log10(breaks=c(1,5,10,30,50,100,200,300,600,800))
 		 + ylab("Prevalence (Current Occupancy)")
+#		 + xlim(c(as.Date(min(ddhosp$Date)),as.Date(max(ddhosp$Date)+8)))
 )
 
 print(gghosp)
-ggsave(plot=gghosp,filename = "plothosp.png",width = 12, height = 6)
+ggsave(plot=gghosp,filename = "plothosp.png",width = 12, height = 9)
