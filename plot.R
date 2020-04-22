@@ -46,18 +46,20 @@ print(didnotupdate <- (ddtoday
 ddtoday <- (ddtoday 
 	%>% filter(newTests>0)
 	## Temp hack to today's labels
-	%>% mutate(Province = ifelse(Province == "NT", "NT NU", Province)
-		, Province = ifelse(Province == "NU", "", Province)
+	%>% mutate(Province = ifelse(Province == "NB", "NB MB", Province)
+		, Province = ifelse(Province == "MB", "", Province)
 		)
+	%>% ungroup()
+	%>% arrange(newTests)
 )
 
 print(ddtoday)
 
 
-ddslopes <- data.frame(x=c(1,1,1,1)
-	, y = c(0.02,0.05,0.1,0.15)
-	, xend = c(10000, 10000, 1000/0.1, 1000/0.15)
-	, yend = c(200,500,1000,1000)
+ddslopes <- data.frame(x=c(1,1,1,1,1)
+	, y = c(0.02,0.05,0.1,0.15,0.2)
+	, xend = c(10000, 10000, 1000/0.1, 1000/0.15,1000/0.2)
+	, yend = c(200,500,1000,1000,1000)
 )
 
 print(ddslopes)
@@ -69,8 +71,8 @@ ggtoday <- (ggplot(ddtoday, aes(x=newTests))
 	+ geom_text(aes(y=newConfirmations,label=Province),vjust=-0.5,hjust=-0.2)
 	+ xlim(c(1,7000))
 	+ ylim(c(0.01,800))
-	+ scale_x_log10(breaks=c(1,ddtoday$newTests, 10000))
-	+ scale_y_log10(breaks=c(0.001,ddtoday$newConfirmations))
+	+ scale_x_log10(breaks=c(1,ddtoday$newTests[c(1,2,3,4,6,8,10,11)]))
+	+ scale_y_log10(breaks=c(0.001,ddtoday$newConfirmations,1000))
 	+ theme(axis.text.x = element_text(angle = 65,vjust=0.65,hjust=1)
 		, panel.grid.minor = element_blank())
 	+  scale_colour_gradient(low = "blue", high = "red", na.value = NA)
