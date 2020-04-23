@@ -46,9 +46,9 @@ print(didnotupdate <- (ddtoday
 ddtoday <- (ddtoday 
 	%>% filter(newTests>0)
 	## Temp hack to today's labels
-	%>% mutate(Province = ifelse(Province == "NB", "NB MB", Province)
-		, Province = ifelse(Province == "MB", "", Province)
-		)
+#	%>% mutate(Province = ifelse(Province == "NB", "NB MB", Province)
+#		, Province = ifelse(Province == "MB", "", Province)
+#		)
 	%>% ungroup()
 	%>% arrange(newTests)
 )
@@ -71,7 +71,7 @@ ggtoday <- (ggplot(ddtoday, aes(x=newTests))
 	+ geom_text(aes(y=newConfirmations,label=Province),vjust=-0.5,hjust=-0.2)
 	+ xlim(c(1,7000))
 	+ ylim(c(0.01,800))
-	+ scale_x_log10(breaks=c(1,ddtoday$newTests[c(1,2,3,4,6,8,10,11)]))
+	+ scale_x_log10(breaks=c(1,ddtoday$newTests[c(1,2,3,4,6,8,10,11,13)]))
 	+ scale_y_log10(breaks=c(0.001,ddtoday$newConfirmations,1000))
 	+ theme(axis.text.x = element_text(angle = 65,vjust=0.65,hjust=1)
 		, panel.grid.minor = element_blank())
@@ -82,6 +82,32 @@ ggtoday <- (ggplot(ddtoday, aes(x=newTests))
 
 print(ggtoday)
 ggsave(ggtoday, filename="ggtoday.png", width = 9, height=5) 
+
+### Quebec
+
+QC <- (ddclean
+	%>% filter(Province == "QC")
+	%>% filter(Date > as.Date("2020-04-15"))
+	%>% select(Date,newConfirmations,newTests,prop)
+)
+
+ggqc <- (ggplot(QC, aes(x=newTests, y=newConfirmations,color=prop))
+	+ geom_point()
+	+ geom_line()
+	+ scale_linetype_manual(values=c("dashed"))
+	+ geom_text(aes(label=Date),color="black")
+	+ geom_text(aes(x=3200,y=700,label=0.2))
+	+ geom_text(aes(x=4500,y=700,label=0.15))
+	+ geom_abline(slope=0.2,color="red")
+	+ geom_abline(slope=0.15,color="#C10259")
+	+ xlim(c(3000,6000))
+	+ ylim(c(700,1000))
+	+ scale_color_gradient(low="#C10259", high = "red")
+)
+
+
+print(ggqc)
+ggsave(ggqc, filename="ggqc.png")
 
 ## FIXME:: DRY: how different are these two plots??
 ##  could this be done with faceting?
