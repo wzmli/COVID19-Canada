@@ -28,4 +28,4 @@ print(tail(ddtest))
 BCdat <- left_join(ddtest,ddconfirm)
 
 print(tail(BCdat))
-
+print(tail(BCdat$SourceCumConfirmations))
