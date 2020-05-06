@@ -1,5 +1,7 @@
 This is the back end of our [public open-resource page for COVID19 data for Canada](https://wzmli.github.io/COVID19-Canada/)
 
+Please visit our public page for the links to the curated dataset. COVID19_Canada.csv is the raw dataset and *not* the currated dataset.
+
 # Reference
 
 Ontario
