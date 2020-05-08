@@ -1,7 +1,7 @@
 This is a public open-resource page for COVID19 data for Canada, 
 maintained by [Michael Li](https://wzmli.github.io/) at McMaster University.
 
-_last updated: May 6th 21:18 Toronto time_
+_last updated: May 7th 21:17 Toronto time_
 
 ## Hospitalization/ICU counts
 
@@ -11,11 +11,11 @@ _These plots are generated using the curated data_ provided below.
 
 Dashed red line represents current ICU capacity allocated to COVID, this line will adjust when we have more details on expansions. This line does not represent the general ICU capacity (which includes all non-COVID cases). The current ICU capacities used in the plot can be found in the [capacity data set](capacity.csv).
 
-## Positive Proportion of Test for May 6th 2020
+## Positive Proportion of Test for May 7th 2020
 
 <img src="git_push/ggtoday.png" width="700" height="500">
 
-NU did not update new test today.
+PEI and NU did not update new test today.
 
 ## COVID19 Data
 
