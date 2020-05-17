@@ -57,10 +57,10 @@ ddtoday <- (ddtoday
 print(ddtoday)
 
 
-ddslopes <- data.frame(x=c(1,1,1,1,1,1)
-	, y = c(0.02,0.05,0.1,0.15,0.2,0.3)
-	, xend = c(2000/0.02, 2000/0.05, 2000/0.1, 2000/0.15,2000/0.2,2000/0.3)
-	, yend = c(2000,2000,2000,2000,2000,2000)
+ddslopes <- data.frame(x=c(1,1,1,1)
+	, y = c(0.02,0.05,0.1,0.15)
+	, xend = c(2000/0.02, 2000/0.05, 2000/0.1, 2000/0.15)
+	, yend = c(2000,2000,2000,2000)
 )
 
 print(ddslopes)
@@ -72,7 +72,7 @@ ggtoday <- (ggplot(ddtoday, aes(x=newTests))
 	+ geom_text(aes(y=newConfirmations,label=Province),vjust=-0.5,hjust=-0.2)
 	+ xlim(c(1,7000))
 	+ ylim(c(0.01,800))
-	+ scale_x_log10(breaks=c(1,ddtoday$newTests[c(1,2,3,4,5,7,8,9,10,11,12,13)]))
+	+ scale_x_log10(breaks=c(1,ddtoday$newTests[c(1,2,3,5,7,8,9,10,11,12,13)]))
 	+ scale_y_log10(breaks=c(0.001,ddtoday$newConfirmations))
 	+ theme(axis.text.x = element_text(angle = 65,vjust=0.65,hjust=1)
 		, panel.grid.minor = element_blank())
