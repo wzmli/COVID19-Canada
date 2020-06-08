@@ -35,7 +35,8 @@ British Columbia
 
 Saskatchewan
 
-- Daily updates : https://www.saskatchewan.ca/government/health-care-administration-and-provider-resources/treatment-procedures-and-guidelines/emerging-public-health-issues/2019-novel-coronavirus/cases-and-risk-of-covid-19-in-saskatchewan
+- Daily updates : https://dashboard.saskatchewan.ca/health-wellness
+- Old page : https://www.saskatchewan.ca/government/health-care-administration-and-provider-resources/treatment-procedures-and-guidelines/emerging-public-health-issues/2019-novel-coronavirus/cases-and-risk-of-covid-19-in-saskatchewan
 - April projections : https://www.saskatchewan.ca/-/media/news-release-backgrounders/2020/apr/health-system-readiness-for-covid-19.pdf 
 
 Manitoba
