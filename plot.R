@@ -46,10 +46,10 @@ print(didnotupdate <- (ddtoday
 ddtoday <- (ddtoday 
 	%>% filter(newTests>0)
 	## Temp hack to today's labels
-	%>% mutate(Province = ifelse(Province == "NL", "NL,NB,NS,PEI", Province)
-		, Province = ifelse(Province %in% c("NS","NB","PEI"), "", Province)
+#	%>% mutate(Province = ifelse(Province == "NL", "NL,NB,NS,PEI", Province)
+#		, Province = ifelse(Province %in% c("NS","NB","PEI"), "", Province)
 #		, Province = ifelse(Province == "PEI","PEI,NL,NB", Province)
-	)
+#	)
 	%>% ungroup()
 	%>% arrange(newTests)
 )

@@ -41,6 +41,8 @@ ddclean <- (left_join(datedf,dd)
 ## ON hospitalization feels like a misread number (replacing with guess number, see note)
 
 summary(ddclean)
+
+print(ddclean %>% select(Date,Province,newConfirmations,newTests),n=Inf)
 write.csv(ddclean,csvname)
 
 # ## from https://en.wikipedia.org/wiki/List_of_Canadian_provinces_and_territories_by_population
