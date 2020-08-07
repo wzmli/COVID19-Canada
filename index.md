@@ -1,7 +1,7 @@
 This is a public open-resource page for COVID19 data for Canada, 
 maintained by [Michael Li](https://wzmli.github.io/) at McMaster University.
 
-_last updated: Aug 5th 08:05 Toronto time_
+_last updated: Aug 7th 10:50 Toronto time_
 
 ## Hospitalization/ICU counts
 
@@ -17,7 +17,7 @@ All code is available on [the associated repo](https://github.com/wzmli/COVID19-
 
 Our [*raw* data set](https://github.com/wzmli/COVID19-Canada/blob/master/COVID19_Canada.csv); [direct download](COVID19_Canada.csv) is compiled from available, open sources on the web – primarily provincial-level public health websites, and news reports. See [README](https://github.com/wzmli/COVID19-Canada/blob/master/README.md) for URLs.
 
-We update once per day around 21:00 Toronto time. 
+We update once per day. 
 
 This dataset contains daily reported number of positive/negative confirmed cases, presumptive cases, under investigation, and sources. 
 
