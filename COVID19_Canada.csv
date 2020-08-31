@@ -1051,8 +1051,19 @@ MB,2020-08-12,NA,NA,NA,NA,578,368,8,105661,10,5,NA,Input , "late fill in, no H a
 MB,2020-08-13,NA,NA,NA,NA,603,377,8,108211,10,5,NA,Input , "late fill in, no H and ICU"
 MB,2020-08-14,NA,NA,NA,NA,643,389,8,110492,10,5,NA,Input , "late fill in, no H and ICU"
 MB,2020-08-15,NA,NA,NA,NA,661,443,9,112283,10,5,NA,Input , "late fill in, no H and ICU"
-MB,2020-08-16,NA,NA,NA,NA,697,483,9,113952,11,3,NA,Input , NA
-MB,2020-08-17,NA,NA,NA,NA,731,490,9,115963,11,3,NA,Input , NA
+MB,2020-08-16,NA,NA,NA,NA,696,483,9,113952,11,3,NA,Input , NA
+MB,2020-08-17,NA,NA,NA,NA,730,490,9,115963,11,3,NA,Input , "late fill in, no H and ICU"
+MB,2020-08-18,NA,NA,NA,NA,747,502,11,116990,11,3,NA,Input , "late fill in, no H and ICU"
+MB,2020-08-19,NA,NA,NA,NA,762,528,12,118364,NA,NA,NA,Input , "late fill in, no H and ICU"
+MB,2020-08-20,NA,NA,NA,NA,795,537,12,119210,NA,NA,NA,Input , "late fill in, no H and ICU"
+MB,2020-08-21,NA,NA,NA,NA,829,553,12,122291,NA,NA,NA,Input , "late fill in, no H and ICU"
+MB,2020-08-22,NA,NA,NA,NA,871,570,12,124140,NA,NA,NA,Input , "late fill in, no H and ICU"
+MB,2020-08-23,NA,NA,NA,NA,943,576,12,125300,NA,NA,NA,Input , "late fill in, no H and ICU"
+MB,2020-08-24,NA,NA,NA,NA,992,586,12,127149,7,1,NA,Input , NA
+MB,2020-08-25,NA,NA,NA,NA,1017,606,13,128576,NA,NA,NA,Input , "late fill in, no H and ICU"
+MB,2020-08-26,NA,NA,NA,NA,1042,622,13,129409,NA,NA,NA,Input , "late fill in, no H and ICU"
+MB,2020-08-27,NA,NA,NA,NA,1064,643,14,130835,NA,NA,NA,Input , "late fill in, no H and ICU"
+MB,2020-08-28,NA,NA,NA,NA,1096,664,14,132085,NA,NA,NA,Input , "late fill in, no H and ICU"
 NL,2020-03-16,NA,NA,NA,1,NA,NA,0,NA,NA,NA,NA,https://www.gov.nl.ca/covid-19/ ,NA
 NL,2020-03-18,NA,NA,NA,3,NA,NA,0,NA,NA,NA,NA,Input,NA
 NL,2020-03-19,NA,NA,NA,2,1,NA,0,NA,NA,NA,NA,Input,NA
