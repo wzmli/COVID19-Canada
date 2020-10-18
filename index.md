@@ -1,7 +1,7 @@
 This is a public open-resource page for COVID19 data for Canada, 
 maintained by [Michael Li](https://wzmli.github.io/) at McMaster University.
 
-_last updated: Oct 18th 03:54 Toronto time_
+_last updated: Oct 19th 00:19 Toronto time_
 
 ## Hospitalization/ICU counts
 
