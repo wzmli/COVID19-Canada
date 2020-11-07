@@ -50,7 +50,11 @@ canada.Rout: clean.Rout canada.R
 
 reset_bc: 
 	touch BC.R
+Ignore += ggpos.png ggbacklog.png ggdiffs.png
 
+ggpos.png: ontario.Rout
+ggbacklog.png: ontario.Rout
+ggdiffs.png: ontario.Rout
 
 ontario.Rout: ontario.R clean.Rout
 	$(run-R)
