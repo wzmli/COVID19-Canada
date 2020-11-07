@@ -91,7 +91,7 @@ gg_diff <- (ggplot(dat
 	+ geom_line(aes(y=collect), color="black")
 	+ geom_point(aes(y=collect), color="black")
 	+ geom_point(aes(y=newTests), color="red")
-	+ scale_x_date(date_breaks="1 week", date_labels = "%m/%d")
+	+ scale_x_date(date_breaks="2 week", date_labels = "%m/%d")
 	+ ylab("Daily Counts")
 	+ ggtitle("Collect (black) and Test (red)")
 )
