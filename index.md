@@ -1,11 +1,19 @@
 This is a public open-resource page for COVID19 data for Canada, 
 maintained by [Michael Li](https://wzmli.github.io/) at McMaster University.
 
-_last updated: Nov 4th 20:57 Toronto time_
+_last updated: Nov 6th 20:40 Toronto time_
 
-## Hospitalization/ICU counts
+## Ontario testing status
 
 _These plots are generated using the curated data_ provided below.
+
+<img src="git_push/ggpos.png" width="900" height="700">
+
+<img src="git_push/ggbacklog.png" width="900" height="700">
+
+<img src="git_push/ggdiggs.png" width="900" height="700">
+
+## Hospitalization/ICU counts
 
 <img src="git_push/plothosp.png" width="900" height="700">
 
