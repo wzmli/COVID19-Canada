@@ -11,7 +11,7 @@ _These plots are generated using the curated data_ provided below.
 
 <img src="git_push/ggbacklog.png" width="900" height="700">
 
-<img src="git_push/ggdiggs.png" width="900" height="700">
+<img src="git_push/ggdiffs.png" width="900" height="700">
 
 ## Hospitalization/ICU counts
 
