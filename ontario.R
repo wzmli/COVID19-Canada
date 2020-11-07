@@ -44,7 +44,7 @@ gg_ontario <- (ggplot(meltdat, aes(Date,value))
 	+ geom_smooth()
 	+ facet_wrap(~type,scale="free",ncol=1)
 #	+ ylim(c(-1,NA))
-	+ scale_x_date(date_breaks="1 week", date_labels = "%m/%d")
+	+ scale_x_date(date_breaks="2 week", date_labels = "%m/%d")
 	+ xlim(c(as.Date(min((meltdat$Date))),as.Date(max(meltdat$Date)+3)))
 )
 
