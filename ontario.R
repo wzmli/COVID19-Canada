@@ -59,14 +59,14 @@ gg_ratio <- gg_ontario %+% filter(meltdat, type == "Backlog_ratio") + geom_hline
 print(gg_pos <- gg_ontario %+% hotdat)
 
 
-ggsave(gg_pos, filename="ggpos.png", width = 12, height=15) 
+ggsave(gg_pos, filename="ggpos.png", width = 8, height=10) 
 
 gg_ontario_backlog1 <- plot_grid(gg_backlog,gg_newTests,ncol=2)
 gg_ontario_backlog <- plot_grid(gg_ontario_backlog1, gg_ratio, nrow=2)
 
 print(gg_ontario_backlog)
 
-ggsave(gg_ontario_backlog, filename="ggbacklog.png", width = 12, height=15) 
+ggsave(gg_ontario_backlog, filename="ggbacklog.png", width = 8, height=10) 
 gg_all <- plot_grid(gg_positivity, gg_backlog, gg_newTests, gg_ratio, ncol=2)
 
 # print(gg_all)
@@ -104,6 +104,6 @@ gg_diffs <- plot_grid(gg_diffbacklog, gg_diff, nrow=2)
 print(gg_diffs)
 
 
-ggsave(gg_diffs, filename="ggdiffs.png", width = 12, height=15) 
+ggsave(gg_diffs, filename="ggdiffs.png", width = 8, height=10) 
 
 
