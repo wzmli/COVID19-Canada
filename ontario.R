@@ -65,7 +65,7 @@ gg_ontario_backlog <- plot_grid(gg_ontario_backlog1, gg_ratio, nrow=2)
 
 print(gg_ontario_backlog)
 
-ggsave(gg_ontario_backlog, filename="ggdbacklog.png", width = 6, height=8) 
+ggsave(gg_ontario_backlog, filename="ggbacklog.png", width = 6, height=8) 
 gg_all <- plot_grid(gg_positivity, gg_backlog, gg_newTests, gg_ratio, ncol=2)
 
 # print(gg_all)
