@@ -39,29 +39,33 @@ hotdat <- (meltdat
 
 print(tail(meltdat))
 
-gg_ontario <- (ggplot(meltdat, aes(Date,value))
+gg_ontario <- (ggplot(meltdat, aes(x=Date,value))
 	+ geom_point()
 	+ geom_smooth()
 	+ facet_wrap(~type,scale="free",ncol=1)
 #	+ ylim(c(-1,NA))
-	+ scale_x_date(date_breaks="2 week", date_labels = "%m/%d")
 	+ xlim(c(as.Date(min((meltdat$Date))),as.Date(max(meltdat$Date)+3)))
+	+ scale_x_date(date_breaks="1 week", date_labels = "%m/%d")
 )
 
 gg_backlog <- gg_ontario %+% filter(meltdat,type == "Backlog")
 gg_positivity <- (gg_ontario %+% filter(meltdat,type == "positivity")
-	+ ylim(0,0.05)
+	+ ylim(0,0.07)
 )
+
+gg_newConfirmations <- (gg_ontario %+% filter(meltdat,type == "newConfirmations"))
 
 gg_newTests <- gg_ontario %+% filter(meltdat,type=="newTests")
 gg_ratio <- gg_ontario %+% filter(meltdat, type == "Backlog_ratio") + geom_hline(yintercept=1)
 
-print(gg_pos <- gg_ontario %+% hotdat)
+gg_pos <- plot_grid(gg_newConfirmations, gg_positivity,nrow=2)
+#print(gg_pos <- gg_ontario %+% hotdat)
 
+print(gg_pos)
 
 ggsave(gg_pos, filename="ggpos.png", width = 6, height=6) 
 
-gg_ontario_backlog1 <- plot_grid(gg_backlog,gg_newTests,ncol=2)
+gg_ontario_backlog1 <- plot_grid(gg_backlog,gg_newTests,nrow=2)
 gg_ontario_backlog <- plot_grid(gg_ontario_backlog1, gg_ratio, nrow=2)
 
 print(gg_ontario_backlog)
@@ -91,7 +95,7 @@ gg_diff <- (ggplot(dat
 	+ geom_line(aes(y=collect), color="black")
 	+ geom_point(aes(y=collect), color="black")
 	+ geom_point(aes(y=newTests), color="red")
-	+ scale_x_date(date_breaks="2 week", date_labels = "%m/%d")
+	+ scale_x_date(date_breaks="1 week", date_labels = "%m/%d")
 	+ ylab("Daily Counts")
 	+ ggtitle("Collect (black) and Test (red)")
 )
