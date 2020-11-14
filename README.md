@@ -6,7 +6,7 @@ Please visit our public page for the links to the curated dataset. COVID19_Canad
 
 Ontario
 
-- Daily updates : https://covid-19.ontario.ca/
+- Daily updates : https://data.ontario.ca/dataset/status-of-covid-19-cases-in-ontario
 - Projections : https://files.ontario.ca/po-covid-19-technical-briefing-en-2020-04-03.pdf
 - Old page : https://www.ontario.ca/page/2019-novel-coronavirus
 
@@ -41,7 +41,7 @@ Saskatchewan
 
 Manitoba
 
-- Daily updates : https://www.gov.mb.ca/covid19/updates/index.html
+- Daily updates : https://www.gov.mb.ca/covid19/updates/cases.html
 - 
 
 Newfoundland & Labrador
@@ -50,7 +50,7 @@ Newfoundland & Labrador
 
 New Brunswick
 
-- Daily updates : https://www2.gnb.ca/content/gnb/en/corporate/promo/covid-19/maps_graphs.html
+- Daily updates : https://experience.arcgis.com/experience/8eeb9a2052d641c996dba5de8f25a8aa
 - Old page : https://www2.gnb.ca/content/gnb/en/departments/ocmoh/cdc/content/respiratory_diseases/coronavirus.html
 - Old page : https://www2.gnb.ca/content/gnb/en/departments/ocmoh/cdc/content/respiratory_diseases/coronavirus/testing-by-the-numbers.html
 - Projections : https://www2.gnb.ca/content/dam/gnb/Departments/h-s/pdf/Modelling.pdf
@@ -62,11 +62,11 @@ Nova Scotia
 
 Prince Edward Island
 
-- Daily updates : https://www.princeedwardisland.ca/en/topic/covid-19
+- Daily updates : https://www.princeedwardisland.ca/en/information/health-and-wellness/pei-covid-19-case-data
 
 Yukon 
 
-- Daily updates : https://yukon.ca/covid-19
+- Daily updates : https://yukon.ca/en/case-counts-covid-19
 
 NWT
 
