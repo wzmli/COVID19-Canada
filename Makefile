@@ -7,12 +7,12 @@ Drop = ~/Dropbox
 
 ######################################################################
 
-## https://wzmli.github.io/COVID19-Canada/ 
 ## pages are on master branch
+# https://wzmli.github.io/COVID19-Canada
+# https://wzmli.github.io/COVID19-Canada/README.md
+# https://github.com/wzmli/COVID19-Canada/blob/master/README.md
 Sources += README.md index.md
 
-https://wzmli.github.io/COVID19-Canada/README.md
-https://github.com/wzmli/COVID19-Canada/blob/master/README.md
 
 ## pages are on master branch
 
