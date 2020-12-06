@@ -1,7 +1,7 @@
 This is a public open-resource page for COVID19 data for Canada, 
 maintained by [Michael Li](https://wzmli.github.io/) at McMaster University.
 
-_last updated: Dec 4th 22:34 Toronto time_
+_last updated: Dec 6th 01:34 Toronto time_
 
 ## Ontario testing status
 
