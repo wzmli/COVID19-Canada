@@ -5,7 +5,7 @@ theme_set(theme_bw())
 
 dd <- ddclean
 
-filterdate <- as.Date("2020-08-31")
+filterdate <- as.Date("2020-11-30")
 
 dat <- (dd
 	%>% filter(Province == "ON")
