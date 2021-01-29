@@ -234,7 +234,7 @@ ddhosplab <- (ddhosp
 
 print(ddhosplab)
 
-
+quit()
 gghosp <- (ggplot(ddhosp, aes(x=Date, y=Count,color=HospType))
 		 + geom_text_repel(data=ddhosplab,aes(x=Date,label = labs)
                           , hjust = -20

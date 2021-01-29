@@ -27,9 +27,9 @@ dat <- (dd
 
 print(head(dat %>% select(Date,Backlog,diffBacklog)))
 
-
 meltdat <- (dat
 	%>% gather(key = "type", value="value",-Date)
+	%>% mutate(value = as.numeric(value))
 	%>% filter(is.finite(value))
 )
 
