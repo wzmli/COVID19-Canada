@@ -59,10 +59,10 @@ ggdiffs.png: ontario.Rout
 ontario.Rout: ontario.R clean.Rout
 	$(run-R)
 
-update: reset_bc clean.Rout.csv.gp plot.png.gp plothosp.png.gp ggtoday.png.gp ggpos.png.gp ggbacklog.png.gp ggdiffs.png.gp
+# update: reset_bc clean.Rout.csv.gp plot.png.gp plothosp.png.gp ggtoday.png.gp ggpos.png.gp ggbacklog.png.gp ggdiffs.png.gp
 
 
-# update: reset_bc clean.Rout.csv.gp ggpos.png.gp ggbacklog.png.gp ggdiffs.png.gp
+update: reset_bc clean.Rout.csv.gp ggpos.png.gp ggbacklog.png.gp ggdiffs.png.gp
 
 ## git mv CAincidence.png plot.png clean.Rout.csv ON.Rout.pdf git_push ##
 ## git add plot.png CAincidence.png ON.Rout.pdf  ##
