@@ -35,6 +35,9 @@ BC.Rout: BC.R
 clean.Rout: COVID19_Canada.csv BC.Rout clean.R
 	$(run-R)
 
+ON_confirmations.Rout: clean.Rout ON_confirmations.R
+	$(run-R)
+
 ## plot.png: plot.R
 Ignore += plot.png plothosp.png ggtoday.png
 plot.png: plot.Rout ;
@@ -71,10 +74,6 @@ update: reset_bc clean.Rout.csv.gp ggpos.png.gp ggbacklog.png.gp ggdiffs.png.gp
 README.gh.html: README.md
 
 ######################################################################
-
-ON.Rout: ON.R
-	$(run-R)
-
 
 ### Makestuff
 
