@@ -62,6 +62,12 @@ ggdiffs.png: ontario.Rout
 ontario.Rout: ontario.R clean.Rout
 	$(run-R)
 
+VoCcalc.Rout: Ontario_VOC.csv ontario.Rout VoCcalc.R
+   $(run-R)
+
+VoCplot.Rout: VoCcalc.Rout VoCplot.R
+	$(run-R)
+
 # update: reset_bc clean.Rout.csv.gp plot.png.gp plothosp.png.gp ggtoday.png.gp ggpos.png.gp ggbacklog.png.gp ggdiffs.png.gp
 
 
