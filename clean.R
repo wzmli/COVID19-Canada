@@ -1,7 +1,11 @@
 library(tidyverse)
 library(zoo)
+library(shellpipes)
 
-dd <- read_csv("COVID19_Canada.csv")
+## startGraphics()
+
+dd <- csvRead()
+commandEnvironments()
 
 ## FIXME; patch the NAs, get rid of sum and then use pmax to get rid of rowwise
 ## This could be part of more principled approach to patching dates
@@ -44,16 +48,4 @@ summary(ddclean)
 print(ddclean %>% select(Date,Province,newConfirmations,newTests),n=Inf)
 write.csv(ddclean,csvname)
 
-# ## from https://en.wikipedia.org/wiki/List_of_Canadian_provinces_and_territories_by_population
-# ## could scrape
-# pop_data <- (read_csv("pop.csv",comment="#")
-#     %>% select(Province,pop)
-# )
-# 
-# ddclean_p <- (left_join(ddclean,pop_data,by="Province")
-#     %>% mutate(calcTotal_i=calcTotal/pop*1e5
-#                , bestTotal_i=bestTotal/pop*1e5
-#                , calcCumCases_i=cumConfirmations/pop*1e5
-#                , deceased_i=deceased/pop*1e5
-#              , frac_pos = cumConfirmations/bestTotal)
-# )
+saveVars(ddclean)

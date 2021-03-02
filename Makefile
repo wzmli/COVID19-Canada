@@ -31,17 +31,17 @@ BC.Rout: BC.R
 	$(run-R)
 
 ## clean.Rout.csv: clean.R ;
-clean.Rout: COVID19_Canada.csv BC.Rout clean.R
-	$(run-R)
+clean.Rout: clean.R COVID19_Canada.csv BC.rda
+	$(pipeR)
 
-ON_confirmations.Rout: clean.Rout ON_confirmations.R
-	$(run-R)
+ON_confirmations.Rout: ON_confirmations.R clean.rda
+	$(pipeR)
 
 ## plot.png: plot.R
-Ignore += plot.png plothosp.png ggtoday.png
-plot.png: plot.Rout ;
-plothosp.png: plot.Rout ; 
-plot.Rout: clean.Rout plot.R
+plotplots = plot.png plothosp.png ggtoday.png ggqc.png
+Ignore += $(plotplots)
+$(plotplots): plot.Rout ;
+plot.Rout: clean.rda plot.R
 	$(run-R)
 
 plot_exp.Rout: clean.Rout plot_exp.R
@@ -93,7 +93,7 @@ makestuff/Makefile:
 
 -include makestuff/os.mk
 
--include makestuff/wrapR.mk
+-include makestuff/pipeR.mk
 ## -include makestuff/pandoc.mk
 
 -include makestuff/git.mk

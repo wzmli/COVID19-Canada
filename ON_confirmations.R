@@ -1,4 +1,8 @@
 library(dplyr)
+library(shellpipes)
+
+commandEnvironments()
+
 names(ddclean)
 
 print(ddclean
