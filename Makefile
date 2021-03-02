@@ -13,7 +13,6 @@ Drop = ~/Dropbox
 # https://github.com/wzmli/COVID19-Canada/blob/master/README.md
 Sources += README.md index.md
 
-
 ## pages are on master branch
 
 ######################################################################
