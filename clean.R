@@ -26,6 +26,7 @@ ddclean <- (left_join(datedf,dd)
 		, bestTotal = max(c(calcTotal,total_testing,SourceTotalTests),na.rm=TRUE)
 	, cumConfirmations = sum(c(presumptive_positive,confirmed_positive),na.rm=TRUE)  ## Federal definition of a "Case" in include presumptive positive; however, if sum doesn't change but numbers changed, that is not good. Removing the sum."
 	, cumConfirmations = max(c(cumConfirmations,SourceCumConfirmations),na.rm=TRUE)
+	, cumConfirmations = ifelse((Province=="BC") & is.na(SourceCumConfirmations),NA,cumConfirmations) 
 	)
 	%>% ungroup()
 	%>% group_by(Province)
