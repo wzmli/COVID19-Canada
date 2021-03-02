@@ -58,8 +58,8 @@ ggpos.png: ontario.Rout
 ggbacklog.png: ontario.Rout
 ggdiffs.png: ontario.Rout
 
-ontario.Rout: ontario.R clean.Rout
-	$(run-R)
+ontario.Rout: ontario.R clean.rda
+	$(pipeR)
 
 VoCcalc.Rout: Ontario_VOC.csv ontario.Rout VoCcalc.R
    $(run-R)

@@ -5,12 +5,12 @@ ddconfirmation <- read_csv("http://www.bccdc.ca/Health-Info-Site/Documents/BCCDC
 ddtest <- read_csv("http://www.bccdc.ca/Health-Info-Site/Documents/BCCDC_COVID19_Dashboard_Lab_Information.csv")
 
 print(ddtest)
-ddtest <- (ddtest
-	%>% mutate(Date = strptime(as.character(Date),"%m/%d/%Y")
-		, Date = format(Date,"%Y-%m-%d")
-		, Date = as.Date(Date)
-		)
-)
+# ddtest <- (ddtest
+# 	%>% mutate(Date = strptime(as.character(Date),"%m/%d/%Y")
+# 		, Date = format(Date,"%Y-%m-%d")
+# 		, Date = as.Date(Date)
+# 		)
+# )
 
 
 ddconfirm <- (ddconfirmation

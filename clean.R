@@ -7,12 +7,9 @@ library(shellpipes)
 dd <- csvRead()
 commandEnvironments()
 
-## FIXME; patch the NAs, get rid of sum and then use pmax to get rid of rowwise
-## This could be part of more principled approach to patching dates
-## NOTATE: We are treating presumptive_positive as confirmations
-## presumptive_negative as negative; this could stand some fiddling
-## based on place and time!
+## FIXME: csvname
 
+csvname <- "clean.Rout.csv"
 
 ## Creating a full date frame, this will automatically fill in missing gaps with NA
 ## FIXME: Do we really need this extra step? This will help flag people that there are missing days

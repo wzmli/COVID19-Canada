@@ -1,7 +1,11 @@
 library(tidyverse)
 library(cowplot)
 library(ggplot2)
+library(shellpipes)
 theme_set(theme_bw())
+
+commandEnvironments()
+
 
 dd <- ddclean
 
