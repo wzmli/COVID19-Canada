@@ -47,4 +47,4 @@ print(ggvoc <- p0 %+% filter(longdat, between(date,as.Date("2021-02-12"),max(lon
 )
 
 
-ggsave(plot=ggvoc,filename = "ggvoc.png",width = 12, height = 9)
+ggsave(plot=ggvoc,filename = "ggvoc.png",width = 8, height = 6)
