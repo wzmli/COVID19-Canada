@@ -1,6 +1,6 @@
 library(shellpipes)
-library(dplyr)
-library(tidyr)
+library(tidyverse)
+library(directlabels)
 library(ggplot2); theme_set(theme_bw(base_size=12))
 
 commandEnvironments()
@@ -22,20 +22,29 @@ gg <- (ggplot(dd, aes(x=Date,y=value))
 print(gg)
 
 longdat <- (longdat
-#	%>% filter(date >= as.Date("2021-02-17"))
-	%>% filter(type != "newConfirmations")
 	%>% filter(!is.na(count))
-	%>% mutate(type = relevel(factor(type),"other_est"))
+	%>% mutate(type = factor(type,levels=c("newConfirmations","other_est","N501Y_est"))
+	)
 )
 
-p0 <- (ggplot(filter(longdat,between(date,as.Date("2021-02-17"),as.Date("2021-02-24"))))
-	+ aes(date, count, fill=type)
-#	+ geom_line()
-#	+ geom_point()
-	+ geom_area()
+
+
+p0 <- (ggplot(longdat)
+	+ aes(date, count, color=type)
+	+ geom_line()
+	+ geom_point()
+#	+ geom_area()
 #	+ scale_y_log10()
+	+ scale_color_manual(values=c("black","blue","red"))
 	+ expand_limits(y=0)
+	+ geom_dl(aes(label = type), method = list(dl.combine("last.points")), cex = 0.8)
+	+ theme(legend.position = "none")
 )
 
-print(p0 %+% filter(longdat, date > max(date) - 60))
-print(p0 %+% filter(longdat, date > max(date) - 15))
+
+print(ggvoc <- p0 %+% filter(longdat, between(date,as.Date("2021-02-12"),max(longdat$date)))
+	+ xlim(c(as.Date("2021-02-12"),max(longdat$date) + 4))
+)
+
+
+ggsave(plot=ggvoc,filename = "ggvoc.png",width = 12, height = 9)

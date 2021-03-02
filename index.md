@@ -7,6 +7,8 @@ _last updated: Mar 1st 21:19 Toronto time_
 
 _These plots are generated using the curated data_ provided below.
 
+<img src="git_push/ggvoc.png" width="900" height="700">
+
 <img src="git_push/ggpos.png" width="900" height="700">
 
 <img src="git_push/ggbacklog.png" width="900" height="700">

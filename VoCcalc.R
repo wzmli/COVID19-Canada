@@ -7,8 +7,7 @@ commandEnvironments()
 
 print(names(dat))
 
-
-screen <- read_csv("Ontario_VOC.csv")
+screen <- csvRead()
 
 summary(screen)
 
@@ -31,4 +30,6 @@ longdat <- (mergedat
 	%>% select(date=Date, other_est, N501Y_est, newConfirmations)
 	%>% pivot_longer(cols=!date, names_to="type", values_to="count")
 )
+
+saveVars(longdat, screen)
 

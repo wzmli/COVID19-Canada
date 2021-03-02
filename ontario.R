@@ -114,4 +114,4 @@ print(gg_diffs)
 
 ggsave(gg_diffs, filename="ggdiffs.png", width = 6, height=6) 
 
-
+saveVars(dat)

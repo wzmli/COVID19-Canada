@@ -38,7 +38,7 @@ ON_confirmations.Rout: ON_confirmations.R clean.rda
 	$(pipeR)
 
 ## plot.png: plot.R
-plotplots = plot.png plothosp.png ggtoday.png ggqc.png
+plotplots = plot.png plothosp.png ggtoday.png ggqc.png ggvoc.png
 Ignore += $(plotplots)
 $(plotplots): plot.Rout ;
 plot.Rout: clean.rda plot.R
@@ -61,16 +61,18 @@ ggdiffs.png: ontario.Rout
 ontario.Rout: ontario.R clean.rda
 	$(pipeR)
 
-VoCcalc.Rout: Ontario_VOC.csv ontario.Rout VoCcalc.R
-   $(run-R)
+VoCcalc.Rout: VoCcalc.R Ontario_VOC.csv ontario.rda 
+	$(pipeR)
 
-VoCplot.Rout: VoCcalc.Rout VoCplot.R
-	$(run-R)
+VoCplot.Rout: VoCplot.R VoCcalc.rda
+	$(pipeR)
+
+ggvoc.png:VoCplot.Rout
 
 # update: reset_bc clean.Rout.csv.gp plot.png.gp plothosp.png.gp ggtoday.png.gp ggpos.png.gp ggbacklog.png.gp ggdiffs.png.gp
 
 
-update: reset_bc clean.Rout.csv.gp ggpos.png.gp ggbacklog.png.gp ggdiffs.png.gp
+update: reset_bc clean.Rout.csv.gp ggpos.png.gp ggbacklog.png.gp ggdiffs.png.gp ggvoc.png.gp
 
 ## git mv CAincidence.png plot.png clean.Rout.csv ON.Rout.pdf git_push ##
 ## git add plot.png CAincidence.png ON.Rout.pdf  ##
