@@ -12,6 +12,12 @@ print(ddtest)
 # 		)
 # )
 
+ddconfirmation <- (ddconfirmation
+	%>% mutate(Reported_Date = strptime(as.character(Reported_Date),"%m/%d/%Y")
+		, Reported_Date = format(Reported_Date,"%Y-%m-%d")
+		, Reported_Date = as.Date(Reported_Date)
+		)
+)
 
 ddconfirm <- (ddconfirmation
 	%>% mutate(Date = Reported_Date + 1) ## hack to make update time match up
