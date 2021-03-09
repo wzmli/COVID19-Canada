@@ -50,7 +50,9 @@ print(ggvoc <- p0 %+% filter(longdat, between(date,as.Date("2021-02-12"),max(lon
 
 longdat2 <- (longdat
 	%>% mutate(count = ifelse(((date >= as.Date("2021-02-12")) & (type == "newConfirmations")), NA, count)
-	)
+		, type = factor(type, labels=c("New Confirmations", "Estimated N501Y negative", "Estimated N501Y positive")
+		)
+		)
 )
 
 ggstack <- (ggplot(longdat2,aes(x=date,y=count,fill=type))
@@ -61,4 +63,4 @@ ggstack <- (ggplot(longdat2,aes(x=date,y=count,fill=type))
 )
 
 print(ggstack)
-ggsave(plot=ggvoc,filename = "ggvoc.png",width = 8, height = 6)
+ggsave(plot=ggstack,filename = "ggvoc.png",width = 8, height = 6)
